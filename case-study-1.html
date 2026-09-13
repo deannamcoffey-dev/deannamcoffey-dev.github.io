@@ -5,17 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AI-Assisted Customer Onboarding | Deanna Coffey</title>
+  <title>Client Onboarding & Conditional Routing Automation | Deanna Coffey</title>
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -32,7 +28,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
     }
 
     .logo {
@@ -56,146 +51,181 @@
     }
 
     .hero-content {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    .case-label {
-      display: inline-block;
-      color: #1769aa;
-      background: #eaf3fb;
-      padding: 7px 12px;
-      border-radius: 5px;
+    .eyebrow {
+      color: #2563eb;
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
-    .hero h1 {
+    h1 {
       color: #0f2744;
-      font-size: 44px;
-      line-height: 1.2;
+      font-size: 46px;
+      line-height: 1.15;
       margin-bottom: 20px;
     }
 
-    .hero p {
-      max-width: 850px;
-      font-size: 20px;
-      color: #52657a;
+    .hero-description {
+      color: #475569;
+      font-size: 19px;
+      max-width: 800px;
     }
 
-    .section {
-      max-width: 1100px;
+    main {
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 55px 25px;
+      padding: 60px 25px;
     }
 
-    .section h2 {
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
       color: #0f2744;
       font-size: 30px;
       margin-bottom: 18px;
     }
 
-    .section p {
-      font-size: 17px;
-      margin-bottom: 18px;
+    h3 {
+      color: #0f2744;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 16px;
     }
 
     .summary-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-top: 30px;
     }
 
     .summary-card {
-      background: #f4f7fa;
-      border-top: 4px solid #1769aa;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
       padding: 25px;
-      border-radius: 5px;
     }
 
-    .summary-card h3 {
-      color: #0f2744;
-      margin-bottom: 10px;
+    .summary-card p {
+      margin-bottom: 0;
     }
 
+    .project-visual {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 25px;
+    }
+
+    .project-visual-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .workflow-list,
+    .business-value,
+    .routing-list {
+      padding-left: 25px;
+    }
+
+    .workflow-list li,
+    .business-value li,
+    .routing-list li {
+      margin-bottom: 12px;
+    }
+
+    .tools,
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tool {
+      background: #eaf2ff;
+      color: #0f2744;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .skill {
-      border: 1px solid #cbd5e1;
-      padding: 10px 16px;
-      border-radius: 5px;
-      background: #ffffff;
-    }
-
-    .business-value {
-      background: #eaf3f8;
-      padding: 30px;
-      border-radius: 5px;
-    }
-
-    .business-value ul {
-      margin-left: 22px;
-    }
-
-    .business-value li {
-      margin-bottom: 10px;
-      font-size: 17px;
+      background: #f1f5f9;
+      color: #0f2744;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .button {
       display: inline-block;
-      background: #1769aa;
+      background: #2563eb;
       color: #ffffff;
       text-decoration: none;
-      padding: 13px 20px;
-      border-radius: 5px;
+      padding: 12px 20px;
+      border-radius: 7px;
       font-weight: 700;
-      margin-top: 20px;
     }
 
     .button:hover {
-      background: #0f5488;
+      background: #1d4ed8;
     }
 
     .case-navigation {
-      background: #0f2744;
-      color: #ffffff;
-      text-align: center;
-      padding: 55px 25px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 35px;
+      margin-top: 60px;
     }
 
     .case-navigation h2 {
-      margin-bottom: 20px;
+      font-size: 24px;
     }
 
-    .case-navigation a {
-      display: inline-block;
-      background: #ffffff;
-      color: #0f2744;
+    .case-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .case-links a {
+      color: #2563eb;
       text-decoration: none;
       font-weight: 700;
-      padding: 13px 20px;
-      border-radius: 5px;
-      margin: 8px;
+    }
+
+    .case-links a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      background: #081c30;
+      background: #0f2744;
       color: #ffffff;
       text-align: center;
-      padding: 22px;
+      padding: 25px;
+      margin-top: 30px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 750px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
       }
 
       nav a {
@@ -203,12 +233,16 @@
         margin-right: 15px;
       }
 
-      .hero h1 {
-        font-size: 34px;
+      h1 {
+        font-size: 36px;
       }
 
       .summary-grid {
         grid-template-columns: 1fr;
+      }
+
+      .case-links {
+        flex-direction: column;
       }
     }
   </style>
@@ -229,18 +263,16 @@
   <header class="hero">
     <div class="hero-content">
 
-      <div class="case-label">
-        CASE STUDY 01
-      </div>
+      <div class="eyebrow">Case Study 01</div>
 
-      <h1>
-        AI-Assisted Customer Onboarding
-      </h1>
+      <h1>Client Onboarding &amp; Conditional Routing Automation</h1>
 
-      <p>
-        Improving a manual customer profile and onboarding process
-        through AI-assisted automation, structured data, quality
-        assurance, and operational workflow improvements.
+      <p class="hero-description">
+        Designed an automated client onboarding workflow that monitors new
+        submissions, evaluates routing criteria, and directs each client to
+        the appropriate operational team. The workflow reduces manual
+        coordination, standardizes internal handoffs, and helps ensure the
+        right team receives the information needed to begin onboarding.
       </p>
 
     </div>
@@ -248,20 +280,21 @@
 
   <main>
 
-    <section class="section">
-
+    <section>
       <h2>Project Overview</h2>
 
       <p>
-        Customer onboarding often requires information to be reviewed,
-        organized, and entered into a consistent structure before it can
-        be used effectively by an operations team.
+        Client onboarding often requires someone to review new submissions,
+        determine which internal team is responsible, and manually forward
+        the information to the correct group. As the number of submissions
+        grows, this process can become repetitive and create opportunities
+        for delays or inconsistent handoffs.
       </p>
 
       <p>
-        This project focused on improving that process by using
-        AI-assisted workflows and structured data while maintaining
-        quality assurance and human review.
+        This project demonstrates how a structured automation workflow can
+        monitor incoming onboarding submissions, evaluate routing conditions,
+        and automatically notify the appropriate operational team.
       </p>
 
       <div class="summary-grid">
@@ -269,133 +302,226 @@
         <div class="summary-card">
           <h3>Challenge</h3>
           <p>
-            Reduce repetitive manual work while maintaining consistency
-            and quality during customer onboarding.
+            Reduce manual review and routing of new client onboarding
+            submissions across multiple internal teams.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Approach</h3>
+          <h3>Solution</h3>
           <p>
-            Apply AI-assisted workflow design to organize information
-            into a more structured and repeatable process.
+            Build a Make.com workflow that monitors onboarding submissions,
+            applies routing logic, and sends targeted notifications.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Focus</h3>
+          <h3>Outcome</h3>
           <p>
-            Balance automation with quality assurance and operational
-            review.
+            Created a repeatable onboarding process that improves consistency,
+            reduces manual coordination, and supports faster team handoffs.
           </p>
         </div>
 
       </div>
-
     </section>
 
-    <section class="section">
-
-      <h2>Process Improvement Approach</h2>
-
-      <p>
-        The first step was understanding the existing onboarding process
-        and identifying where repetitive work, inconsistent formatting,
-        and manual review created unnecessary effort.
-      </p>
+    <section>
+      <h2>Project Visual</h2>
 
       <p>
-        The improved workflow was designed around structured information,
-        AI-assisted processing, and clear review points so that automation
-        could support the process without removing necessary oversight.
+        The workflow below shows how a new client onboarding submission is
+        monitored, evaluated through routing logic, and directed to the
+        appropriate operational team.
       </p>
 
-    </section>
-
-    <section class="section">
-
-      <h2>Quality Assurance</h2>
-
-      <p>
-        Quality assurance was an important part of the workflow design.
-        AI-assisted output still required a process for checking that
-        information was complete, consistent, and appropriate before it
-        moved forward.
-      </p>
-
-      <p>
-        This helped keep the workflow focused on practical operational
-        improvement rather than automation for its own sake.
-      </p>
-
-    </section>
-
-    <section class="section">
-
-      <div class="business-value">
-
-        <h2>Business Value</h2>
-
-        <ul>
-          <li>
-            Reduced repetitive steps within the onboarding process.
-          </li>
-
-          <li>
-            Created a more structured approach to customer information.
-          </li>
-
-          <li>
-            Supported greater consistency through workflow design and QA.
-          </li>
-
-          <li>
-            Demonstrated how AI can support existing business operations.
-          </li>
-
-          <li>
-            Created a process designed to be easier to manage and scale.
-          </li>
-        </ul>
-
+      <div class="project-visual">
+        <img
+          src="client-onboarding-automation.png"
+          alt="Make.com client onboarding and conditional routing automation workflow"
+          class="project-visual-image"
+        >
       </div>
-
     </section>
 
-    <section class="section">
+    <section>
+      <h2>How the Automation Works</h2>
 
+      <ol class="workflow-list">
+        <li>
+          The workflow monitors the client onboarding submission source for
+          new records.
+        </li>
+
+        <li>
+          When a new submission is detected, Make.com retrieves the
+          onboarding information.
+        </li>
+
+        <li>
+          A router evaluates the submission against defined business rules.
+        </li>
+
+        <li>
+          The submission is directed into the appropriate workflow path based
+          on the type of service or operational support required.
+        </li>
+
+        <li>
+          The appropriate internal team receives an automated email
+          notification containing the onboarding information.
+        </li>
+
+        <li>
+          The routing structure creates a more consistent handoff process
+          without requiring someone to manually review and forward each
+          submission.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Routing Logic</h2>
+
+      <p>
+        The core of this automation is the routing layer. Instead of treating
+        every onboarding submission the same way, the workflow evaluates the
+        information and sends it to the team responsible for the next step.
+      </p>
+
+      <ul class="routing-list">
+        <li>
+          AI consulting submissions are routed to the consulting team.
+        </li>
+
+        <li>
+          Digital advertising submissions are routed to advertising
+          operations.
+        </li>
+
+        <li>
+          AI automation or implementation submissions are routed to the
+          implementation team.
+        </li>
+      </ul>
+
+      <p>
+        This approach allows one centralized onboarding process to support
+        multiple operational paths while keeping the logic consistent and
+        manageable.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tools &amp; Methods</h2>
+
+      <div class="tools">
+        <span class="tool">Make.com</span>
+        <span class="tool">Google Sheets</span>
+        <span class="tool">Gmail</span>
+        <span class="tool">Routers</span>
+        <span class="tool">Conditional Filters</span>
+        <span class="tool">Workflow Design</span>
+        <span class="tool">Business Rules</span>
+        <span class="tool">Process Mapping</span>
+        <span class="tool">Automation Testing</span>
+        <span class="tool">Quality Assurance</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Challenges &amp; Problem Solving</h2>
+
+      <p>
+        One of the key considerations was making sure each submission followed
+        the correct routing path. A workflow can run successfully from a
+        technical perspective and still create operational problems if the
+        routing logic is incorrect.
+      </p>
+
+      <p>
+        Testing therefore focused on validating each path independently,
+        confirming that the correct conditions triggered the correct route,
+        and verifying that the appropriate team received the expected
+        notification.
+      </p>
+
+      <p>
+        The workflow was structured so that additional onboarding paths could
+        be added later without redesigning the entire process.
+      </p>
+    </section>
+
+    <section>
+      <h2>Business Value</h2>
+
+      <ul class="business-value">
+        <li>
+          Reduces repetitive manual review and forwarding of onboarding
+          submissions.
+        </li>
+
+        <li>
+          Creates a more consistent internal handoff process.
+        </li>
+
+        <li>
+          Helps ensure onboarding information reaches the correct operational
+          team.
+        </li>
+
+        <li>
+          Supports faster response times for new client submissions.
+        </li>
+
+        <li>
+          Reduces dependence on individual staff members to remember routing
+          requirements.
+        </li>
+
+        <li>
+          Creates a scalable framework that can support additional teams or
+          service categories.
+        </li>
+      </ul>
+    </section>
+
+    <section>
       <h2>Skills Demonstrated</h2>
 
       <div class="skills">
-        <span class="skill">AI-Assisted Workflows</span>
-        <span class="skill">Workflow Design</span>
+        <span class="skill">Operations Management</span>
         <span class="skill">Process Improvement</span>
+        <span class="skill">Workflow Design</span>
+        <span class="skill">Conditional Logic</span>
+        <span class="skill">Business Rules</span>
+        <span class="skill">Cross-Functional Coordination</span>
+        <span class="skill">Automation</span>
+        <span class="skill">Testing</span>
         <span class="skill">Quality Assurance</span>
-        <span class="skill">Structured Data</span>
-        <span class="skill">Operations</span>
+        <span class="skill">Digital Transformation</span>
       </div>
+    </section>
 
-      <a class="button" href="index.html#projects">
-        ← Back to Projects
-      </a>
+    <a class="button" href="index.html#projects">
+      ← Back to Projects
+    </a>
 
+    <section class="case-navigation">
+      <h2>Explore More Case Studies</h2>
+
+      <div class="case-links">
+        <a href="case-study-2.html">
+          Case Study 2 →
+        </a>
+
+        <a href="case-study-3.html">
+          Case Study 3 →
+        </a>
+      </div>
     </section>
 
   </main>
-
-  <section class="case-navigation">
-
-    <h2>Explore More Case Studies</h2>
-
-    <a href="case-study-2.html">
-      Case Study 2 →
-    </a>
-
-    <a href="case-study-3.html">
-      Case Study 3 →
-    </a>
-
-  </section>
 
   <footer>
     © 2026 Deanna Coffey | Operations + Automation Portfolio
