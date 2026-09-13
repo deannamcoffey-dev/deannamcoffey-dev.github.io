@@ -1,1 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI-Assisted Customer Onboarding | Deanna Coffey</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #0f2744;
+      color: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: #f4f7fa;
+      padding: 70px 7%;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .case-label {
+      display: inline-block;
+      color: #1769aa;
+      background: #eaf3fb;
+      padding: 7px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: #0f2744;
+      font-size: 44px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      font-size: 20px;
+      color: #52657a;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 55px 25px;
+    }
+
+    .section h2 {
+      color: #0f2744;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .section p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .summary-card {
+      background: #f4f7fa;
+      border-top: 4px solid #1769aa;
+      padding: 25px;
+      border-radius: 5px;
+    }
+
+    .summary-card h3 {
+      color: #0f2744;
+      margin-bottom: 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      border: 1px solid #cbd5e1;
+      padding: 10px 16px;
+      border-radius: 5px;
+      background: #ffffff;
+    }
+
+    .business-value {
+      background: #eaf3f8;
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .business-value ul {
+      margin-left: 22px;
+    }
+
+    .business-value li {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1769aa;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 5px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #0f5488;
+    }
+
+    .case-navigation {
+      background: #0f2744;
+      color: #ffffff;
+      text-align: center;
+      padding: 55px 25px;
+    }
+
+    .case-navigation h2 {
+      margin-bottom: 20px;
+    }
+
+    .case-navigation a {
+      display: inline-block;
+      background: #ffffff;
+      color: #0f2744;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 5px;
+      margin: 8px;
+    }
+
+    footer {
+      background: #081c30;
+      color: #ffffff;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Deanna Coffey</div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="case-label">
+        CASE STUDY 01
+      </div>
+
+      <h1>
+        AI-Assisted Customer Onboarding
+      </h1>
+
+      <p>
+        Improving a manual customer profile and onboarding process
+        through AI-assisted automation, structured data, quality
+        assurance, and operational workflow improvements.
+      </p>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+
+      <h2>Project Overview</h2>
+
+      <p>
+        Customer onboarding often requires information to be reviewed,
+        organized, and entered into a consistent structure before it can
+        be used effectively by an operations team.
+      </p>
+
+      <p>
+        This project focused on improving that process by using
+        AI-assisted workflows and structured data while maintaining
+        quality assurance and human review.
+      </p>
+
+      <div class="summary-grid">
+
+        <div class="summary-card">
+          <h3>Challenge</h3>
+          <p>
+            Reduce repetitive manual work while maintaining consistency
+            and quality during customer onboarding.
+          </p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Approach</h3>
+          <p>
+            Apply AI-assisted workflow design to organize information
+            into a more structured and repeatable process.
+          </p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Focus</h3>
+          <p>
+            Balance automation with quality assurance and operational
+            review.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2>Process Improvement Approach</h2>
+
+      <p>
+        The first step was understanding the existing onboarding process
+        and identifying where repetitive work, inconsistent formatting,
+        and manual review created unnecessary effort.
+      </p>
+
+      <p>
+        The improved workflow was designed around structured information,
+        AI-assisted processing, and clear review points so that automation
+        could support the process without removing necessary oversight.
+      </p>
+
+    </section>
+
+    <section class="section">
+
+      <h2>Quality Assurance</h2>
+
+      <p>
+        Quality assurance was an important part of the workflow design.
+        AI-assisted output still required a process for checking that
+        information was complete, consistent, and appropriate before it
+        moved forward.
+      </p>
+
+      <p>
+        This helped keep the workflow focused on practical operational
+        improvement rather than automation for its own sake.
+      </p>
+
+    </section>
+
+    <section class="section">
+
+      <div class="business-value">
+
+        <h2>Business Value</h2>
+
+        <ul>
+          <li>
+            Reduced repetitive steps within the onboarding process.
+          </li>
+
+          <li>
+            Created a more structured approach to customer information.
+          </li>
+
+          <li>
+            Supported greater consistency through workflow design and QA.
+          </li>
+
+          <li>
+            Demonstrated how AI can support existing business operations.
+          </li>
+
+          <li>
+            Created a process designed to be easier to manage and scale.
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2>Skills Demonstrated</h2>
+
+      <div class="skills">
+        <span class="skill">AI-Assisted Workflows</span>
+        <span class="skill">Workflow Design</span>
+        <span class="skill">Process Improvement</span>
+        <span class="skill">Quality Assurance</span>
+        <span class="skill">Structured Data</span>
+        <span class="skill">Operations</span>
+      </div>
+
+      <a class="button" href="index.html#projects">
+        ← Back to Projects
+      </a>
+
+    </section>
+
+  </main>
+
+  <section class="case-navigation">
+
+    <h2>Explore More Case Studies</h2>
+
+    <a href="case-study-2.html">
+      Case Study 2 →
+    </a>
+
+    <a href="case-study-3.html">
+      Case Study 3 →
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 Deanna Coffey | Operations + Automation Portfolio
+  </footer>
+
+</body>
+
+</html>
