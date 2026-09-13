@@ -1,1 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inventory Monitoring & Reorder Workflow | Deanna Coffey</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #0f2744;
+      color: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: #f4f7fa;
+      padding: 70px 7%;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .case-label {
+      display: inline-block;
+      color: #1769aa;
+      background: #eaf3fb;
+      padding: 7px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: #0f2744;
+      font-size: 44px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      font-size: 20px;
+      color: #52657a;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 55px 25px;
+    }
+
+    .section h2 {
+      color: #0f2744;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .section p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .summary-card {
+      background: #f4f7fa;
+      border-top: 4px solid #1769aa;
+      padding: 25px;
+      border-radius: 5px;
+    }
+
+    .summary-card h3 {
+      color: #0f2744;
+      margin-bottom: 10px;
+    }
+
+    .tools,
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tool,
+    .skill {
+      border: 1px solid #cbd5e1;
+      padding: 10px 16px;
+      border-radius: 5px;
+      background: #ffffff;
+    }
+
+    .business-value {
+      background: #eaf3f8;
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .business-value ul,
+    .workflow-list {
+      margin-left: 22px;
+    }
+
+    .business-value li,
+    .workflow-list li {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1769aa;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 5px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #0f5488;
+    }
+
+    .case-navigation {
+      background: #0f2744;
+      color: #ffffff;
+      text-align: center;
+      padding: 55px 25px;
+    }
+
+    .case-navigation h2 {
+      margin-bottom: 20px;
+    }
+
+    .case-navigation a {
+      display: inline-block;
+      background: #ffffff;
+      color: #0f2744;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 5px;
+      margin: 8px;
+    }
+
+    footer {
+      background: #081c30;
+      color: #ffffff;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Deanna Coffey</div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="case-label">
+        CASE STUDY 03
+      </div>
+
+      <h1>
+        Inventory Monitoring & Reorder Workflow
+      </h1>
+
+      <p>
+        Built an automated inventory workflow that updates stock levels,
+        identifies reorder conditions, and routes notifications through
+        a parent/child automation design.
+      </p>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+
+      <h2>Project Overview</h2>
+
+      <p>
+        Inventory management often requires repeated monitoring of stock
+        levels and manual follow-up when products reach reorder points.
+      </p>
+
+      <p>
+        This project demonstrates how automation can monitor inventory
+        data, evaluate reorder conditions, and trigger the appropriate
+        workflow when stock levels require attention.
+      </p>
+
+      <div class="summary-grid">
+
+        <div class="summary-card">
+          <h3>Challenge</h3>
+          <p>
+            Reduce manual inventory monitoring and make reorder decisions
+            easier to identify.
+          </p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Solution</h3>
+          <p>
+            Use automated workflows to update inventory data, evaluate
+            conditions, and trigger notifications.
+          </p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Approach</h3>
+          <p>
+            Separate workflow responsibilities using a parent/child
+            automation structure.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2>Tools &amp; Methods</h2>
+
+      <div class="tools">
+        <span class="tool">Make.com</span>
+        <span class="tool">Webhooks</span>
+        <span class="tool">HTTP</span>
+        <span class="tool">Google Sheets</span>
+        <span class="tool">Gmail</span>
+        <span class="tool">Workflow Design</span>
+        <span class="tool">Business Rules</span>
+        <span class="tool">Automation Testing</span>
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2>How the Workflow Works</h2>
+
+      <ul class="workflow-list">
+        <li>
+          Inventory information is received or updated through the
+          automated workflow.
+        </li>
+
+        <li>
+          Stock levels are recorded and evaluated against defined
+          reorder conditions.
+        </li>
+
+        <li>
+          The workflow determines whether additional action is required.
+        </li>
+
+        <li>
+          Parent and child automation scenarios separate processing
+          responsibilities.
+        </li>
+
+        <li>
+          Notifications are routed when inventory reaches a condition
+          requiring attention.
+        </li>
+
+        <li>
+          Google Sheets provides a structured location for inventory data.
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="section">
+
+      <h2>Challenges &amp; Problem Solving</h2>
+
+      <p>
+        One of the key design considerations was separating the workflow
+        into logical components rather than placing every action inside a
+        single automation.
+      </p>
+
+      <p>
+        A parent/child structure made it easier to organize the workflow,
+        route information between steps, and keep individual automation
+        responsibilities more manageable.
+      </p>
+
+      <p>
+        Testing also required checking that inventory conditions produced
+        the correct response and that notifications were triggered only
+        when the defined business rules were met.
+      </p>
+
+    </section>
+
+    <section class="section">
+
+      <div class="business-value">
+
+        <h2>Business Value</h2>
+
+        <ul>
+          <li>
+            Reduced repetitive inventory monitoring.
+          </li>
+
+          <li>
+            Improved visibility into stock levels requiring attention.
+          </li>
+
+          <li>
+            Created a repeatable process for identifying reorder conditions.
+          </li>
+
+          <li>
+            Automated notification routing based on business rules.
+          </li>
+
+          <li>
+            Demonstrated a scalable parent/child workflow design.
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2>Skills Demonstrated</h2>
+
+      <div class="skills">
+        <span class="skill">Workflow Automation</span>
+        <span class="skill">Inventory Operations</span>
+        <span class="skill">Process Improvement</span>
+        <span class="skill">Business Rules</span>
+        <span class="skill">Webhooks</span>
+        <span class="skill">HTTP</span>
+        <span class="skill">Google Sheets</span>
+        <span class="skill">Automation Testing</span>
+      </div>
+
+      <a class="button" href="index.html#projects">
+        ← Back to Projects
+      </a>
+
+    </section>
+
+  </main>
+
+  <section class="case-navigation">
+
+    <h2>Explore More Case Studies</h2>
+
+    <a href="case-study-1.html">
+      ← Case Study 1
+    </a>
+
+    <a href="case-study-2.html">
+      ← Case Study 2
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 Deanna Coffey | Operations + Automation Portfolio
+  </footer>
+
+</body>
+
+</html>
