@@ -46,7 +46,7 @@
     }
 
     .page {
-      max-width: 760px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 70px 25px;
     }
@@ -70,52 +70,18 @@
       font-size: 17px;
     }
 
-    form {
-      display: grid;
-      gap: 20px;
-    }
-
-    label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 7px;
-      color: #0f2744;
-    }
-
-    input,
-    textarea {
+    .google-form-container {
       width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #cbd5e1;
-      border-radius: 7px;
-      font: inherit;
+      overflow: hidden;
+      border-radius: 8px;
       background: #ffffff;
     }
 
-    input:focus,
-    textarea:focus {
-      outline: 2px solid #bfdbfe;
-      border-color: #2563eb;
-    }
-
-    textarea {
-      min-height: 170px;
-      resize: vertical;
-    }
-
-    button {
-      border: none;
-      background: #2563eb;
-      color: #ffffff;
-      padding: 14px 22px;
-      border-radius: 7px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1d4ed8;
+    .google-form-container iframe {
+      display: block;
+      width: 100%;
+      min-height: 966px;
+      border: 0;
     }
 
     .back-link {
@@ -148,12 +114,31 @@
         margin-right: 15px;
       }
 
+      .page {
+        padding: 40px 15px;
+      }
+
       .contact-card {
-        padding: 28px;
+        padding: 25px 10px;
       }
 
       h1 {
         font-size: 32px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .intro {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .google-form-container iframe {
+        min-height: 1050px;
+      }
+
+      .back-link {
+        margin-left: 10px;
       }
     }
   </style>
@@ -183,61 +168,18 @@
         Send me a message below.
       </p>
 
-      <form id="contact-form">
-
-        <div>
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="company">Company</label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-          >
-        </div>
-
-        <div>
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit">
-          Send Message
-        </button>
-
-      </form>
+      <div class="google-form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSehjwP9TcpHO8MHSNCBUMsy1ERcYclxHH1Nh7-sJ33sCYhWgg/viewform?embedded=true"
+          width="100%"
+          height="966"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Contact Deanna Coffey">
+          Loading…
+        </iframe>
+      </div>
 
       <a class="back-link" href="index.html">
         ← Back to Portfolio
@@ -250,35 +192,6 @@
   <footer>
     © 2026 Deanna Coffey | Operations + Automation Portfolio
   </footer>
-
-  <script>
-    const form = document.getElementById("contact-form");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const company = document.getElementById("company").value;
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value;
-
-      const body = [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Company: ${company}`,
-        "",
-        message
-      ].join("\n");
-
-      const mailtoLink =
-        "mailto:deannamcoffey@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailtoLink;
-    });
-  </script>
 
 </body>
 
