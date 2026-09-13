@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Deanna Coffey</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #0f2744;
+      color: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 70px 25px;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(15, 39, 68, 0.08);
+    }
+
+    h1 {
+      color: #0f2744;
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      color: #64748b;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 7px;
+      color: #0f2744;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 7px;
+      font: inherit;
+      background: #ffffff;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid #bfdbfe;
+      border-color: #2563eb;
+    }
+
+    textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    button {
+      border: none;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 24px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #64748b;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .contact-card {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Deanna Coffey</div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <div class="contact-card">
+
+      <h1>Let's Connect</h1>
+
+      <p class="intro">
+        Interested in discussing operations, automation,
+        process improvement, or digital transformation opportunities?
+        Send me a message below.
+      </p>
+
+      <form id="contact-form">
+
+        <div>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="company">Company</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+          >
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+      <a class="back-link" href="index.html">
+        ← Back to Portfolio
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Deanna Coffey | Operations + Automation Portfolio
+  </footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const company = document.getElementById("company").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const body = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Company: ${company}`,
+        "",
+        message
+      ].join("\n");
+
+      const mailtoLink =
+        "mailto:deannamcoffey@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailtoLink;
+    });
+  </script>
+
+</body>
+
+</html>
