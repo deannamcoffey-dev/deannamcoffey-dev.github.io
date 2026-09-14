@@ -3,9 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Client Onboarding & Conditional Routing Automation | Deanna Coffey</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Client Onboarding & Conditional Routing Automation | Deanna Coffey
+  </title>
 
   <style>
     * {
@@ -136,13 +142,13 @@
     }
 
     .workflow-list,
-    .routing-list,
+    .detail-list,
     .business-value {
       padding-left: 25px;
     }
 
     .workflow-list li,
-    .routing-list li,
+    .detail-list li,
     .business-value li {
       margin-bottom: 12px;
     }
@@ -181,10 +187,14 @@
       padding: 12px 20px;
       border-radius: 7px;
       font-weight: 700;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
     .button:hover {
       background: #1d4ed8;
+      transform: translateY(-1px);
     }
 
     .case-navigation {
@@ -201,6 +211,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .case-links a {
@@ -210,6 +221,44 @@
     }
 
     .case-links a:hover {
+      text-decoration: underline;
+    }
+
+    .case-contact {
+      margin-top: 70px;
+      padding: 45px 30px;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+    }
+
+    .case-contact h2 {
+      margin-bottom: 12px;
+    }
+
+    .case-contact p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: #64748b;
+    }
+
+    .case-contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin-bottom: 25px;
+    }
+
+    .case-contact-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .case-contact-links a:hover {
       text-decoration: underline;
     }
 
@@ -244,6 +293,15 @@
       .case-links {
         flex-direction: column;
       }
+
+      .case-contact {
+        padding: 35px 20px;
+      }
+
+      .case-contact-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -251,28 +309,42 @@
 <body>
 
   <nav>
-    <div class="logo">Deanna Coffey</div>
+    <div class="logo">
+      Deanna Coffey
+    </div>
 
     <div>
-      <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
 
-      <div class="eyebrow">Case Study 01</div>
+      <div class="eyebrow">
+        Case Study 01
+      </div>
 
-      <h1>Client Onboarding &amp; Conditional Routing Automation</h1>
+      <h1>
+        Client Onboarding &amp;
+        Conditional Routing Automation
+      </h1>
 
       <p class="hero-description">
-        Designed an automated client onboarding workflow that monitors new
-        submissions, evaluates routing criteria, and directs each client to
-        the appropriate operational team. The workflow reduces manual
-        coordination, standardizes internal handoffs, and helps ensure the
-        right team receives the information needed to begin onboarding.
+        Designed an automated onboarding workflow
+        that monitors new submissions, applies routing
+        logic, and directs each client to the appropriate
+        operational team.
       </p>
 
     </div>
@@ -281,45 +353,63 @@
   <main>
 
     <section>
-      <h2>Project Overview</h2>
+      <h2>
+        Project Overview
+      </h2>
 
       <p>
-        Client onboarding often requires someone to review new submissions,
-        determine which internal team is responsible, and manually forward
-        the information to the correct group. As submission volume grows,
-        this can create repetitive work, delays, and inconsistent handoffs.
+        Client onboarding often requires someone to
+        review new submissions, determine which
+        internal team is responsible, and manually
+        forward the information to the correct group.
+        As submission volume grows, this can create
+        repetitive work, delays, and inconsistent
+        handoffs.
       </p>
 
       <p>
-        This project demonstrates how automation can monitor incoming
-        onboarding submissions, evaluate routing conditions, and
-        automatically notify the appropriate operational team.
+        This project demonstrates how automation can
+        monitor incoming onboarding submissions,
+        evaluate routing conditions, and automatically
+        notify the appropriate operational team.
       </p>
 
       <div class="summary-grid">
 
         <div class="summary-card">
-          <h3>Challenge</h3>
+          <h3>
+            Challenge
+          </h3>
+
           <p>
-            Reduce manual review and routing of new client onboarding
-            submissions across multiple internal teams.
+            Reduce manual review and routing of new
+            client onboarding submissions across
+            multiple internal teams.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Solution</h3>
+          <h3>
+            Solution
+          </h3>
+
           <p>
-            Build a Make.com workflow that monitors new submissions,
-            applies routing logic, and sends targeted notifications.
+            Build a Make.com workflow that monitors
+            new submissions, applies routing logic,
+            and sends targeted notifications.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Outcome</h3>
+          <h3>
+            Outcome
+          </h3>
+
           <p>
-            Created a repeatable onboarding process that improves
-            consistency, reduces manual coordination, and supports
-            faster internal handoffs.
+            Created a repeatable onboarding process
+            that improves consistency, reduces manual
+            coordination, and supports faster internal
+            handoffs.
           </p>
         </div>
 
@@ -327,206 +417,365 @@
     </section>
 
     <section>
-      <h2>Project Visual</h2>
+      <h2>
+        Project Visual
+      </h2>
 
       <p>
-        The workflow below shows how a new client onboarding submission is
-        monitored, evaluated through routing logic, and directed to the
+        The workflow below shows how a new client
+        onboarding submission is monitored, evaluated
+        through routing logic, and directed to the
         appropriate operational team.
       </p>
 
       <div class="project-visual">
         <img
           src="client-onboarding-automation.png"
-          alt="Make.com client onboarding and conditional routing automation workflow"
+          alt="Client onboarding and conditional routing automation workflow"
           class="project-visual-image"
         >
       </div>
     </section>
 
     <section>
-      <h2>How the Automation Works</h2>
+      <h2>
+        How the Automation Works
+      </h2>
 
       <ol class="workflow-list">
+
         <li>
-          Google Sheets monitors the client onboarding submission source
-          for new records.
+          Google Sheets monitors the client onboarding
+          submission source for new records.
         </li>
 
         <li>
-          When a new submission is detected, Make.com retrieves the
+          When a new submission is detected, Make.com
+          retrieves the onboarding information.
+        </li>
+
+        <li>
+          A router evaluates the submission against
+          defined business rules.
+        </li>
+
+        <li>
+          The submission is directed into the
+          appropriate workflow path based on the type
+          of service or operational support required.
+        </li>
+
+        <li>
+          The appropriate internal team receives an
+          automated Gmail notification containing the
           onboarding information.
         </li>
 
         <li>
-          A router evaluates the submission against defined business rules.
-        </li>
-
-        <li>
-          The submission is directed into the appropriate workflow path
-          based on the type of service or operational support required.
-        </li>
-
-        <li>
-          The appropriate internal team receives an automated Gmail
-          notification containing the onboarding information.
-        </li>
-
-        <li>
-          The routing structure creates a more consistent handoff process
-          without requiring someone to manually review and forward every
+          The routing structure creates a more
+          consistent handoff process without requiring
+          someone to manually review and forward every
           submission.
         </li>
+
       </ol>
     </section>
 
     <section>
-      <h2>Routing Logic</h2>
+      <h2>
+        Routing Logic
+      </h2>
 
       <p>
-        The core of this automation is the routing layer. Instead of treating
-        every onboarding submission the same way, the workflow evaluates the
-        information and sends it to the team responsible for the next step.
+        The core of this automation is the routing
+        layer. Instead of treating every onboarding
+        submission the same way, the workflow
+        evaluates the information and sends it to the
+        team responsible for the next step.
       </p>
 
-      <ul class="routing-list">
+      <ul class="detail-list">
+
         <li>
-          AI consulting submissions are routed to the consulting team.
+          AI consulting submissions are routed to the
+          consulting team.
         </li>
 
         <li>
-          Digital advertising submissions are routed to advertising
-          operations.
+          Digital advertising submissions are routed
+          to advertising operations.
         </li>
 
         <li>
-          AI automation or implementation submissions are routed to the
-          implementation team.
+          AI automation or implementation submissions
+          are routed to the implementation team.
         </li>
+
       </ul>
 
       <p>
-        This approach allows one centralized onboarding process to support
-        multiple operational paths while keeping the logic consistent and
-        manageable.
+        This approach allows one centralized
+        onboarding process to support multiple
+        operational paths while keeping the logic
+        consistent and manageable.
       </p>
     </section>
 
     <section>
-      <h2>Tools &amp; Methods</h2>
+      <h2>
+        Tools &amp; Methods
+      </h2>
 
       <div class="tools">
-        <span class="tool">Make.com</span>
-        <span class="tool">Google Sheets</span>
-        <span class="tool">Gmail</span>
-        <span class="tool">Routers</span>
-        <span class="tool">Conditional Filters</span>
-        <span class="tool">Workflow Design</span>
-        <span class="tool">Business Rules</span>
-        <span class="tool">Process Mapping</span>
-        <span class="tool">Automation Testing</span>
-        <span class="tool">Quality Assurance</span>
+
+        <span class="tool">
+          Make.com
+        </span>
+
+        <span class="tool">
+          Google Sheets
+        </span>
+
+        <span class="tool">
+          Gmail
+        </span>
+
+        <span class="tool">
+          Routers
+        </span>
+
+        <span class="tool">
+          Conditional Filters
+        </span>
+
+        <span class="tool">
+          Workflow Design
+        </span>
+
+        <span class="tool">
+          Business Rules
+        </span>
+
+        <span class="tool">
+          Process Mapping
+        </span>
+
+        <span class="tool">
+          Automation Testing
+        </span>
+
+        <span class="tool">
+          Quality Assurance
+        </span>
+
       </div>
     </section>
 
     <section>
-      <h2>Challenges &amp; Problem Solving</h2>
+      <h2>
+        Challenges &amp; Problem Solving
+      </h2>
 
       <p>
-        One of the key considerations was making sure each submission
-        followed the correct routing path. A workflow can run successfully
-        from a technical perspective and still create operational problems
-        if the routing logic is incorrect.
+        One of the key considerations was making sure
+        each submission followed the correct routing
+        path. A workflow can run successfully from a
+        technical perspective and still create
+        operational problems if the routing logic is
+        incorrect.
       </p>
 
       <p>
-        Testing therefore focused on validating each route independently,
-        confirming that the correct conditions triggered the correct path,
-        and verifying that the appropriate team received the expected
-        notification.
+        Testing therefore focused on validating each
+        route independently, confirming that the
+        correct conditions triggered the correct path,
+        and verifying that the appropriate team
+        received the expected notification.
       </p>
 
       <p>
-        The workflow was structured so additional onboarding paths could be
-        added later without redesigning the entire process.
+        The workflow was structured so additional
+        onboarding paths could be added later without
+        redesigning the entire process.
       </p>
     </section>
 
     <section>
-      <h2>Business Value</h2>
+      <h2>
+        Business Value
+      </h2>
 
       <ul class="business-value">
+
         <li>
-          Reduces repetitive manual review and forwarding of onboarding
-          submissions.
+          Reduces repetitive manual review and
+          forwarding of onboarding submissions.
         </li>
 
         <li>
-          Creates a more consistent internal handoff process.
+          Creates a more consistent internal handoff
+          process.
         </li>
 
         <li>
-          Helps ensure onboarding information reaches the correct
-          operational team.
+          Helps ensure onboarding information reaches
+          the correct operational team.
         </li>
 
         <li>
-          Supports faster response times for new client submissions.
+          Supports faster response times for new
+          client submissions.
         </li>
 
         <li>
-          Reduces dependence on individual staff members to remember
-          routing requirements.
+          Reduces dependence on individual staff
+          members to remember routing requirements.
         </li>
 
         <li>
-          Creates a scalable framework that can support additional teams
-          or service categories.
+          Creates a scalable framework that can
+          support additional teams or service
+          categories.
         </li>
+
       </ul>
     </section>
 
     <section>
-      <h2>Skills Demonstrated</h2>
+      <h2>
+        Skills Demonstrated
+      </h2>
 
       <div class="skills">
-        <span class="skill">Operations Management</span>
-        <span class="skill">Process Improvement</span>
-        <span class="skill">Workflow Design</span>
-        <span class="skill">Conditional Logic</span>
-        <span class="skill">Business Rules</span>
-        <span class="skill">Cross-Functional Coordination</span>
-        <span class="skill">Automation</span>
-        <span class="skill">Testing</span>
-        <span class="skill">Quality Assurance</span>
-        <span class="skill">Digital Transformation</span>
+
+        <span class="skill">
+          Operations Management
+        </span>
+
+        <span class="skill">
+          Process Improvement
+        </span>
+
+        <span class="skill">
+          Workflow Design
+        </span>
+
+        <span class="skill">
+          Conditional Logic
+        </span>
+
+        <span class="skill">
+          Business Rules
+        </span>
+
+        <span class="skill">
+          Cross-Functional Coordination
+        </span>
+
+        <span class="skill">
+          Automation
+        </span>
+
+        <span class="skill">
+          Testing
+        </span>
+
+        <span class="skill">
+          Quality Assurance
+        </span>
+
+        <span class="skill">
+          Digital Transformation
+        </span>
+
       </div>
     </section>
 
-    <a class="button" href="index.html#projects">
+    <a
+      class="button"
+      href="index.html#projects"
+    >
       ← Back to Projects
     </a>
 
     <section class="case-navigation">
-      <h2>Explore More Case Studies</h2>
+
+      <h2>
+        Explore More Case Studies
+      </h2>
 
       <div class="case-links">
-        <a href="case-study-2.html">
-          Case Study 2 →
+
+        <a href="case-study-4.html">
+          Accounts Payable Vendor Validation →
         </a>
 
         <a href="case-study-3.html">
-          Case Study 3 →
+          Inventory Monitoring →
         </a>
+
+        <a href="case-study-2.html">
+          College Baseball Recruiting →
+        </a>
+
       </div>
+
+    </section>
+
+    <section class="case-contact">
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        Interested in discussing operations,
+        automation, process improvement, or
+        professional opportunities? I'd be happy
+        to connect.
+      </p>
+
+      <div class="case-contact-links">
+
+        <a
+          href="mailto:deannamcoffey@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          deannamcoffey@gmail.com
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/deannamcoffey"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a href="tel:+16175846587">
+          617-584-6587
+        </a>
+
+      </div>
+
+      <a
+        class="button"
+        href="https://calendly.com/deannamcoffey/15min"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Schedule a Conversation
+      </a>
+
     </section>
 
   </main>
 
   <footer>
-    © 2026 Deanna Coffey | Operations + Automation Portfolio
+    © 2026 Deanna Coffey |
+    Operations + Automation Portfolio
   </footer>
 
 </body>
-
 </html>
