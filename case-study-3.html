@@ -3,9 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Inventory Monitoring & Reorder Workflow | Deanna Coffey</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Inventory Monitoring & Reorder Workflow | Deanna Coffey
+  </title>
 
   <style>
     * {
@@ -136,13 +142,13 @@
     }
 
     .workflow-list,
-    .business-rules,
+    .detail-list,
     .business-value {
       padding-left: 25px;
     }
 
     .workflow-list li,
-    .business-rules li,
+    .detail-list li,
     .business-value li {
       margin-bottom: 12px;
     }
@@ -181,10 +187,14 @@
       padding: 12px 20px;
       border-radius: 7px;
       font-weight: 700;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
     .button:hover {
       background: #1d4ed8;
+      transform: translateY(-1px);
     }
 
     .case-navigation {
@@ -201,6 +211,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .case-links a {
@@ -210,6 +221,44 @@
     }
 
     .case-links a:hover {
+      text-decoration: underline;
+    }
+
+    .case-contact {
+      margin-top: 70px;
+      padding: 45px 30px;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+    }
+
+    .case-contact h2 {
+      margin-bottom: 12px;
+    }
+
+    .case-contact p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: #64748b;
+    }
+
+    .case-contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin-bottom: 25px;
+    }
+
+    .case-contact-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .case-contact-links a:hover {
       text-decoration: underline;
     }
 
@@ -244,6 +293,15 @@
       .case-links {
         flex-direction: column;
       }
+
+      .case-contact {
+        padding: 35px 20px;
+      }
+
+      .case-contact-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -251,27 +309,41 @@
 <body>
 
   <nav>
-    <div class="logo">Deanna Coffey</div>
+    <div class="logo">
+      Deanna Coffey
+    </div>
 
     <div>
-      <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
 
-      <div class="eyebrow">Case Study 03</div>
+      <div class="eyebrow">
+        Case Study 03
+      </div>
 
-      <h1>Inventory Monitoring &amp; Reorder Workflow</h1>
+      <h1>
+        Inventory Monitoring &amp; Reorder Workflow
+      </h1>
 
       <p class="hero-description">
-        Designed an automated inventory workflow that monitors new orders,
-        locates the corresponding inventory record, updates stock quantities,
-        evaluates low-inventory conditions, and triggers automated
-        notifications when follow-up is required.
+        Built an automated inventory workflow that monitors
+        new orders, updates stock levels, identifies
+        low-inventory conditions, and triggers automated
+        notifications through connected workflows.
       </p>
 
     </div>
@@ -280,46 +352,62 @@
   <main>
 
     <section>
-      <h2>Project Overview</h2>
+      <h2>
+        Project Overview
+      </h2>
 
       <p>
-        Inventory monitoring can become time-consuming when employees must
-        repeatedly review spreadsheets, calculate updated quantities, and
-        manually identify items that require attention.
+        Inventory processes can become difficult to manage
+        when order activity and stock levels are tracked
+        manually. Each order may require someone to locate
+        the item, calculate the remaining quantity, update
+        the inventory record, and determine whether the new
+        balance requires attention.
       </p>
 
       <p>
-        This project demonstrates how an automated workflow can monitor new
-        order activity, find the appropriate inventory record, update the
-        remaining quantity, evaluate business rules, and trigger a secondary
-        notification workflow when inventory reaches a defined condition.
+        This project demonstrates an automated workflow
+        that monitors new orders, updates inventory
+        quantities, evaluates low-stock conditions, and
+        sends a notification when inventory requires
+        follow-up.
       </p>
 
       <div class="summary-grid">
 
         <div class="summary-card">
-          <h3>Challenge</h3>
+          <h3>
+            Challenge
+          </h3>
+
           <p>
-            Reduce repetitive inventory monitoring while improving the
-            consistency of stock updates and low-inventory identification.
+            Reduce manual inventory updates and make
+            low-stock conditions easier to identify.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Solution</h3>
+          <h3>
+            Solution
+          </h3>
+
           <p>
-            Build a connected Make.com workflow that monitors orders,
-            searches inventory records, updates quantities, and triggers
-            notifications based on defined conditions.
+            Connect Google Sheets, Make.com, HTTP,
+            webhooks, and Gmail in a parent/child
+            automation design.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Outcome</h3>
+          <h3>
+            Outcome
+          </h3>
+
           <p>
-            Created a repeatable process that improves inventory visibility,
-            reduces manual review, and supports faster response to stock
-            conditions requiring attention.
+            Created a repeatable process that updates
+            inventory automatically and notifies the
+            appropriate person when stock falls below a
+            defined level.
           </p>
         </div>
 
@@ -327,12 +415,16 @@
     </section>
 
     <section>
-      <h2>Project Visual</h2>
+      <h2>
+        Project Visual
+      </h2>
 
       <p>
-        The workflow below shows how new order data is monitored, inventory
-        quantities are located and updated, and low-inventory conditions
-        trigger a secondary notification workflow.
+        The workflow below shows the main inventory
+        scenario that monitors new orders, calculates
+        inventory changes, updates the inventory record,
+        and triggers a secondary notification workflow
+        when stock is low.
       </p>
 
       <div class="project-visual">
@@ -345,214 +437,350 @@
     </section>
 
     <section>
-      <h2>How the Automation Works</h2>
+      <h2>
+        How the Automation Works
+      </h2>
 
       <ol class="workflow-list">
 
         <li>
-          Google Sheets monitors for new order records.
+          Google Sheets watches the New Orders sheet for
+          newly added order records.
         </li>
 
         <li>
-          When a new order is detected, the workflow searches the inventory
-          data to locate the matching item and current quantity.
-        </li>
-
-        <li>
-          A variable is created to calculate or prepare the updated inventory
+          The workflow searches order and inventory
+          information to identify the item and ordered
           quantity.
         </li>
 
         <li>
-          The corresponding Google Sheets inventory record is updated with
-          the new quantity.
+          A Tools step calculates and stores the updated
+          inventory value.
         </li>
 
         <li>
-          The updated inventory level is evaluated against a defined
-          low-inventory condition.
+          Google Sheets updates the corresponding
+          inventory row with the new stock level.
         </li>
 
         <li>
-          When the condition is met, an HTTP request triggers a secondary
-          workflow.
+          A low-inventory filter determines whether the
+          updated quantity requires attention.
         </li>
 
         <li>
-          A webhook receives the request and starts the notification process.
+          If the condition is met, an HTTP POST sends
+          the low-stock information to a connected
+          webhook.
         </li>
 
         <li>
-          Gmail sends an automated message so the appropriate person can
-          review the inventory condition and take the next action.
+          The secondary Make.com scenario receives the
+          webhook data.
+        </li>
+
+        <li>
+          Gmail sends an automated low-inventory
+          notification.
         </li>
 
       </ol>
     </section>
 
     <section>
-      <h2>Business Rules &amp; Exception Handling</h2>
+      <h2>
+        Business Rules
+      </h2>
 
-      <p>
-        The workflow is designed around operational rules rather than simply
-        moving information between applications.
-      </p>
-
-      <ul class="business-rules">
+      <ul class="detail-list">
 
         <li>
-          A new order must be detected before inventory processing begins.
+          Only new order records should trigger the
+          inventory-update process.
         </li>
 
         <li>
-          The workflow must locate the correct inventory record before
-          changing the quantity.
+          The ordered item must be matched to the
+          correct inventory record.
         </li>
 
         <li>
-          Inventory quantities are updated using the order information
-          captured by the workflow.
+          The ordered quantity is used to calculate the
+          remaining stock level.
         </li>
 
         <li>
-          The notification workflow is triggered only when inventory meets
-          the defined low-stock condition.
+          The inventory record is updated before the
+          low-stock rule is evaluated.
         </li>
 
         <li>
-          The notification process is separated from the primary inventory
-          workflow through HTTP and webhook connections.
+          The secondary notification workflow runs only
+          when the low-inventory condition is met.
         </li>
 
       </ul>
+    </section>
+
+    <section>
+      <h2>
+        Parent / Child Workflow Design
+      </h2>
 
       <p>
-        Separating the primary inventory process from the notification
-        process creates a more modular design and makes future changes easier
-        to manage.
+        The solution separates inventory processing from
+        notification delivery. The main scenario handles
+        the order and inventory logic, while a second
+        scenario receives low-stock information through a
+        webhook and sends the Gmail alert.
+      </p>
+
+      <p>
+        This design keeps each workflow focused and makes
+        it easier to expand the notification process later
+        without redesigning the inventory logic.
       </p>
     </section>
 
     <section>
-      <h2>Tools &amp; Methods</h2>
+      <h2>
+        Tools &amp; Methods
+      </h2>
 
       <div class="tools">
-        <span class="tool">Make.com</span>
-        <span class="tool">Google Sheets</span>
-        <span class="tool">Variables</span>
-        <span class="tool">Filters</span>
-        <span class="tool">HTTP</span>
-        <span class="tool">Webhooks</span>
-        <span class="tool">Gmail</span>
-        <span class="tool">Business Rules</span>
-        <span class="tool">Workflow Design</span>
-        <span class="tool">Automation Testing</span>
+
+        <span class="tool">
+          Make.com
+        </span>
+
+        <span class="tool">
+          Google Sheets
+        </span>
+
+        <span class="tool">
+          Webhooks
+        </span>
+
+        <span class="tool">
+          HTTP
+        </span>
+
+        <span class="tool">
+          Gmail
+        </span>
+
+        <span class="tool">
+          Tools / Variables
+        </span>
+
+        <span class="tool">
+          Filters
+        </span>
+
+        <span class="tool">
+          Workflow Design
+        </span>
+
+        <span class="tool">
+          Automation Testing
+        </span>
+
       </div>
     </section>
 
     <section>
-      <h2>Challenges &amp; Problem Solving</h2>
+      <h2>
+        Challenges &amp; Problem Solving
+      </h2>
 
       <p>
-        One of the key challenges was ensuring that each new order updated
-        the correct inventory record before any low-inventory condition was
-        evaluated.
+        One challenge was ensuring that each order
+        updated the correct inventory record and that
+        the remaining quantity was calculated before
+        the low-stock condition was evaluated.
       </p>
 
       <p>
-        Testing needed to cover multiple scenarios, including different order
-        quantities, normal stock levels, low-stock conditions, and the
-        connection between the primary inventory workflow and the secondary
-        notification workflow.
-      </p>
-
-      <p>
-        The workflow was also structured so that notification logic could be
-        changed or expanded independently from the primary inventory process.
-        This creates a more flexible foundation for future automation.
+        Separating the low-inventory notification into
+        a webhook-driven secondary scenario also
+        required testing the data passed between the
+        two workflows and confirming that notifications
+        were triggered only when the defined condition
+        was met.
       </p>
     </section>
 
     <section>
-      <h2>Business Value</h2>
+      <h2>
+        Business Value
+      </h2>
 
       <ul class="business-value">
 
         <li>
-          Reduces repetitive manual inventory monitoring.
+          Reduces repetitive manual inventory updates.
         </li>
 
         <li>
-          Improves the consistency of inventory quantity updates.
+          Improves consistency in stock-level
+          calculations.
         </li>
 
         <li>
-          Identifies low-inventory conditions more quickly.
+          Provides faster visibility into low-inventory
+          conditions.
         </li>
 
         <li>
-          Applies inventory business rules consistently.
+          Creates a reusable notification workflow
+          through webhook integration.
         </li>
 
         <li>
-          Improves visibility into inventory conditions requiring attention.
+          Supports more proactive inventory management
+          and reorder planning.
         </li>
 
         <li>
-          Reduces reliance on employees to manually identify stock issues.
-        </li>
-
-        <li>
-          Creates a modular workflow that can support additional alerts,
-          rules, or integrations.
+          Demonstrates integration between spreadsheet
+          data, HTTP requests, webhooks, and email.
         </li>
 
       </ul>
     </section>
 
     <section>
-      <h2>Skills Demonstrated</h2>
+      <h2>
+        Skills Demonstrated
+      </h2>
 
       <div class="skills">
-        <span class="skill">Operations Management</span>
-        <span class="skill">Inventory Operations</span>
-        <span class="skill">Process Improvement</span>
-        <span class="skill">Workflow Design</span>
-        <span class="skill">Business Rules</span>
-        <span class="skill">Conditional Logic</span>
-        <span class="skill">Exception Management</span>
-        <span class="skill">Automation</span>
-        <span class="skill">Testing</span>
-        <span class="skill">Quality Assurance</span>
+
+        <span class="skill">
+          Inventory Operations
+        </span>
+
+        <span class="skill">
+          Process Improvement
+        </span>
+
+        <span class="skill">
+          Workflow Design
+        </span>
+
+        <span class="skill">
+          Google Sheets
+        </span>
+
+        <span class="skill">
+          Webhooks
+        </span>
+
+        <span class="skill">
+          HTTP Integration
+        </span>
+
+        <span class="skill">
+          Business Rules
+        </span>
+
+        <span class="skill">
+          Automation Testing
+        </span>
+
+        <span class="skill">
+          Exception Monitoring
+        </span>
+
       </div>
     </section>
 
-    <a class="button" href="index.html#projects">
+    <a
+      class="button"
+      href="index.html#projects"
+    >
       ← Back to Projects
     </a>
 
     <section class="case-navigation">
-      <h2>Explore More Case Studies</h2>
+
+      <h2>
+        Explore More Case Studies
+      </h2>
 
       <div class="case-links">
 
         <a href="case-study-1.html">
-          ← Case Study 1
+          Client Onboarding →
+        </a>
+
+        <a href="case-study-4.html">
+          Accounts Payable Vendor Validation →
         </a>
 
         <a href="case-study-2.html">
-          Case Study 2 →
+          College Baseball Recruiting →
         </a>
 
       </div>
+
+    </section>
+
+    <section class="case-contact">
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        Interested in discussing operations,
+        automation, process improvement, or
+        professional opportunities? I'd be happy
+        to connect.
+      </p>
+
+      <div class="case-contact-links">
+
+        <a
+          href="mailto:deannamcoffey@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          deannamcoffey@gmail.com
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/deannamcoffey"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a href="tel:+16175846587">
+          617-584-6587
+        </a>
+
+      </div>
+
+      <a
+        class="button"
+        href="https://calendly.com/deannamcoffey/15min"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Schedule a Conversation
+      </a>
+
     </section>
 
   </main>
 
   <footer>
-    © 2026 Deanna Coffey | Operations + Automation Portfolio
+    © 2026 Deanna Coffey |
+    Operations + Automation Portfolio
   </footer>
 
 </body>
-
 </html>
