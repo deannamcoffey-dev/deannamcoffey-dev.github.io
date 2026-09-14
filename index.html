@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Deanna Coffey - Operations, Automation, AI Workflows and Digital Transformation Portfolio">
+
+  <meta
+    name="description"
+    content="Deanna Coffey - Operations, Automation, AI Workflows and Digital Transformation Portfolio"
+  >
+
   <title>Deanna Coffey | Operations + Automation</title>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+    @import url(
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap'
+    );
 
     /* =========================
        RESET / BASE
     ========================= */
 
-    * {S
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -21,7 +30,7 @@
     html {
       scroll-behavior: smooth;
     }
-F
+
     body {
       font-family: 'Inter', Arial, sans-serif;
       color: #1E293B;
@@ -55,14 +64,14 @@ F
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(8px);
     }
 
     .logo {
       font-size: 20px;
       font-weight: 800;
-      letter-spacing: -.3px;
+      letter-spacing: -0.3px;
     }
 
     nav a {
@@ -71,7 +80,7 @@ F
       margin-left: 28px;
       font-size: 14px;
       font-weight: 600;
-      transition: color .2s ease;
+      transition: color 0.2s ease;
     }
 
     nav a:hover {
@@ -86,7 +95,7 @@ F
       background:
         radial-gradient(
           circle at top right,
-          rgba(37, 99, 235, .13),
+          rgba(37, 99, 235, 0.13),
           transparent 32%
         ),
         linear-gradient(
@@ -94,9 +103,11 @@ F
           #F8FAFC 0%,
           #FFFFFF 100%
         );
+
       padding: 120px 8% 110px;
       text-align: center;
       border-bottom: 1px solid #E2E8F0;
+      animation: heroFadeUp 0.7s ease-out both;
     }
 
     .hero-label {
@@ -138,6 +149,18 @@ F
       color: #64748B;
     }
 
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     /* =========================
        BUTTONS
     ========================= */
@@ -153,18 +176,19 @@ F
       font-size: 15px;
       font-weight: 700;
       border: 2px solid #2563EB;
-      box-shadow: 0 5px 15px rgba(37,99,235,.18);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.18);
+
       transition:
-        background .2s ease,
-        transform .2s ease,
-        box-shadow .2s ease;
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .button:hover {
       background: #1D4ED8;
       border-color: #1D4ED8;
       transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(37,99,235,.22);
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
     }
 
     .button.secondary {
@@ -222,11 +246,12 @@ F
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
       border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(15,23,42,.04);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+
       transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
     }
 
     .service::before {
@@ -243,7 +268,7 @@ F
     .service:hover {
       transform: translateY(-5px);
       border-color: #BFDBFE;
-      box-shadow: 0 12px 28px rgba(15,23,42,.08);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     }
 
     .service h3 {
@@ -275,17 +300,18 @@ F
       padding: 34px;
       border-radius: 12px;
       border: 1px solid #E2E8F0;
-      box-shadow: 0 4px 15px rgba(15,23,42,.05);
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+
       transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
     }
 
     .project:hover {
       transform: translateY(-5px);
       border-color: #BFDBFE;
-      box-shadow: 0 12px 30px rgba(15,23,42,.08);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
     }
 
     .project-number {
@@ -325,12 +351,18 @@ F
       font-weight: 700;
       text-decoration: none;
       display: inline-block;
-      transition: color .2s ease;
+
+      transition:
+        color 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease;
     }
 
     .project-link:hover {
       color: #1D4ED8;
       text-decoration: underline;
+      opacity: 0.85;
+      transform: translateX(2px);
     }
 
     /* =========================
@@ -360,6 +392,7 @@ F
           #0B1F33,
           #132E4C
         );
+
       color: #FFFFFF;
     }
 
@@ -370,9 +403,9 @@ F
 
     .skills {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 35px;
-      max-width: 1100px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 30px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -410,6 +443,24 @@ F
     }
 
     /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
        FOOTER
     ========================= */
 
@@ -419,21 +470,30 @@ F
       color: #94A3B8;
       padding: 28px;
       font-size: 13px;
-      border-top: 1px solid rgba(255,255,255,.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     /* =========================
        TABLET
     ========================= */
 
-    @media (max-width: 900px) {
-      .services,
+    @media (max-width: 1050px) {
       .skills {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .services {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .projects {
         grid-template-columns: 1fr;
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -478,335 +538,465 @@ F
         padding: 27px;
       }
     }
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-<nav>
-  <div class="logo">Deanna Coffey</div>
+  <nav>
+    <div class="logo">Deanna Coffey</div>
 
-  <div>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<header class="hero">
-  <div class="hero-label">OPERATIONS + AUTOMATION</div>
-
-  <h1>Building Smarter, More Scalable Operations</h1>
-
-  <h2>
-    Improving business processes through AI, automation,
-    systems and smarter workflows.
-  </h2>
-
-  <p>
-    I combine hands-on operations leadership with modern automation
-    and AI tools to design practical, efficient and scalable
-    business processes.
-  </p>
-
-  <a class="button" href="#projects">View My Projects</a>
-  <a class="button secondary" href="#about">About Me</a>
-</header>
-
-<!-- =========================
-     WHAT I DO
-========================= -->
-
-<section>
-  <h2 class="section-title">What I Do</h2>
-
-  <p class="section-intro">
-    I approach automation from an operations perspective:
-    understand the business problem first, then determine
-    how technology can improve the process.
-  </p>
-
-  <div class="services">
-    <div class="service">
-      <h3>Operations</h3>
-      <p>
-        Business operations, process design, vendor management,
-        workflow development and operational scaling.
-      </p>
+  <header class="hero">
+    <div class="hero-label">
+      OPERATIONS + AUTOMATION
     </div>
 
-    <div class="service">
-      <h3>Workflow Automation</h3>
-      <p>
-        Designing automated workflows that reduce repetitive
-        work and improve consistency.
-      </p>
-    </div>
+    <h1>
+      Building Smarter, More Scalable Operations
+    </h1>
 
-    <div class="service">
-      <h3>AI & Digital Transformation</h3>
-      <p>
-        Applying AI and modern digital tools to improve
-        existing business processes.
-      </p>
-    </div>
+    <h2>
+      Improving business processes through AI, automation,
+      systems and smarter workflows.
+    </h2>
 
-    <div class="service">
-      <h3>Systems & Data</h3>
-      <p>
-        Connecting business systems, organizing data and
-        creating more efficient information flows.
-      </p>
-    </div>
-  </div>
-</section>
+    <p>
+      I combine hands-on operations leadership with modern automation
+      and AI tools to design practical, efficient and scalable
+      business processes.
+    </p>
 
-<!-- =========================
-     PROJECTS
-========================= -->
+    <a class="button" href="#projects">
+      View My Projects
+    </a>
 
-<section class="projects-section" id="projects">
-  <h2 class="section-title">Featured Projects</h2>
+    <a class="button secondary" href="#about">
+      About Me
+    </a>
+  </header>
 
-  <p class="section-intro">
-    Selected projects demonstrating how I combine operations,
-    automation and technology to solve business problems.
-  </p>
+  <!-- =========================
+       WHAT I DO
+  ========================= -->
 
-  <div class="projects">
+  <section class="reveal">
+    <h2 class="section-title">
+      What I Do
+    </h2>
 
-    <!-- PROJECT 1 -->
+    <p class="section-intro">
+      I approach automation from an operations perspective:
+      understand the business problem first, then determine
+      how technology can improve the process.
+    </p>
 
-    <div class="project">
-      <div class="project-number">CASE STUDY 01</div>
+    <div class="services">
 
-    <h3>Client Onboarding &amp; Conditional Routing Automation</h3>
+      <div class="service">
+        <h3>Operations</h3>
 
-<p>
-  Designed an automated onboarding workflow that monitors new
-  submissions, applies routing logic, and directs each client
-  to the appropriate operational team.
-</p>
-
-<div class="tools">
-  Make • Google Sheets • Gmail • Routing Logic • Process Improvement
-</div>
-
-      <a class="project-link" href="case-study-4.html">
-        View Case Study →
-      </a>
-    </div>
-
-    <!-- PROJECT 2 -->
-<!-- PROJECT 2 -->
-
-<div class="project">
-  <div class="project-number">CASE STUDY 02</div>
-
-  <h3>Accounts Payable Vendor Validation</h3>
-
-  <p>
-    Designed an automated workflow for extracting invoice
-    information, validating vendors, applying financial
-    controls, and routing exceptions through business rules.
-  </p>
-
-  <div class="tools">
-    QuickBooks • Make • JSON • Gmail • Google Sheets • Webhooks
-  </div>
-
-  <a class="project-link" href="case-study-4.html">
-    View Case Study →
-  </a>
-</div>
-    <!-- PROJECT 3 -->
-
-    <div class="project">
-      <div class="project-number">CASE STUDY 03</div>
-
-      <h3>Inventory Monitoring & Reorder Workflow</h3>
-
-      <p>
-        Built an automated inventory workflow that updates
-        stock levels, identifies reorder conditions and routes
-        notifications through a parent/child automation design.
-      </p>
-
-      <div class="tools">
-        Make • Webhooks • HTTP • Google Sheets • Gmail
+        <p>
+          Business operations, process design, vendor management,
+          workflow development and operational scaling.
+        </p>
       </div>
 
-      <a class="project-link" href="case-study-3.html">
-        View Case Study →
-      </a>
+      <div class="service">
+        <h3>Workflow Automation</h3>
+
+        <p>
+          Designing automated workflows that reduce repetitive
+          work and improve consistency.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>AI &amp; Digital Transformation</h3>
+
+        <p>
+          Applying AI and modern digital tools to improve
+          existing business processes.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Systems &amp; Data</h3>
+
+        <p>
+          Connecting business systems, organizing data and
+          creating more efficient information flows.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-  <!-- PROJECT 4 -->
+  <!-- =========================
+       PROJECTS
+  ========================= -->
 
-<div class="project">
-  <div class="project-number">CASE STUDY 04</div>
+  <section class="projects-section reveal" id="projects">
+    <h2 class="section-title">
+      Featured Projects
+    </h2>
 
-  <h3>College Baseball Recruiting Automation</h3>
+    <p class="section-intro">
+      Selected projects demonstrating how I combine operations,
+      automation and technology to solve business problems.
+    </p>
 
-  <p>
-    Designed a workflow that transforms incoming recruiting
-    emails into organized player records for easier review
-    and recruiting management.
-  </p>
+    <div class="projects">
 
-  <div class="tools">
-    Make • Gmail • Regex • Google Sheets • Apps Script
-  </div>
+      <!-- PROJECT 1 -->
 
-  <a class="project-link" href="case-study-2.html">
-    View Case Study →
-  </a>
-</div>
+      <div class="project">
+        <div class="project-number">
+          CASE STUDY 01
+        </div>
 
-  </div>
-</section>
+        <h3>
+          Client Onboarding &amp; Conditional Routing Automation
+        </h3>
 
-<!-- =========================
-     ABOUT
-========================= -->
+        <p>
+          Designed an automated onboarding workflow that monitors new
+          submissions, applies routing logic, and directs each client
+          to the appropriate operational team.
+        </p>
 
-<section id="about">
-  <h2 class="section-title">About Me</h2>
+        <div class="tools">
+          Make • Google Sheets • Gmail • Routing Logic • Process Improvement
+        </div>
 
-  <div class="about">
-  <p>
-    I’m an operations leader with 20+ years of hands-on experience
-    managing the day-to-day functions that keep businesses running
-    effectively. My background includes payroll, vendor payments,
-    financial processes, inventory control, budgeting, compliance,
-    systems, process improvement, and leadership support.
-  </p>
+        <a
+          class="project-link"
+          href="case-study-1.html"
+        >
+          View Case Study →
+        </a>
+      </div>
 
-  <p>
-    My career spans both large organizations and startup environments.
-    Earlier in my career, I managed pharmaceutical distribution
-    operations at H.D. Smith, with responsibilities across payroll,
-    inventory, budgets, compliance, vendor management, and process
-    improvement. More recently, as Director of Operations at Best Agent
-    Today, I’ve taken on a broad operational role that includes payroll,
-    vendor payments, systems and technology, cross-functional
-    coordination, and leadership support.
-  </p>
+      <!-- PROJECT 2 -->
 
-  <p>
-    What I enjoy most is finding better ways to work. I combine
-    practical operations experience with process improvement,
-    automation, and AI tools to reduce repetitive work, improve
-    workflows, and help organizations operate more efficiently.
-  </p>
-</div>
-</section>
+      <div class="project">
+        <div class="project-number">
+          CASE STUDY 02
+        </div>
 
-<!-- =========================
-     SKILLS
-========================= -->
+        <h3>
+          Accounts Payable Vendor Validation
+        </h3>
 
-<section class="skills-section" id="skills">
-  <h2 class="section-title">Skills &amp; Tools</h2>
+        <p>
+          Designed an automated workflow for extracting invoice
+          information, validating vendors, applying financial
+          controls, and routing exceptions through business rules.
+        </p>
 
-  <div class="skills">
+        <div class="tools">
+          QuickBooks • Make • JSON • Gmail • Google Sheets • Webhooks
+        </div>
 
-    <div>
-      <h3>Operations &amp; Management</h3>
+        <a
+          class="project-link"
+          href="case-study-4.html"
+        >
+          View Case Study →
+        </a>
+      </div>
+
+      <!-- PROJECT 3 -->
+
+      <div class="project">
+        <div class="project-number">
+          CASE STUDY 03
+        </div>
+
+        <h3>
+          Inventory Monitoring &amp; Reorder Workflow
+        </h3>
+
+        <p>
+          Built an automated inventory workflow that monitors new orders,
+          updates stock levels, identifies low-inventory conditions, and
+          triggers automated notifications through connected workflows.
+        </p>
+
+        <div class="tools">
+          Make • Webhooks • HTTP • Google Sheets • Gmail
+        </div>
+
+        <a
+          class="project-link"
+          href="case-study-3.html"
+        >
+          View Case Study →
+        </a>
+      </div>
+
+      <!-- PROJECT 4 -->
+
+      <div class="project">
+        <div class="project-number">
+          CASE STUDY 04
+        </div>
+
+        <h3>
+          College Baseball Recruiting Automation
+        </h3>
+
+        <p>
+          Designed a workflow that transforms incoming recruiting
+          emails into organized player records for easier review
+          and recruiting management.
+        </p>
+
+        <div class="tools">
+          Make • Gmail • Regex • Google Sheets • Apps Script
+        </div>
+
+        <a
+          class="project-link"
+          href="case-study-2.html"
+        >
+          View Case Study →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section class="reveal" id="about">
+    <h2 class="section-title">
+      About Me
+    </h2>
+
+    <div class="about">
+
       <p>
-        Operations Management<br>
-        Process Improvement<br>
-        Workflow Design<br>
-        Vendor Management<br>
-        Operational Scaling<br>
-        Project Management
+        I’m an operations leader with 20+ years of hands-on experience
+        managing the day-to-day functions that keep businesses running
+        effectively. My background includes payroll, vendor payments,
+        financial processes, inventory control, budgeting, compliance,
+        systems, process improvement, and leadership support.
       </p>
-    </div>
 
-    <div>
-      <h3>Automation &amp; Integration</h3>
       <p>
-        Make<br>
-        Zapier<br>
-        Webhooks<br>
-        HTTP / APIs<br>
-        JSON<br>
-        Regex
+        My career spans both large organizations and startup environments.
+        Earlier in my career, I managed pharmaceutical distribution
+        operations at H.D. Smith, with responsibilities across payroll,
+        inventory, budgets, compliance, vendor management, and process
+        improvement. More recently, as Director of Operations at Best Agent
+        Today, I’ve taken on a broad operational role that includes payroll,
+        vendor payments, systems and technology, cross-functional
+        coordination, and leadership support.
       </p>
-    </div>
 
-    <div>
-      <h3>AI &amp; Productivity</h3>
       <p>
-        ChatGPT<br>
-        Gemini<br>
-        Prompt Engineering<br>
-        AI-Assisted Workflows<br>
-        Gamma
+        What I enjoy most is finding better ways to work. I combine
+        practical operations experience with process improvement,
+        automation, and AI tools to reduce repetitive work, improve
+        workflows, and help organizations operate more efficiently.
       </p>
+
     </div>
+  </section>
 
-    <div>
-      <h3>Business &amp; Operations Systems</h3>
-      <p>
-        QuickBooks<br>
-        ADP<br>
-        Basecamp<br>
-        Mailchimp<br>
-        Google Sheets<br>
-        Apps Script<br>
-        GA4<br>
-        Monday.com<br>
-        Supabase
-      </p>
+  <!-- =========================
+       SKILLS
+  ========================= -->
+
+  <section class="skills-section reveal" id="skills">
+    <h2 class="section-title">
+      Skills &amp; Tools
+    </h2>
+
+    <div class="skills">
+
+      <div>
+        <h3>
+          Operations &amp; Management
+        </h3>
+
+        <p>
+          Operations Management<br>
+          Process Improvement<br>
+          Workflow Design<br>
+          Vendor Management<br>
+          Operational Scaling<br>
+          Project Management
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          Automation &amp; Integration
+        </h3>
+
+        <p>
+          Make<br>
+          Zapier<br>
+          Webhooks<br>
+          HTTP / APIs<br>
+          JSON<br>
+          Regex
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          AI &amp; Productivity
+        </h3>
+
+        <p>
+          ChatGPT<br>
+          Gemini<br>
+          Prompt Engineering<br>
+          AI-Assisted Workflows<br>
+          Gamma
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          Business &amp; Operations Systems
+        </h3>
+
+        <p>
+          QuickBooks<br>
+          ADP<br>
+          Basecamp<br>
+          Mailchimp<br>
+          Google Sheets<br>
+          Apps Script<br>
+          GA4<br>
+          Monday.com<br>
+          Supabase
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          Technical &amp; Development
+        </h3>
+
+        <p>
+          GitHub<br>
+          HTML
+        </p>
+      </div>
+
     </div>
+  </section>
 
-    <div>
-      <h3>Technical &amp; Development</h3>
-      <p>
-        GitHub<br>
-        HTML
-      </p>
-    </div>
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
-  </div>
-</section>
-</section>
+  <section class="contact reveal" id="contact">
+    <h2 class="section-title">
+      Let's Connect
+    </h2>
 
-<!-- =========================
-     CONTACT
-========================= -->
+    <p>
+      Interested in discussing operations, automation,
+      process improvement or digital transformation opportunities?
+      I'd be happy to connect.
+    </p>
 
-<section class="contact" id="contact">
-  <h2 class="section-title">Let's Connect</h2>
+    <a
+      class="button"
+      href="contact.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Contact Me
+    </a>
+  </section>
 
-  <p>
-    Interested in discussing operations, automation,
-    process improvement or digital transformation opportunities?
-    I'd be happy to connect.
-  </p>
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-<a class="button" href="contact.html" target="_blank" rel="noopener noreferrer">
-    Contact Me
-  </a>
-</section>
+  <footer>
+    © 2026 Deanna Coffey | Operations + Automation Portfolio
+  </footer>
 
-<!-- =========================
-     FOOTER
-========================= -->
+  <!-- =========================
+       SCROLL ANIMATION
+  ========================= -->
 
-<footer>
-  © 2026 Deanna Coffey | Operations + Automation Portfolio
-</footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if (!("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+      revealElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
 
 </body>
+
 </html>
