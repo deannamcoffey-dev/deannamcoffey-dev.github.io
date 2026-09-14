@@ -271,8 +271,9 @@
       <p class="hero-description">
         Designed an automated accounts payable workflow that receives invoice
         information, validates vendors against an approved vendor master,
-        applies invoice business rules, detects exceptions, and routes
-        financial information for review or processing.
+        applies invoice business rules, detects exceptions, and routes approved
+        financial information into QuickBooks Online for accounts payable
+        processing.
       </p>
 
     </div>
@@ -294,8 +295,8 @@
         This project demonstrates how automation can apply those controls
         consistently. Invoice data enters the workflow, vendor information is
         validated against an approved vendor master, invoice requirements are
-        checked, and the transaction is routed either to an approved path or
-        an exception-review path.
+        checked, and the transaction is routed either to an exception-review
+        path or into QuickBooks Online for accounts payable processing.
       </p>
 
       <div class="summary-grid">
@@ -304,7 +305,7 @@
           <h3>Challenge</h3>
           <p>
             Reduce repetitive AP validation work while maintaining consistent
-            vendor and invoice controls.
+            vendor, invoice, and financial-system controls.
           </p>
         </div>
 
@@ -312,15 +313,17 @@
           <h3>Solution</h3>
           <p>
             Build a Make.com workflow using webhooks, JSON, Google Sheets,
-            business rules, routers, filters, and Gmail notifications.
+            business rules, routers, filters, QuickBooks Online, and Gmail
+            notifications.
           </p>
         </div>
 
         <div class="summary-card">
           <h3>Outcome</h3>
           <p>
-            Created a repeatable validation process that separates approved
-            invoices from exceptions requiring human review.
+            Created a repeatable validation process that separates exceptions
+            from approved invoices and prepares validated transactions for
+            processing in QuickBooks Online.
           </p>
         </div>
 
@@ -333,13 +336,14 @@
       <p>
         The workflow below illustrates how invoice information enters the
         automation, moves through vendor and invoice validation, and is routed
-        to either an approved processing path or an exception-review path.
+        either to QuickBooks Online for processing or to an exception-review
+        path.
       </p>
 
       <div class="project-visual">
         <img
           src="accounts-payable-vendor-validation.png"
-          alt="Accounts payable vendor and invoice validation automation workflow"
+          alt="Accounts payable vendor validation workflow with QuickBooks Online integration"
           class="project-visual-image"
         >
       </div>
@@ -386,8 +390,13 @@
         </li>
 
         <li>
-          Approved invoices are added to the Invoice Log with an approved
-          validation status.
+          Approved invoice data is passed to the QuickBooks Online module for
+          accounts payable processing.
+        </li>
+
+        <li>
+          The approved transaction is recorded in the Invoice Log with its
+          validation and processing status.
         </li>
 
         <li>
@@ -403,16 +412,22 @@
 
       <p>
         The workflow applies several validation rules before an invoice can
-        move to the approved path.
+        move to the QuickBooks Online processing path.
       </p>
 
       <ul class="business-rules">
 
-        <li>The Vendor ID must exist in the approved Vendor Master.</li>
+        <li>
+          The Vendor ID must exist in the approved Vendor Master.
+        </li>
 
-        <li>The vendor must have an Active status.</li>
+        <li>
+          The vendor must have an Active status.
+        </li>
 
-        <li>Required invoice information must be present.</li>
+        <li>
+          Required invoice information must be present.
+        </li>
 
         <li>
           If the vendor requires a purchase order, a PO number must be
@@ -426,27 +441,53 @@
 
         <li>
           Only invoices that pass all required validation rules are routed to
-          the approved path.
+          the QuickBooks Online processing step.
         </li>
 
       </ul>
     </section>
 
     <section>
+      <h2>QuickBooks Online Integration</h2>
+
+      <p>
+        QuickBooks Online is incorporated into the approved processing path so
+        validated accounts payable information can move from the automation
+        workflow into the accounting system.
+      </p>
+
+      <p>
+        Before financial information reaches QuickBooks, the workflow verifies
+        vendor status, required invoice fields, purchase order requirements,
+        and potential duplicate invoices. This helps keep validation logic
+        upstream of the accounting-system step.
+      </p>
+
+      <p>
+        Integrating QuickBooks with Make.com demonstrates how operational
+        workflows can connect financial controls with accounting-system
+        processing while preserving an exception path for transactions that
+        require human review.
+      </p>
+    </section>
+
+    <section>
       <h2>Exception Handling</h2>
 
       <p>
-        Not every invoice should move through an automated financial process
-        without review. The workflow separates exceptions so they can be
-        investigated before further processing.
+        Not every invoice should move into QuickBooks without review. The
+        workflow separates exceptions so they can be investigated before
+        financial processing continues.
       </p>
 
       <ul class="business-rules">
+
         <li>Vendor Not Found</li>
         <li>Vendor Inactive</li>
         <li>Missing Required Information</li>
         <li>Missing Purchase Order</li>
         <li>Duplicate Invoice</li>
+
       </ul>
 
       <p>
@@ -460,6 +501,7 @@
       <h2>Tools &amp; Methods</h2>
 
       <div class="tools">
+        <span class="tool">QuickBooks Online</span>
         <span class="tool">Make.com</span>
         <span class="tool">Webhooks</span>
         <span class="tool">JSON</span>
@@ -479,7 +521,8 @@
       <p>
         One of the most important design considerations was determining which
         decisions could be automated safely and which conditions should be
-        routed for human review.
+        routed for human review before financial information reached
+        QuickBooks Online.
       </p>
 
       <p>
@@ -497,6 +540,12 @@
       </p>
 
       <p>
+        The QuickBooks integration added another important control point:
+        transactions should reach the accounting system only after the required
+        validation rules have been satisfied.
+      </p>
+
+      <p>
         Separating approved transactions from exceptions creates a workflow
         that supports automation while preserving human review for conditions
         that require additional attention.
@@ -507,19 +556,42 @@
       <h2>Business Value</h2>
 
       <ul class="business-value">
-        <li>Reduces repetitive manual vendor and invoice validation.</li>
-        <li>Applies accounts payable business rules more consistently.</li>
-        <li>Helps identify duplicate invoices before further processing.</li>
-        <li>Improves visibility into invoices requiring additional review.</li>
-        <li>Creates a structured exception-handling process.</li>
+
+        <li>
+          Reduces repetitive manual vendor and invoice validation.
+        </li>
+
+        <li>
+          Applies accounts payable business rules more consistently.
+        </li>
+
+        <li>
+          Helps identify duplicate invoices before accounting-system
+          processing.
+        </li>
+
+        <li>
+          Connects validated AP information with QuickBooks Online.
+        </li>
+
+        <li>
+          Improves visibility into invoices requiring additional review.
+        </li>
+
+        <li>
+          Creates a structured exception-handling process.
+        </li>
+
         <li>
           Provides a centralized invoice validation log for tracking and
           review.
         </li>
+
         <li>
           Demonstrates how automation can support financial operations while
           maintaining validation controls.
         </li>
+
       </ul>
     </section>
 
@@ -527,6 +599,7 @@
       <h2>Skills Demonstrated</h2>
 
       <div class="skills">
+        <span class="skill">QuickBooks Online</span>
         <span class="skill">Accounts Payable Operations</span>
         <span class="skill">Vendor Management</span>
         <span class="skill">Financial Processes</span>
