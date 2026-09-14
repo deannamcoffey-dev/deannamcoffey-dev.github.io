@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Accounts Payable Vendor Validation | Deanna Coffey</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #0f2744;
+      color: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: #f4f7fa;
+      padding: 70px 7%;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      color: #0f2744;
+      font-size: 46px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      color: #475569;
+      font-size: 19px;
+      max-width: 820px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 25px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #0f2744;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: #0f2744;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .summary-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .summary-card p {
+      margin-bottom: 0;
+    }
+
+    .project-visual {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 25px;
+    }
+
+    .project-visual-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .workflow-list,
+    .business-rules,
+    .business-value {
+      padding-left: 25px;
+    }
+
+    .workflow-list li,
+    .business-rules li,
+    .business-value li {
+      margin-bottom: 12px;
+    }
+
+    .tools,
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tool {
+      background: #eaf2ff;
+      color: #0f2744;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .skill {
+      background: #f1f5f9;
+      color: #0f2744;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+
+    .case-navigation {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 35px;
+      margin-top: 60px;
+    }
+
+    .case-navigation h2 {
+      font-size: 24px;
+    }
+
+    .case-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .case-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .case-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0f2744;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-links {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Deanna Coffey</div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="eyebrow">Case Study 04</div>
+
+      <h1>Accounts Payable Vendor Validation</h1>
+
+      <p class="hero-description">
+        Designed an automated accounts payable workflow that receives invoice
+        information, validates vendors against an approved vendor master,
+        applies invoice business rules, detects exceptions, and routes
+        financial information for review or processing.
+      </p>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Project Overview</h2>
+
+      <p>
+        Accounts payable teams often spend significant time reviewing invoice
+        information, confirming vendor status, checking purchase order
+        requirements, identifying duplicate invoices, and determining whether
+        an invoice is ready for processing.
+      </p>
+
+      <p>
+        This project demonstrates how automation can apply those controls
+        consistently. Invoice data enters the workflow, vendor information is
+        validated against an approved vendor master, invoice requirements are
+        checked, and the transaction is routed either to an approved path or
+        an exception-review path.
+      </p>
+
+      <div class="summary-grid">
+
+        <div class="summary-card">
+          <h3>Challenge</h3>
+          <p>
+            Reduce repetitive AP validation work while maintaining consistent
+            vendor and invoice controls.
+          </p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Solution</h3>
+          <p>
+            Build a Make.com workflow using webhooks, JSON, Google Sheets,
+            business rules, routers, filters, and Gmail notifications.
+          </p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Outcome</h3>
+          <p>
+            Created a repeatable validation process that separates approved
+            invoices from exceptions requiring human review.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Project Visual</h2>
+
+      <p>
+        The workflow below illustrates how invoice information enters the
+        automation, moves through vendor and invoice validation, and is routed
+        to either an approved processing path or an exception-review path.
+      </p>
+
+      <div class="project-visual">
+        <img
+          src="accounts-payable-vendor-validation.png"
+          alt="Accounts payable vendor and invoice validation automation workflow"
+          class="project-visual-image"
+        >
+      </div>
+    </section>
+
+    <section>
+      <h2>How the Automation Works</h2>
+
+      <ol class="workflow-list">
+
+        <li>
+          A custom webhook receives structured invoice information from the
+          source process.
+        </li>
+
+        <li>
+          JSON parsing identifies key invoice fields including Vendor ID,
+          Vendor Name, Invoice Number, Invoice Date, Amount, Purchase Order,
+          Payment Terms, and Vendor Email.
+        </li>
+
+        <li>
+          Google Sheets searches the Vendor Master using the Vendor ID.
+        </li>
+
+        <li>
+          The workflow validates whether the vendor exists and whether the
+          vendor is currently active.
+        </li>
+
+        <li>
+          Invoice information is checked for required fields and purchase
+          order requirements.
+        </li>
+
+        <li>
+          The Invoice Log is searched using Vendor ID and Invoice Number to
+          identify potential duplicate invoices.
+        </li>
+
+        <li>
+          A router applies the validation results and directs the invoice to
+          either an approved path or an exception path.
+        </li>
+
+        <li>
+          Approved invoices are added to the Invoice Log with an approved
+          validation status.
+        </li>
+
+        <li>
+          Exceptions are logged with the appropriate reason and a Gmail
+          notification is sent for review.
+        </li>
+
+      </ol>
+    </section>
+
+    <section>
+      <h2>Business Rules &amp; Validation Controls</h2>
+
+      <p>
+        The workflow applies several validation rules before an invoice can
+        move to the approved path.
+      </p>
+
+      <ul class="business-rules">
+
+        <li>
+          The Vendor ID must exist in the approved Vendor Master.
+        </li>
+
+        <li>
+          The vendor must have an Active status.
+        </li>
+
+        <li>
+          Required invoice information must be present.
+        </li>
+
+        <li>
+          If the vendor requires a purchase order, a PO number must be
+          included.
+        </li>
+
+        <li>
+          Vendor ID and Invoice Number are checked against the Invoice Log to
+          identify duplicate invoices.
+        </li>
+
+        <li>
+          Only invoices that pass all required validation rules are routed to
+          the approved path.
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>Exception Handling</h2>
+
+      <p>
+        Not every invoice should move through an automated financial process
+        without review. The workflow separates exceptions so they can be
+        investigated before further processing.
+      </p>
+
+      <ul class="business-rules">
+
+        <li>
+          Vendor Not Found
+        </li>
+
+        <li>
+          Vendor Inactive
+        </li>
+
+        <li>
+          Missing Required Information
+        </li>
+
+        <li>
+          Missing Purchase Order
+        </li>
+
+        <li>
+          Duplicate Invoice
+        </li>
+
+      </ul>
+
+      <p>
+        When an exception occurs, the workflow records the validation status
+        and exception reason in the Invoice Log and sends a notification
+        containing the information needed for follow-up.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tools &amp; Methods</h2>
+
+      <div class="tools">
+        <span class="tool">Make.com</span>
+        <span class="tool">Webhooks</span>
+        <span class="tool">JSON</span>
+        <span class="tool">Google Sheets</span>
+        <span class="tool">Gmail</span>
+        <span class="tool">Routers</span>
+        <span class="tool">Filters</span>
+        <span class="tool">Data Validation</span>
+        <span class="tool">Business Rules</span>
+        <span class="tool">Exception Handling</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Challenges &amp; Problem Solving</h2>
+
+      <p>
+        One of the most important design considerations was determining which
+        decisions could be automated safely and which conditions should be
+        routed for human review.
+      </p>
+
+      <p>
+        Vendor validation required the workflow to compare incoming invoice
+        information against a controlled vendor master rather than relying
+        only on the information contained in the invoice.
+      </p>
+
+      <p>
+        Duplicate detection also required the workflow to search historical
+        invoice records before approving a new transaction. Testing therefore
+        included valid invoices, unknown vendors, inactive vendors, missing
+        purchase orders, incomplete invoice data, and duplicate invoice
+        numbers.
+      </p>
+
+      <p>
+        Separating approved transactions from exceptions creates a workflow
+        that supports automation while preserving human review for conditions
+        that require additional attention.
+      </p>
+    </section>
+
+    <section>
+      <h2>Business Value</h2>
+
+      <ul class="business-value">
+
+        <li>
+          Reduces repetitive manual vendor and invoice validation.
+        </li>
+
+        <li>
+          Applies accounts payable business rules more consistently.
+        </li>
+
+        <li>
+          Helps identify duplicate invoices before further processing.
+        </li>
+
+        <li>
+          Improves visibility into invoices requiring additional review.
+        </li>
+
+        <li>
+          Creates a structured exception-handling process.
+        </li>
+
+        <li>
+          Provides a centralized invoice validation log for tracking and
+          review.
+        </li>
+
+        <li>
+          Demonstrates how automation can support financial operations while
+          maintaining validation controls.
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills Demonstrated</h2>
+
+      <div class="skills">
+        <span class="skill">Accounts Payable Operations</span>
+        <span class="skill">Vendor Management</span>
+        <span class="skill">Financial Processes</span>
+        <span class="skill">Process Improvement</span>
+        <span class="skill">Workflow Design</span>
+        <span class="skill">Business Rules</span>
+        <span class="skill">Data Validation</span>
+        <span class="skill">Exception Management</span>
+        <span class="skill">Automation Testing</span>
+        <span class="skill">Operational Controls</span>
+      </div>
+    </section>
+
+    <a class="button" href="index.html#projects">
+      ← Back to Projects
+    </a>
+
+    <section class="case-navigation">
+      <h2>Explore More Case Studies</h2>
+
+      <div class="case-links">
+
+        <a href="case-study-1.html">
+          Case Study 1
+        </a>
+
+        <a href="case-study-2.html">
+          Case Study 2
+        </a>
+
+        <a href="case-study-3.html">
+          ← Case Study 3
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Deanna Coffey | Operations + Automation Portfolio
+  </footer>
+
+</body>
+
+</html>
