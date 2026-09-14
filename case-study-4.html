@@ -3,9 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Accounts Payable Vendor Validation | Deanna Coffey</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Accounts Payable Vendor Validation | Deanna Coffey
+  </title>
 
   <style>
     * {
@@ -136,13 +142,13 @@
     }
 
     .workflow-list,
-    .business-rules,
+    .detail-list,
     .business-value {
       padding-left: 25px;
     }
 
     .workflow-list li,
-    .business-rules li,
+    .detail-list li,
     .business-value li {
       margin-bottom: 12px;
     }
@@ -181,10 +187,14 @@
       padding: 12px 20px;
       border-radius: 7px;
       font-weight: 700;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
     .button:hover {
       background: #1d4ed8;
+      transform: translateY(-1px);
     }
 
     .case-navigation {
@@ -211,6 +221,44 @@
     }
 
     .case-links a:hover {
+      text-decoration: underline;
+    }
+
+    .case-contact {
+      margin-top: 70px;
+      padding: 45px 30px;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+    }
+
+    .case-contact h2 {
+      margin-bottom: 12px;
+    }
+
+    .case-contact p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: #64748b;
+    }
+
+    .case-contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin-bottom: 25px;
+    }
+
+    .case-contact-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .case-contact-links a:hover {
       text-decoration: underline;
     }
 
@@ -245,6 +293,15 @@
       .case-links {
         flex-direction: column;
       }
+
+      .case-contact {
+        padding: 35px 20px;
+      }
+
+      .case-contact-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -252,27 +309,43 @@
 <body>
 
   <nav>
-    <div class="logo">Deanna Coffey</div>
+    <div class="logo">
+      Deanna Coffey
+    </div>
 
     <div>
-      <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
 
-      <div class="eyebrow">Case Study 04</div>
+      <div class="eyebrow">
+        Case Study 02
+      </div>
 
-      <h1>Accounts Payable Vendor Validation</h1>
+      <h1>
+        Accounts Payable Vendor Validation
+      </h1>
 
       <p class="hero-description">
-        Designed an automated accounts payable workflow that receives invoice
-        information, validates vendors against an approved vendor master,
-        applies invoice business rules, detects exceptions, and routes approved
-        financial information into QuickBooks Online for accounts payable
+        Designed an automated accounts payable workflow
+        that receives invoice information, validates
+        vendors against an approved vendor master,
+        applies invoice business rules, detects
+        exceptions, and routes approved financial
+        information into QuickBooks Online for AP
         processing.
       </p>
 
@@ -282,48 +355,68 @@
   <main>
 
     <section>
-      <h2>Project Overview</h2>
+      <h2>
+        Project Overview
+      </h2>
 
       <p>
-        Accounts payable teams often spend significant time reviewing invoice
-        information, confirming vendor status, checking purchase order
-        requirements, identifying duplicate invoices, and determining whether
-        an invoice is ready for processing.
+        Accounts payable teams often spend significant
+        time reviewing invoice information, confirming
+        vendor status, checking purchase order
+        requirements, identifying duplicate invoices,
+        and determining whether an invoice is ready
+        for processing.
       </p>
 
       <p>
-        This project demonstrates how automation can apply those controls
-        consistently. Invoice data enters the workflow, vendor information is
-        validated against an approved vendor master, invoice requirements are
-        checked, and the transaction is routed either to an exception-review
-        path or into QuickBooks Online for accounts payable processing.
+        This project demonstrates how automation can
+        apply those controls consistently. Invoice
+        data enters the workflow, vendor information
+        is validated against an approved vendor
+        master, invoice requirements are checked, and
+        the transaction is routed either to an
+        exception path or into QuickBooks Online for
+        accounts payable processing.
       </p>
 
       <div class="summary-grid">
 
         <div class="summary-card">
-          <h3>Challenge</h3>
+          <h3>
+            Challenge
+          </h3>
+
           <p>
-            Reduce repetitive AP validation work while maintaining consistent
-            vendor, invoice, and financial-system controls.
+            Reduce repetitive AP validation work while
+            maintaining consistent vendor and invoice
+            controls.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Solution</h3>
+          <h3>
+            Solution
+          </h3>
+
           <p>
-            Build a Make.com workflow using webhooks, JSON, Google Sheets,
-            business rules, routers, filters, QuickBooks Online, and Gmail
-            notifications.
+            Build a Make.com workflow using webhooks,
+            JSON, Google Sheets, business rules,
+            routers, filters, Gmail, and QuickBooks
+            Online.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Outcome</h3>
+          <h3>
+            Outcome
+          </h3>
+
           <p>
-            Created a repeatable validation process that separates exceptions
-            from approved invoices and prepares validated transactions for
-            processing in QuickBooks Online.
+            Created a repeatable validation process
+            that separates exceptions from approved
+            invoices and prepares validated
+            transactions for processing in QuickBooks
+            Online.
           </p>
         </div>
 
@@ -331,98 +424,105 @@
     </section>
 
     <section>
-      <h2>Project Visual</h2>
+      <h2>
+        Project Visual
+      </h2>
 
       <p>
-        The workflow below illustrates how invoice information enters the
-        automation, moves through vendor and invoice validation, and is routed
-        either to QuickBooks Online for processing or to an exception-review
-        path.
+        The workflow below illustrates how invoice
+        information enters the automation, moves
+        through vendor and invoice validation, and is
+        routed to either an exception-review path or a
+        QuickBooks Online processing path.
       </p>
 
       <div class="project-visual">
         <img
           src="accounts-payable-vendor-validation.png"
-          alt="Accounts payable vendor validation workflow with QuickBooks Online integration"
+          alt="Accounts payable vendor and invoice validation automation workflow"
           class="project-visual-image"
         >
       </div>
     </section>
 
     <section>
-      <h2>How the Automation Works</h2>
+      <h2>
+        How the Automation Works
+      </h2>
 
       <ol class="workflow-list">
 
         <li>
-          A custom webhook receives structured invoice information from the
-          source process.
+          A custom webhook receives structured invoice
+          information.
         </li>
 
         <li>
-          JSON parsing identifies key invoice fields including Vendor ID,
-          Vendor Name, Invoice Number, Invoice Date, Amount, Purchase Order,
+          JSON parsing identifies fields including
+          Vendor ID, Vendor Name, Invoice Number,
+          Invoice Date, Amount, Purchase Order,
           Payment Terms, and Vendor Email.
         </li>
 
         <li>
-          Google Sheets searches the Vendor Master using the Vendor ID.
+          Google Sheets searches the Vendor Master
+          using the Vendor ID.
         </li>
 
         <li>
-          The workflow validates whether the vendor exists and whether the
-          vendor is currently active.
+          The workflow confirms that the vendor exists
+          and is active.
         </li>
 
         <li>
-          Invoice information is checked for required fields and purchase
-          order requirements.
+          Required invoice fields and purchase order
+          requirements are checked.
         </li>
 
         <li>
-          The Invoice Log is searched using Vendor ID and Invoice Number to
-          identify potential duplicate invoices.
+          The Invoice Log is searched by Vendor ID and
+          Invoice Number to identify possible duplicate
+          invoices.
         </li>
 
         <li>
-          A router applies the validation results and directs the invoice to
-          either an approved path or an exception path.
+          A router directs the invoice to either the
+          approved path or the exception path.
         </li>
 
         <li>
-          Approved invoice data is passed to the QuickBooks Online module for
-          accounts payable processing.
+          Approved invoice data is passed to the
+          QuickBooks Online module for accounts
+          payable processing.
         </li>
 
         <li>
-          The approved transaction is recorded in the Invoice Log with its
-          validation and processing status.
+          The approved transaction is recorded in the
+          Invoice Log.
         </li>
 
         <li>
-          Exceptions are logged with the appropriate reason and a Gmail
-          notification is sent for review.
+          Exceptions are logged and an automated
+          Gmail notification is sent for human review.
         </li>
 
       </ol>
     </section>
 
     <section>
-      <h2>Business Rules &amp; Validation Controls</h2>
+      <h2>
+        Business Rules
+      </h2>
 
-      <p>
-        The workflow applies several validation rules before an invoice can
-        move to the QuickBooks Online processing path.
-      </p>
-
-      <ul class="business-rules">
+      <ul class="detail-list">
 
         <li>
-          The Vendor ID must exist in the approved Vendor Master.
+          The vendor must exist in the approved Vendor
+          Master.
         </li>
 
         <li>
-          The vendor must have an Active status.
+          The vendor must be active.
         </li>
 
         <li>
@@ -430,219 +530,341 @@
         </li>
 
         <li>
-          If the vendor requires a purchase order, a PO number must be
-          included.
+          Purchase order requirements must be
+          satisfied when applicable.
         </li>
 
         <li>
-          Vendor ID and Invoice Number are checked against the Invoice Log to
-          identify duplicate invoices.
+          The Vendor ID and Invoice Number combination
+          must not already exist in the Invoice Log.
         </li>
 
         <li>
-          Only invoices that pass all required validation rules are routed to
-          the QuickBooks Online processing step.
+          Only invoices that pass validation are
+          routed to the QuickBooks Online processing
+          step.
+        </li>
+
+        <li>
+          Invoices that fail a control are routed for
+          exception review rather than continuing
+          automatically.
         </li>
 
       </ul>
     </section>
 
     <section>
-      <h2>QuickBooks Online Integration</h2>
+      <h2>
+        QuickBooks Online Integration
+      </h2>
 
       <p>
-        QuickBooks Online is incorporated into the approved processing path so
-        validated accounts payable information can move from the automation
-        workflow into the accounting system.
+        QuickBooks Online serves as the financial
+        system step after the validation controls have
+        been completed.
       </p>
 
       <p>
-        Before financial information reaches QuickBooks, the workflow verifies
-        vendor status, required invoice fields, purchase order requirements,
-        and potential duplicate invoices. This helps keep validation logic
-        upstream of the accounting-system step.
+        The workflow is intentionally designed so
+        invoice data does not move into QuickBooks
+        until vendor, invoice, purchase order, and
+        duplicate checks have passed.
       </p>
 
       <p>
-        Integrating QuickBooks with Make.com demonstrates how operational
-        workflows can connect financial controls with accounting-system
-        processing while preserving an exception path for transactions that
-        require human review.
-      </p>
-    </section>
-
-    <section>
-      <h2>Exception Handling</h2>
-
-      <p>
-        Not every invoice should move into QuickBooks without review. The
-        workflow separates exceptions so they can be investigated before
-        financial processing continues.
-      </p>
-
-      <ul class="business-rules">
-
-        <li>Vendor Not Found</li>
-        <li>Vendor Inactive</li>
-        <li>Missing Required Information</li>
-        <li>Missing Purchase Order</li>
-        <li>Duplicate Invoice</li>
-
-      </ul>
-
-      <p>
-        When an exception occurs, the workflow records the validation status
-        and exception reason in the Invoice Log and sends a notification
-        containing the information needed for follow-up.
+        This creates a clear control point between
+        automated validation and downstream accounts
+        payable processing.
       </p>
     </section>
 
     <section>
-      <h2>Tools &amp; Methods</h2>
+      <h2>
+        Exception Management
+      </h2>
+
+      <p>
+        Not every invoice should move into QuickBooks
+        without review. Unknown vendors, inactive
+        vendors, incomplete invoice information,
+        missing required purchase orders, or duplicate
+        invoice records are routed to an exception
+        path.
+      </p>
+
+      <p>
+        The exception path creates visibility into the
+        issue and sends a Gmail notification so the
+        transaction can be reviewed before further
+        processing.
+      </p>
+    </section>
+
+    <section>
+      <h2>
+        Tools &amp; Methods
+      </h2>
 
       <div class="tools">
-        <span class="tool">QuickBooks Online</span>
-        <span class="tool">Make.com</span>
-        <span class="tool">Webhooks</span>
-        <span class="tool">JSON</span>
-        <span class="tool">Google Sheets</span>
-        <span class="tool">Gmail</span>
-        <span class="tool">Routers</span>
-        <span class="tool">Filters</span>
-        <span class="tool">Data Validation</span>
-        <span class="tool">Business Rules</span>
-        <span class="tool">Exception Handling</span>
+
+        <span class="tool">
+          QuickBooks Online
+        </span>
+
+        <span class="tool">
+          Make.com
+        </span>
+
+        <span class="tool">
+          Webhooks
+        </span>
+
+        <span class="tool">
+          JSON
+        </span>
+
+        <span class="tool">
+          Google Sheets
+        </span>
+
+        <span class="tool">
+          Gmail
+        </span>
+
+        <span class="tool">
+          Routers
+        </span>
+
+        <span class="tool">
+          Filters
+        </span>
+
+        <span class="tool">
+          Vendor Master
+        </span>
+
+        <span class="tool">
+          Invoice Log
+        </span>
+
+        <span class="tool">
+          Business Rules
+        </span>
+
       </div>
     </section>
 
     <section>
-      <h2>Challenges &amp; Problem Solving</h2>
+      <h2>
+        Challenges &amp; Problem Solving
+      </h2>
 
       <p>
-        One of the most important design considerations was determining which
-        decisions could be automated safely and which conditions should be
-        routed for human review before financial information reached
-        QuickBooks Online.
+        One of the most important design
+        considerations was determining which
+        decisions could be automated safely and which
+        conditions should be routed for human review.
       </p>
 
       <p>
-        Vendor validation required the workflow to compare incoming invoice
-        information against a controlled vendor master rather than relying
-        only on the information contained in the invoice.
+        Vendor validation required the workflow to
+        compare incoming invoice information against a
+        controlled vendor master rather than relying
+        only on the information contained in the
+        invoice.
       </p>
 
       <p>
-        Duplicate detection also required the workflow to search historical
-        invoice records before approving a new transaction. Testing therefore
-        included valid invoices, unknown vendors, inactive vendors, missing
-        purchase orders, incomplete invoice data, and duplicate invoice
-        numbers.
-      </p>
-
-      <p>
-        The QuickBooks integration added another important control point:
-        transactions should reach the accounting system only after the required
-        validation rules have been satisfied.
-      </p>
-
-      <p>
-        Separating approved transactions from exceptions creates a workflow
-        that supports automation while preserving human review for conditions
-        that require additional attention.
+        Duplicate detection required a search of
+        historical invoice records before approving a
+        new transaction. The QuickBooks integration
+        was positioned after these controls so it
+        serves as a downstream processing step rather
+        than bypassing validation.
       </p>
     </section>
 
     <section>
-      <h2>Business Value</h2>
+      <h2>
+        Business Value
+      </h2>
 
       <ul class="business-value">
 
         <li>
-          Reduces repetitive manual vendor and invoice validation.
+          Reduces repetitive manual vendor and invoice
+          validation.
         </li>
 
         <li>
-          Applies accounts payable business rules more consistently.
+          Applies accounts payable business rules more
+          consistently.
         </li>
 
         <li>
-          Helps identify duplicate invoices before accounting-system
-          processing.
+          Helps identify duplicate invoices before
+          further processing.
         </li>
 
         <li>
-          Connects validated AP information with QuickBooks Online.
+          Improves visibility into invoices requiring
+          additional review.
         </li>
 
         <li>
-          Improves visibility into invoices requiring additional review.
+          Creates a structured exception-handling
+          process.
         </li>
 
         <li>
-          Creates a structured exception-handling process.
+          Provides a centralized invoice validation
+          log for tracking and review.
         </li>
 
         <li>
-          Provides a centralized invoice validation log for tracking and
-          review.
-        </li>
-
-        <li>
-          Demonstrates how automation can support financial operations while
-          maintaining validation controls.
+          Connects validated AP information with
+          QuickBooks Online for downstream processing.
         </li>
 
       </ul>
     </section>
 
     <section>
-      <h2>Skills Demonstrated</h2>
+      <h2>
+        Skills Demonstrated
+      </h2>
 
       <div class="skills">
-        <span class="skill">QuickBooks Online</span>
-        <span class="skill">Accounts Payable Operations</span>
-        <span class="skill">Vendor Management</span>
-        <span class="skill">Financial Processes</span>
-        <span class="skill">Process Improvement</span>
-        <span class="skill">Workflow Design</span>
-        <span class="skill">Business Rules</span>
-        <span class="skill">Data Validation</span>
-        <span class="skill">Exception Management</span>
-        <span class="skill">Automation Testing</span>
-        <span class="skill">Operational Controls</span>
+
+        <span class="skill">
+          QuickBooks Online
+        </span>
+
+        <span class="skill">
+          Accounts Payable Operations
+        </span>
+
+        <span class="skill">
+          Vendor Management
+        </span>
+
+        <span class="skill">
+          Financial Processes
+        </span>
+
+        <span class="skill">
+          Process Improvement
+        </span>
+
+        <span class="skill">
+          Workflow Design
+        </span>
+
+        <span class="skill">
+          Business Rules
+        </span>
+
+        <span class="skill">
+          Data Validation
+        </span>
+
+        <span class="skill">
+          Exception Management
+        </span>
+
+        <span class="skill">
+          Operational Controls
+        </span>
+
       </div>
     </section>
 
-    <a class="button" href="index.html#projects">
+    <a
+      class="button"
+      href="index.html#projects"
+    >
       ← Back to Projects
     </a>
 
     <section class="case-navigation">
-      <h2>Explore More Case Studies</h2>
+
+      <h2>
+        Explore More Case Studies
+      </h2>
 
       <div class="case-links">
 
         <a href="case-study-1.html">
-          Case Study 1
-        </a>
-
-        <a href="case-study-2.html">
-          Case Study 2
+          Client Onboarding →
         </a>
 
         <a href="case-study-3.html">
-          ← Case Study 3
+          Inventory Monitoring →
+        </a>
+
+        <a href="case-study-2.html">
+          College Baseball Recruiting →
         </a>
 
       </div>
+
+    </section>
+
+    <section class="case-contact">
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        Interested in discussing operations,
+        automation, process improvement, or
+        professional opportunities? I'd be happy
+        to connect.
+      </p>
+
+      <div class="case-contact-links">
+
+        <a
+          href="mailto:deannamcoffey@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          deannamcoffey@gmail.com
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/deannamcoffey"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a href="tel:+16175846587">
+          617-584-6587
+        </a>
+
+      </div>
+
+      <a
+        class="button"
+        href="https://calendly.com/deannamcoffey/15min"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Schedule a Conversation
+      </a>
+
     </section>
 
   </main>
 
   <footer>
-    © 2026 Deanna Coffey | Operations + Automation Portfolio
+    © 2026 Deanna Coffey |
+    Operations + Automation Portfolio
   </footer>
 
 </body>
-
 </html>
