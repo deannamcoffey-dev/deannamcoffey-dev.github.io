@@ -3,14 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
     content="Deanna Coffey - Operations, Automation, AI Workflows and Digital Transformation Portfolio"
   >
 
-  <title>Deanna Coffey | Operations + Automation</title>
+  <title>
+    Deanna Coffey | Operations + Automation
+  </title>
 
   <style>
     @import url(
@@ -58,12 +64,15 @@
       background: rgba(11, 31, 51, 0.97);
       color: #FFFFFF;
       padding: 17px 8%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       position: sticky;
       top: 0;
       z-index: 1000;
+
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(8px);
     }
@@ -77,9 +86,12 @@
     nav a {
       color: #E2E8F0;
       text-decoration: none;
+
       margin-left: 28px;
+
       font-size: 14px;
       font-weight: 600;
+
       transition: color 0.2s ease;
     }
 
@@ -105,21 +117,30 @@
         );
 
       padding: 120px 8% 110px;
+
       text-align: center;
+
       border-bottom: 1px solid #E2E8F0;
+
       animation: heroFadeUp 0.7s ease-out both;
     }
 
     .hero-label {
       display: inline-block;
+
       color: #2563EB;
       background: #EFF6FF;
+
       border: 1px solid #DBEAFE;
+
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2.2px;
+
       padding: 8px 14px;
+
       border-radius: 999px;
+
       margin-bottom: 24px;
     }
 
@@ -127,25 +148,35 @@
       font-size: clamp(42px, 6vw, 68px);
       line-height: 1.08;
       letter-spacing: -2px;
+
       color: #0B1F33;
+
       max-width: 950px;
+
       margin: 0 auto 24px;
     }
 
     .hero h2 {
       font-family: 'Inter', Arial, sans-serif;
+
       font-size: clamp(21px, 2.5vw, 28px);
       line-height: 1.45;
       font-weight: 500;
+
       color: #334155;
+
       max-width: 860px;
+
       margin: auto;
     }
 
     .hero p {
       max-width: 760px;
+
       margin: 28px auto 24px;
+
       font-size: 18px;
+
       color: #64748B;
     }
 
@@ -167,16 +198,25 @@
 
     .button {
       display: inline-block;
+
       background: #2563EB;
       color: #FFFFFF;
+
       text-decoration: none;
+
       padding: 14px 25px;
+
       margin: 10px 5px;
+
       border-radius: 8px;
+
       font-size: 15px;
       font-weight: 700;
+
       border: 2px solid #2563EB;
-      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.18);
+
+      box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.18);
 
       transition:
         background 0.2s ease,
@@ -186,20 +226,28 @@
 
     .button:hover {
       background: #1D4ED8;
+
       border-color: #1D4ED8;
+
       transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+
+      box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.22);
     }
 
     .button.secondary {
       background: #FFFFFF;
+
       color: #2563EB;
+
       border: 2px solid #CBD5E1;
+
       box-shadow: none;
     }
 
     .button.secondary:hover {
       background: #F8FAFC;
+
       border-color: #2563EB;
     }
 
@@ -213,18 +261,25 @@
 
     .section-title {
       text-align: center;
+
       font-size: clamp(30px, 4vw, 40px);
       line-height: 1.2;
       letter-spacing: -1px;
+
       color: #0B1F33;
+
       margin-bottom: 16px;
     }
 
     .section-intro {
       text-align: center;
+
       max-width: 720px;
+
       margin: 0 auto 50px;
+
       font-size: 17px;
+
       color: #64748B;
     }
 
@@ -234,19 +289,30 @@
 
     .services {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 22px;
+
       max-width: 1200px;
+
       margin: auto;
     }
 
     .service {
       position: relative;
+
       padding: 30px 27px;
+
       background: #FFFFFF;
+
       border: 1px solid #E2E8F0;
+
       border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+
+      box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.04);
 
       transition:
         transform 0.25s ease,
@@ -256,24 +322,35 @@
 
     .service::before {
       content: "";
+
       position: absolute;
+
       top: 0;
       left: 0;
+
       width: 100%;
       height: 4px;
+
       background: #2563EB;
-      border-radius: 12px 12px 0 0;
+
+      border-radius:
+        12px 12px 0 0;
     }
 
     .service:hover {
       transform: translateY(-5px);
+
       border-color: #BFDBFE;
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+
+      box-shadow:
+        0 12px 28px rgba(15, 23, 42, 0.08);
     }
 
     .service h3 {
       color: #0B1F33;
+
       font-size: 19px;
+
       margin-bottom: 10px;
     }
 
@@ -283,24 +360,35 @@
 
     .projects-section {
       background: #F8FAFC;
+
       border-top: 1px solid #E2E8F0;
       border-bottom: 1px solid #E2E8F0;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 26px;
+
       max-width: 1100px;
+
       margin: auto;
     }
 
     .project {
       background: #FFFFFF;
+
       padding: 34px;
+
       border-radius: 12px;
+
       border: 1px solid #E2E8F0;
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+
+      box-shadow:
+        0 4px 15px rgba(15, 23, 42, 0.05);
 
       transition:
         transform 0.25s ease,
@@ -310,46 +398,63 @@
 
     .project:hover {
       transform: translateY(-5px);
+
       border-color: #BFDBFE;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+
+      box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.1);
     }
 
     .project-number {
       display: inline-block;
+
       color: #2563EB;
+
       background: #EFF6FF;
+
       padding: 5px 9px;
+
       border-radius: 5px;
+
       font-size: 11px;
       letter-spacing: 1.2px;
       font-weight: 700;
+
       margin-bottom: 15px;
     }
 
     .project h3 {
       color: #0B1F33;
+
       font-size: 23px;
       line-height: 1.35;
+
       margin-bottom: 14px;
     }
 
     .project p {
       font-size: 16px;
+
       color: #64748B;
     }
 
     .tools {
       margin: 21px 0;
+
       color: #334155;
+
       font-size: 13px;
       font-weight: 600;
     }
 
     .project-link {
       color: #2563EB;
+
       font-size: 15px;
       font-weight: 700;
+
       text-decoration: none;
+
       display: inline-block;
 
       transition:
@@ -360,8 +465,11 @@
 
     .project-link:hover {
       color: #1D4ED8;
+
       text-decoration: underline;
+
       opacity: 0.85;
+
       transform: translateX(2px);
     }
 
@@ -369,15 +477,56 @@
        ABOUT
     ========================= */
 
-    .about {
-      max-width: 850px;
+    .about-layout {
+      display: grid;
+
+      grid-template-columns:
+        260px 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+
+      max-width: 1050px;
+
       margin: auto;
+    }
+
+    .about-photo {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-photo img {
+      width: 100%;
+
+      max-width: 260px;
+
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      border-radius: 18px;
+
+      border: 1px solid #E2E8F0;
+
+      box-shadow:
+        0 14px 35px rgba(15, 23, 42, 0.13);
+    }
+
+    .about {
+      max-width: 760px;
     }
 
     .about p {
       margin-bottom: 20px;
+
       font-size: 17px;
+
       line-height: 1.8;
+
       color: #475569;
     }
 
@@ -398,31 +547,43 @@
 
     .skills-section .section-title {
       color: #FFFFFF;
+
       margin-bottom: 45px;
     }
 
     .skills {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
       gap: 30px;
+
       max-width: 1200px;
+
       margin: auto;
     }
 
     .skills > div {
-      border-left: 2px solid #3B82F6;
+      border-left:
+        2px solid #3B82F6;
+
       padding-left: 20px;
     }
 
     .skills h3 {
       color: #93C5FD;
+
       margin-bottom: 13px;
+
       font-size: 18px;
     }
 
     .skills p {
       color: #CBD5E1;
+
       line-height: 1.9;
+
       font-size: 15px;
     }
 
@@ -432,14 +593,55 @@
 
     .contact {
       text-align: center;
+
       background: #FFFFFF;
     }
 
     .contact p {
       max-width: 650px;
+
       margin: 16px auto 26px;
+
       font-size: 17px;
+
       color: #64748B;
+    }
+
+    .contact-links {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px 28px;
+
+      max-width: 800px;
+
+      margin:
+        0 auto 28px;
+    }
+
+    .contact-links a {
+      color: #2563EB;
+
+      text-decoration: none;
+
+      font-size: 15px;
+      font-weight: 600;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      color: #1D4ED8;
+
+      text-decoration: underline;
+
+      transform: translateY(-1px);
     }
 
     /* =========================
@@ -448,7 +650,9 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(18px);
+
+      transform:
+        translateY(18px);
 
       transition:
         opacity 0.65s ease,
@@ -457,7 +661,9 @@
 
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+
+      transform:
+        translateY(0);
     }
 
     /* =========================
@@ -466,11 +672,17 @@
 
     footer {
       text-align: center;
+
       background: #071827;
+
       color: #94A3B8;
+
       padding: 28px;
+
       font-size: 13px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+      border-top:
+        1px solid rgba(255, 255, 255, 0.05);
     }
 
     /* =========================
@@ -479,13 +691,15 @@
 
     @media (max-width: 1050px) {
       .skills {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+          repeat(3, 1fr);
       }
     }
 
     @media (max-width: 900px) {
       .services {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
       .projects {
@@ -493,7 +707,19 @@
       }
 
       .skills {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .about-layout {
+        grid-template-columns:
+          220px 1fr;
+
+        gap: 35px;
+      }
+
+      .about-photo img {
+        max-width: 220px;
       }
     }
 
@@ -504,7 +730,9 @@
     @media (max-width: 650px) {
       nav {
         display: block;
+
         text-align: center;
+
         padding: 15px 5%;
       }
 
@@ -514,6 +742,7 @@
 
       nav a {
         margin: 0 8px;
+
         font-size: 13px;
       }
 
@@ -537,6 +766,23 @@
       .project {
         padding: 27px;
       }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+      }
+
+      .about-photo img {
+        width: 210px;
+        height: 210px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+
+        gap: 12px;
+      }
     }
 
     /* =========================
@@ -548,12 +794,15 @@
       *::before,
       *::after {
         animation: none !important;
+
         transition: none !important;
+
         scroll-behavior: auto !important;
       }
 
       .reveal {
         opacity: 1;
+
         transform: none;
       }
     }
@@ -567,14 +816,29 @@
   ========================= -->
 
   <nav>
-    <div class="logo">Deanna Coffey</div>
+
+    <div class="logo">
+      Deanna Coffey
+    </div>
 
     <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
     </div>
+
   </nav>
 
   <!-- =========================
@@ -582,6 +846,7 @@
   ========================= -->
 
   <header class="hero">
+
     <div class="hero-label">
       OPERATIONS + AUTOMATION
     </div>
@@ -591,23 +856,30 @@
     </h1>
 
     <h2>
-      Improving business processes through AI, automation,
-      systems and smarter workflows.
+      Improving business processes through AI,
+      automation, systems and smarter workflows.
     </h2>
 
     <p>
-      I combine hands-on operations leadership with modern automation
-      and AI tools to design practical, efficient and scalable
-      business processes.
+      I combine hands-on operations leadership with modern
+      automation and AI tools to design practical,
+      efficient and scalable business processes.
     </p>
 
-    <a class="button" href="#projects">
+    <a
+      class="button"
+      href="#projects"
+    >
       View My Projects
     </a>
 
-    <a class="button secondary" href="#about">
+    <a
+      class="button secondary"
+      href="#about"
+    >
       About Me
     </a>
+
   </header>
 
   <!-- =========================
@@ -615,6 +887,7 @@
   ========================= -->
 
   <section class="reveal">
+
     <h2 class="section-title">
       What I Do
     </h2>
@@ -628,56 +901,80 @@
     <div class="services">
 
       <div class="service">
-        <h3>Operations</h3>
+
+        <h3>
+          Operations
+        </h3>
 
         <p>
-          Business operations, process design, vendor management,
-          workflow development and operational scaling.
+          Business operations, process design,
+          vendor management, workflow development
+          and operational scaling.
         </p>
+
       </div>
 
       <div class="service">
-        <h3>Workflow Automation</h3>
+
+        <h3>
+          Workflow Automation
+        </h3>
 
         <p>
-          Designing automated workflows that reduce repetitive
-          work and improve consistency.
+          Designing automated workflows that reduce
+          repetitive work and improve consistency.
         </p>
+
       </div>
 
       <div class="service">
-        <h3>AI &amp; Digital Transformation</h3>
+
+        <h3>
+          AI &amp; Digital Transformation
+        </h3>
 
         <p>
-          Applying AI and modern digital tools to improve
-          existing business processes.
+          Applying AI and modern digital tools
+          to improve existing business processes.
         </p>
+
       </div>
 
       <div class="service">
-        <h3>Systems &amp; Data</h3>
+
+        <h3>
+          Systems &amp; Data
+        </h3>
 
         <p>
-          Connecting business systems, organizing data and
-          creating more efficient information flows.
+          Connecting business systems,
+          organizing data and creating more
+          efficient information flows.
         </p>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- =========================
        PROJECTS
   ========================= -->
 
-  <section class="projects-section reveal" id="projects">
+  <section
+    class="projects-section reveal"
+    id="projects"
+  >
+
     <h2 class="section-title">
       Featured Projects
     </h2>
 
     <p class="section-intro">
-      Selected projects demonstrating how I combine operations,
-      automation and technology to solve business problems.
+      Selected projects demonstrating how I combine
+      operations, automation and technology to solve
+      business problems.
     </p>
 
     <div class="projects">
@@ -685,22 +982,26 @@
       <!-- PROJECT 1 -->
 
       <div class="project">
+
         <div class="project-number">
           CASE STUDY 01
         </div>
 
         <h3>
-          Client Onboarding &amp; Conditional Routing Automation
+          Client Onboarding &amp;
+          Conditional Routing Automation
         </h3>
 
         <p>
-          Designed an automated onboarding workflow that monitors new
-          submissions, applies routing logic, and directs each client
+          Designed an automated onboarding workflow
+          that monitors new submissions, applies
+          routing logic, and directs each client
           to the appropriate operational team.
         </p>
 
         <div class="tools">
-          Make • Google Sheets • Gmail • Routing Logic • Process Improvement
+          Make • Google Sheets • Gmail •
+          Routing Logic • Process Improvement
         </div>
 
         <a
@@ -709,11 +1010,13 @@
         >
           View Case Study →
         </a>
+
       </div>
 
       <!-- PROJECT 2 -->
 
       <div class="project">
+
         <div class="project-number">
           CASE STUDY 02
         </div>
@@ -723,13 +1026,16 @@
         </h3>
 
         <p>
-          Designed an automated workflow for extracting invoice
-          information, validating vendors, applying financial
-          controls, and routing exceptions through business rules.
+          Designed an automated workflow for
+          extracting invoice information,
+          validating vendors, applying financial
+          controls, and routing exceptions through
+          business rules.
         </p>
 
         <div class="tools">
-          QuickBooks • Make • JSON • Gmail • Google Sheets • Webhooks
+          QuickBooks • Make • JSON • Gmail •
+          Google Sheets • Webhooks
         </div>
 
         <a
@@ -738,27 +1044,33 @@
         >
           View Case Study →
         </a>
+
       </div>
 
       <!-- PROJECT 3 -->
 
       <div class="project">
+
         <div class="project-number">
           CASE STUDY 03
         </div>
 
         <h3>
-          Inventory Monitoring &amp; Reorder Workflow
+          Inventory Monitoring &amp;
+          Reorder Workflow
         </h3>
 
         <p>
-          Built an automated inventory workflow that monitors new orders,
-          updates stock levels, identifies low-inventory conditions, and
-          triggers automated notifications through connected workflows.
+          Built an automated inventory workflow
+          that monitors new orders, updates stock
+          levels, identifies low-inventory
+          conditions, and triggers automated
+          notifications through connected workflows.
         </p>
 
         <div class="tools">
-          Make • Webhooks • HTTP • Google Sheets • Gmail
+          Make • Webhooks • HTTP •
+          Google Sheets • Gmail
         </div>
 
         <a
@@ -767,11 +1079,13 @@
         >
           View Case Study →
         </a>
+
       </div>
 
       <!-- PROJECT 4 -->
 
       <div class="project">
+
         <div class="project-number">
           CASE STUDY 04
         </div>
@@ -781,13 +1095,15 @@
         </h3>
 
         <p>
-          Designed a workflow that transforms incoming recruiting
-          emails into organized player records for easier review
-          and recruiting management.
+          Designed a workflow that transforms
+          incoming recruiting emails into organized
+          player records for easier review and
+          recruiting management.
         </p>
 
         <div class="tools">
-          Make • Gmail • Regex • Google Sheets • Apps Script
+          Make • Gmail • Regex •
+          Google Sheets • Apps Script
         </div>
 
         <a
@@ -796,56 +1112,89 @@
         >
           View Case Study →
         </a>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- =========================
        ABOUT
   ========================= -->
 
-  <section class="reveal" id="about">
+  <section
+    class="reveal"
+    id="about"
+  >
+
     <h2 class="section-title">
       About Me
     </h2>
 
-    <div class="about">
+    <div class="about-layout">
 
-      <p>
-        I’m an operations leader with 20+ years of hands-on experience
-        managing the day-to-day functions that keep businesses running
-        effectively. My background includes payroll, vendor payments,
-        financial processes, inventory control, budgeting, compliance,
-        systems, process improvement, and leadership support.
-      </p>
+      <div class="about-photo">
 
-      <p>
-        My career spans both large organizations and startup environments.
-        Earlier in my career, I managed pharmaceutical distribution
-        operations at H.D. Smith, with responsibilities across payroll,
-        inventory, budgets, compliance, vendor management, and process
-        improvement. More recently, as Director of Operations at Best Agent
-        Today, I’ve taken on a broad operational role that includes payroll,
-        vendor payments, systems and technology, cross-functional
-        coordination, and leadership support.
-      </p>
+        <img
+          src="deanna-coffey-headshot.png"
+          alt="Deanna Coffey"
+        >
 
-      <p>
-        What I enjoy most is finding better ways to work. I combine
-        practical operations experience with process improvement,
-        automation, and AI tools to reduce repetitive work, improve
-        workflows, and help organizations operate more efficiently.
-      </p>
+      </div>
+
+      <div class="about">
+
+        <p>
+          I’m an operations leader with 20+ years
+          of hands-on experience managing the
+          day-to-day functions that keep businesses
+          running effectively. My background includes
+          payroll, vendor payments, financial processes,
+          inventory control, budgeting, compliance,
+          systems, process improvement, and leadership
+          support.
+        </p>
+
+        <p>
+          My career spans both large organizations
+          and startup environments. Earlier in my
+          career, I managed pharmaceutical distribution
+          operations at H.D. Smith, with responsibilities
+          across payroll, inventory, budgets, compliance,
+          vendor management, and process improvement.
+          More recently, as Director of Operations at
+          Best Agent Today, I’ve taken on a broad
+          operational role that includes payroll,
+          vendor payments, systems and technology,
+          cross-functional coordination, and leadership
+          support.
+        </p>
+
+        <p>
+          What I enjoy most is finding better ways
+          to work. I combine practical operations
+          experience with process improvement,
+          automation, and AI tools to reduce repetitive
+          work, improve workflows, and help organizations
+          operate more efficiently.
+        </p>
+
+      </div>
 
     </div>
+
   </section>
 
   <!-- =========================
        SKILLS
   ========================= -->
 
-  <section class="skills-section reveal" id="skills">
+  <section
+    class="skills-section reveal"
+    id="skills"
+  >
+
     <h2 class="section-title">
       Skills &amp; Tools
     </h2>
@@ -853,6 +1202,7 @@
     <div class="skills">
 
       <div>
+
         <h3>
           Operations &amp; Management
         </h3>
@@ -865,9 +1215,11 @@
           Operational Scaling<br>
           Project Management
         </p>
+
       </div>
 
       <div>
+
         <h3>
           Automation &amp; Integration
         </h3>
@@ -880,9 +1232,11 @@
           JSON<br>
           Regex
         </p>
+
       </div>
 
       <div>
+
         <h3>
           AI &amp; Productivity
         </h3>
@@ -894,9 +1248,11 @@
           AI-Assisted Workflows<br>
           Gamma
         </p>
+
       </div>
 
       <div>
+
         <h3>
           Business &amp; Operations Systems
         </h3>
@@ -912,9 +1268,11 @@
           Monday.com<br>
           Supabase
         </p>
+
       </div>
 
       <div>
+
         <h3>
           Technical &amp; Development
         </h3>
@@ -923,25 +1281,52 @@
           GitHub<br>
           HTML
         </p>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- =========================
        CONTACT
   ========================= -->
 
-  <section class="contact reveal" id="contact">
+  <section
+    class="contact reveal"
+    id="contact"
+  >
+
     <h2 class="section-title">
       Let's Connect
     </h2>
 
     <p>
-      Interested in discussing operations, automation,
-      process improvement or digital transformation opportunities?
+      Interested in discussing operations,
+      automation, process improvement or
+      digital transformation opportunities?
       I'd be happy to connect.
     </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:deannamcoffey@gmail.com">
+        deannamcoffey@gmail.com
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/deannamcoffey"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a href="tel:+16175846587">
+        617-584-6587
+      </a>
+
+    </div>
 
     <a
       class="button"
@@ -951,6 +1336,7 @@
     >
       Contact Me
     </a>
+
   </section>
 
   <!-- =========================
@@ -958,7 +1344,8 @@
   ========================= -->
 
   <footer>
-    © 2026 Deanna Coffey | Operations + Automation Portfolio
+    © 2026 Deanna Coffey |
+    Operations + Automation Portfolio
   </footer>
 
   <!-- =========================
@@ -966,35 +1353,53 @@
   ========================= -->
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const revealElements = document.querySelectorAll(".reveal");
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+        const revealElements =
+          document.querySelectorAll(".reveal");
 
-      if (!("IntersectionObserver" in window)) {
-        revealElements.forEach((element) => {
-          element.classList.add("visible");
-        });
-
-        return;
-      }
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
+        if (
+          !("IntersectionObserver" in window)
+        ) {
+          revealElements.forEach(
+            (element) => {
+              element.classList.add("visible");
             }
-          });
-        },
-        {
-          threshold: 0.12
-        }
-      );
+          );
 
-      revealElements.forEach((element) => {
-        observer.observe(element);
-      });
-    });
+          return;
+        }
+
+        const observer =
+          new IntersectionObserver(
+            (entries) => {
+              entries.forEach(
+                (entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add(
+                      "visible"
+                    );
+
+                    observer.unobserve(
+                      entry.target
+                    );
+                  }
+                }
+              );
+            },
+            {
+              threshold: 0.12
+            }
+          );
+
+        revealElements.forEach(
+          (element) => {
+            observer.observe(element);
+          }
+        );
+      }
+    );
   </script>
 
 </body>
