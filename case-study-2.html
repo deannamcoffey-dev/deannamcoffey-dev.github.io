@@ -3,9 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>College Baseball Recruiting Automation | Deanna Coffey</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    College Baseball Recruiting Automation | Deanna Coffey
+  </title>
 
   <style>
     * {
@@ -74,7 +80,7 @@
     .hero-description {
       color: #475569;
       font-size: 19px;
-      max-width: 800px;
+      max-width: 820px;
     }
 
     main {
@@ -135,15 +141,20 @@
       border-radius: 8px;
     }
 
-    .workflow-list {
+    .workflow-list,
+    .detail-list,
+    .business-value {
       padding-left: 25px;
     }
 
-    .workflow-list li {
+    .workflow-list li,
+    .detail-list li,
+    .business-value li {
       margin-bottom: 12px;
     }
 
-    .tools {
+    .tools,
+    .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -157,21 +168,6 @@
       border-radius: 20px;
       font-size: 14px;
       font-weight: 600;
-    }
-
-    .business-value {
-      padding-left: 25px;
-    }
-
-    .business-value li {
-      margin-bottom: 10px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
     }
 
     .skill {
@@ -191,10 +187,14 @@
       padding: 12px 20px;
       border-radius: 7px;
       font-weight: 700;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
     .button:hover {
       background: #1d4ed8;
+      transform: translateY(-1px);
     }
 
     .case-navigation {
@@ -211,6 +211,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .case-links a {
@@ -220,6 +221,44 @@
     }
 
     .case-links a:hover {
+      text-decoration: underline;
+    }
+
+    .case-contact {
+      margin-top: 70px;
+      padding: 45px 30px;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+    }
+
+    .case-contact h2 {
+      margin-bottom: 12px;
+    }
+
+    .case-contact p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: #64748b;
+    }
+
+    .case-contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin-bottom: 25px;
+    }
+
+    .case-contact-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .case-contact-links a:hover {
       text-decoration: underline;
     }
 
@@ -254,6 +293,15 @@
       .case-links {
         flex-direction: column;
       }
+
+      .case-contact {
+        padding: 35px 20px;
+      }
+
+      .case-contact-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -261,27 +309,41 @@
 <body>
 
   <nav>
-    <div class="logo">Deanna Coffey</div>
+    <div class="logo">
+      Deanna Coffey
+    </div>
 
     <div>
-      <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
 
-      <div class="eyebrow">Case Study 02</div>
+      <div class="eyebrow">
+        Case Study 04
+      </div>
 
-      <h1>College Baseball Recruiting Automation</h1>
+      <h1>
+        College Baseball Recruiting Automation
+      </h1>
 
       <p class="hero-description">
-        Designed and implemented an automated workflow that transforms
-        incoming college baseball recruiting emails into organized player
-        records, reducing manual data entry and creating a more consistent
-        recruiting review process.
+        Designed a workflow that transforms incoming
+        college baseball recruiting emails into organized
+        player records for easier review, tracking, and
+        recruiting management.
       </p>
 
     </div>
@@ -290,44 +352,64 @@
   <main>
 
     <section>
-      <h2>Project Overview</h2>
+      <h2>
+        Project Overview
+      </h2>
 
       <p>
-        Recruiting information often arrives through email in an unstructured
-        format. Player names, graduation years, recruiting details, video
-        links, and profile URLs can all appear in different locations within
-        the message.
+        College baseball recruiting can generate a large
+        volume of emails containing player names,
+        graduation years, positions, school information,
+        statistics, video links, profile links, and
+        additional recruiting details.
       </p>
 
       <p>
-        This project demonstrates how workflow automation can capture that
-        information, identify important recruiting data, organize it into
-        structured records, and support a more efficient review process.
+        Reviewing each message manually and transferring
+        the information into a structured recruiting
+        system can be time-consuming and inconsistent.
+        This project demonstrates how automation can
+        capture incoming recruiting emails, extract
+        relevant information, organize player data in
+        Google Sheets, and support a more efficient
+        recruiting workflow.
       </p>
 
       <div class="summary-grid">
 
         <div class="summary-card">
-          <h3>Challenge</h3>
+          <h3>
+            Challenge
+          </h3>
+
           <p>
-            Convert inconsistent recruiting emails into standardized,
-            usable player information.
+            Reduce the manual effort required to review
+            recruiting emails and organize player
+            information.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Solution</h3>
+          <h3>
+            Solution
+          </h3>
+
           <p>
-            Build an automated Make.com workflow using Gmail, pattern
-            matching, Google Sheets, and automated email actions.
+            Use Make.com, Gmail, Regex, Google Sheets,
+            and Apps Script to extract and organize
+            recruiting information automatically.
           </p>
         </div>
 
         <div class="summary-card">
-          <h3>Outcome</h3>
+          <h3>
+            Outcome
+          </h3>
+
           <p>
-            Created a repeatable workflow that reduces manual processing
-            and organizes recruiting information for easier review.
+            Created a more consistent process for
+            turning unstructured recruiting emails into
+            organized player records for review.
           </p>
         </div>
 
@@ -335,161 +417,393 @@
     </section>
 
     <section>
-      <h2>Project Visual</h2>
+      <h2>
+        Project Visual
+      </h2>
 
       <p>
-        The workflow below demonstrates how recruiting information moves
-        from incoming email through parsing and validation into structured
-        records and an automated response.
+        The workflow below demonstrates how recruiting
+        emails are captured, processed, and transformed
+        into structured player information.
       </p>
 
       <div class="project-visual">
         <img
           src="make-recruiter-automation.png"
-          alt="Make.com College Baseball Recruiting Automation workflow"
+          alt="College baseball recruiting automation workflow"
           class="project-visual-image"
         >
       </div>
     </section>
 
     <section>
-      <h2>How the Automation Works</h2>
+      <h2>
+        How the Automation Works
+      </h2>
 
       <ol class="workflow-list">
+
         <li>
-          Gmail monitors for new recruiting emails.
+          Gmail monitors incoming recruiting emails.
         </li>
 
         <li>
-          The workflow identifies and parses relevant recruiting data.
+          Make.com retrieves the email content for
+          processing.
         </li>
 
         <li>
-          Pattern matching extracts recruiting video URLs.
+          Pattern matching and Regex are used to locate
+          recruiting information contained within the
+          email body.
         </li>
 
         <li>
-          Additional parsing identifies player profile URLs.
+          Player details are organized into structured
+          fields for easier review.
         </li>
 
         <li>
-          Structured player information is added to Google Sheets.
+          Video and recruiting profile URLs are captured
+          when present in the message.
         </li>
 
         <li>
-          Gmail sends an automated email response after the workflow
-          completes the required processing.
+          The structured player information is added to
+          Google Sheets.
         </li>
+
+        <li>
+          Google Apps Script supports additional
+          processing and organization within the
+          recruiting workflow.
+        </li>
+
+        <li>
+          Gmail sends an automated response when the
+          workflow requires a confirmation or follow-up
+          message.
+        </li>
+
       </ol>
     </section>
 
     <section>
-      <h2>Tools &amp; Methods</h2>
-
-      <div class="tools">
-        <span class="tool">Make.com</span>
-        <span class="tool">Gmail</span>
-        <span class="tool">Regex / Pattern Matching</span>
-        <span class="tool">Google Sheets</span>
-        <span class="tool">Apps Script</span>
-        <span class="tool">Workflow Design</span>
-        <span class="tool">Process Mapping</span>
-        <span class="tool">Testing</span>
-        <span class="tool">Quality Assurance</span>
-        <span class="tool">Data Validation</span>
-      </div>
-    </section>
-
-    <section>
-      <h2>Challenges &amp; Problem Solving</h2>
+      <h2>
+        Data Extraction &amp; Organization
+      </h2>
 
       <p>
-        One of the most important parts of the project was determining
-        where automation should end and human review should begin.
-        Automated collection can improve speed, but profile information
-        still needs to meet business standards before being used.
+        Recruiting emails are not always formatted the
+        same way. Important information may appear in
+        different locations or may be included as plain
+        text, links, or labels.
       </p>
 
       <p>
-        Testing therefore focused not only on whether the automation worked
-        technically, but also on whether the resulting information was
-        useful, accurate, and consistent from an operational perspective.
+        The workflow uses pattern matching and Regex to
+        identify information that can be consistently
+        extracted and placed into structured fields.
       </p>
 
-      <p>
-        The workflow was refined through testing, feedback, and iteration
-        rather than treating automation as a one-time implementation.
-      </p>
-    </section>
+      <ul class="detail-list">
 
-    <section>
-      <h2>Business Value</h2>
-
-      <ul class="business-value">
         <li>
-          Reduced reliance on repetitive manual profile data entry.
+          Player name
         </li>
 
         <li>
-          Created a more structured and repeatable profile-building process.
+          Graduation year
         </li>
 
         <li>
-          Improved the ability to scale candidate and recruiting onboarding.
+          Position information
         </li>
 
         <li>
-          Added validation and QA into the automation workflow.
+          School or team information
         </li>
 
         <li>
-          Created a stronger connection between operational requirements
-          and the technology used to support them.
+          Contact or recruiting details
         </li>
+
+        <li>
+          Video URLs
+        </li>
+
+        <li>
+          Recruiting profile URLs
+        </li>
+
       </ul>
     </section>
 
     <section>
-      <h2>Skills Demonstrated</h2>
+      <h2>
+        Workflow Design
+      </h2>
 
-      <div class="skills">
-        <span class="skill">Operations Management</span>
-        <span class="skill">AI Automation</span>
-        <span class="skill">Process Improvement</span>
-        <span class="skill">Workflow Design</span>
-        <span class="skill">Quality Assurance</span>
-        <span class="skill">Testing</span>
-        <span class="skill">Data Validation</span>
-        <span class="skill">Digital Transformation</span>
-        <span class="skill">Cross-Functional Collaboration</span>
-        <span class="skill">Implementation</span>
+      <p>
+        The automation converts unstructured email
+        information into a format that is easier to
+        review and manage.
+      </p>
+
+      <p>
+        Instead of requiring someone to repeatedly
+        copy and paste recruiting information into a
+        spreadsheet, the workflow creates a consistent
+        intake process that organizes the available
+        player data automatically.
+      </p>
+    </section>
+
+    <section>
+      <h2>
+        Tools &amp; Methods
+      </h2>
+
+      <div class="tools">
+
+        <span class="tool">
+          Make.com
+        </span>
+
+        <span class="tool">
+          Gmail
+        </span>
+
+        <span class="tool">
+          Regex
+        </span>
+
+        <span class="tool">
+          Google Sheets
+        </span>
+
+        <span class="tool">
+          Google Apps Script
+        </span>
+
+        <span class="tool">
+          Pattern Matching
+        </span>
+
+        <span class="tool">
+          Data Extraction
+        </span>
+
+        <span class="tool">
+          Workflow Design
+        </span>
+
+        <span class="tool">
+          Automation Testing
+        </span>
+
       </div>
     </section>
 
-    <a class="button" href="index.html#projects">
+    <section>
+      <h2>
+        Challenges &amp; Problem Solving
+      </h2>
+
+      <p>
+        A key challenge was working with email content
+        that could vary from one recruiting message to
+        another. Unlike data submitted through a
+        standardized form, email text may not always
+        follow the same structure.
+      </p>
+
+      <p>
+        Pattern matching and Regex were used to locate
+        recognizable pieces of information and extract
+        them into structured fields where possible.
+      </p>
+
+      <p>
+        The workflow also required testing with
+        different email formats to confirm that player
+        records remained organized and that links were
+        captured correctly.
+      </p>
+    </section>
+
+    <section>
+      <h2>
+        Business Value
+      </h2>
+
+      <ul class="business-value">
+
+        <li>
+          Reduces repetitive copying and pasting from
+          recruiting emails.
+        </li>
+
+        <li>
+          Creates a more consistent recruiting intake
+          process.
+        </li>
+
+        <li>
+          Makes player information easier to review and
+          compare.
+        </li>
+
+        <li>
+          Centralizes recruiting information in Google
+          Sheets.
+        </li>
+
+        <li>
+          Improves visibility into video and recruiting
+          profile links.
+        </li>
+
+        <li>
+          Demonstrates how automation can convert
+          unstructured communication into structured
+          operational data.
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>
+        Skills Demonstrated
+      </h2>
+
+      <div class="skills">
+
+        <span class="skill">
+          Workflow Automation
+        </span>
+
+        <span class="skill">
+          Gmail Automation
+        </span>
+
+        <span class="skill">
+          Regex
+        </span>
+
+        <span class="skill">
+          Data Extraction
+        </span>
+
+        <span class="skill">
+          Google Sheets
+        </span>
+
+        <span class="skill">
+          Apps Script
+        </span>
+
+        <span class="skill">
+          Process Improvement
+        </span>
+
+        <span class="skill">
+          Data Organization
+        </span>
+
+        <span class="skill">
+          Automation Testing
+        </span>
+
+      </div>
+    </section>
+
+    <a
+      class="button"
+      href="index.html#projects"
+    >
       ← Back to Projects
     </a>
 
     <section class="case-navigation">
-      <h2>Explore More Case Studies</h2>
+
+      <h2>
+        Explore More Case Studies
+      </h2>
 
       <div class="case-links">
+
         <a href="case-study-1.html">
-          ← Case Study 1
+          Client Onboarding →
+        </a>
+
+        <a href="case-study-4.html">
+          Accounts Payable Vendor Validation →
         </a>
 
         <a href="case-study-3.html">
-          Case Study 3 →
+          Inventory Monitoring →
         </a>
+
       </div>
+
+    </section>
+
+    <section class="case-contact">
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        Interested in discussing operations,
+        automation, process improvement, or
+        professional opportunities? I'd be happy
+        to connect.
+      </p>
+
+      <div class="case-contact-links">
+
+        <a
+          href="mailto:deannamcoffey@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          deannamcoffey@gmail.com
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/deannamcoffey"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a href="tel:+16175846587">
+          617-584-6587
+        </a>
+
+      </div>
+
+      <a
+        class="button"
+        href="https://calendly.com/deannamcoffey/15min"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Schedule a Conversation
+      </a>
+
     </section>
 
   </main>
 
   <footer>
-    © 2026 Deanna Coffey | Operations + Automation Portfolio
+    © 2026 Deanna Coffey |
+    Operations + Automation Portfolio
   </footer>
 
 </body>
-
 </html>
