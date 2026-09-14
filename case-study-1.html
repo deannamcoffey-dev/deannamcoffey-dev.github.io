@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Inventory Monitoring & Reorder Workflow | Deanna Coffey</title>
+  <title>Client Onboarding & Conditional Routing Automation | Deanna Coffey</title>
 
   <style>
     * {
@@ -136,13 +136,13 @@
     }
 
     .workflow-list,
-    .business-rules,
+    .routing-list,
     .business-value {
       padding-left: 25px;
     }
 
     .workflow-list li,
-    .business-rules li,
+    .routing-list li,
     .business-value li {
       margin-bottom: 12px;
     }
@@ -263,16 +263,16 @@
   <header class="hero">
     <div class="hero-content">
 
-      <div class="eyebrow">Case Study 03</div>
+      <div class="eyebrow">Case Study 01</div>
 
-      <h1>Inventory Monitoring &amp; Reorder Workflow</h1>
+      <h1>Client Onboarding &amp; Conditional Routing Automation</h1>
 
       <p class="hero-description">
-        Designed an automated inventory monitoring workflow that evaluates
-        new order activity, updates inventory records, identifies low-stock
-        conditions, and triggers follow-up actions. The solution reduces
-        repetitive manual monitoring while creating a more consistent and
-        scalable approach to inventory control.
+        Designed an automated client onboarding workflow that monitors new
+        submissions, evaluates routing criteria, and directs each client to
+        the appropriate operational team. The workflow reduces manual
+        coordination, standardizes internal handoffs, and helps ensure the
+        right team receives the information needed to begin onboarding.
       </p>
 
     </div>
@@ -284,17 +284,16 @@
       <h2>Project Overview</h2>
 
       <p>
-        Inventory management depends on accurate and timely information.
-        When stock levels are monitored manually, low-inventory conditions
-        can be missed, updates can be delayed, and employees may spend
-        unnecessary time repeatedly checking spreadsheets.
+        Client onboarding often requires someone to review new submissions,
+        determine which internal team is responsible, and manually forward
+        the information to the correct group. As submission volume grows,
+        this can create repetitive work, delays, and inconsistent handoffs.
       </p>
 
       <p>
-        This project demonstrates how an automated workflow can monitor
-        incoming order activity, identify the affected inventory item,
-        update inventory data, evaluate defined business rules, and trigger
-        follow-up actions when inventory falls below an established level.
+        This project demonstrates how automation can monitor incoming
+        onboarding submissions, evaluate routing conditions, and
+        automatically notify the appropriate operational team.
       </p>
 
       <div class="summary-grid">
@@ -302,26 +301,25 @@
         <div class="summary-card">
           <h3>Challenge</h3>
           <p>
-            Reduce manual inventory monitoring while improving the
-            consistency of reorder and low-stock identification.
+            Reduce manual review and routing of new client onboarding
+            submissions across multiple internal teams.
           </p>
         </div>
 
         <div class="summary-card">
           <h3>Solution</h3>
           <p>
-            Build an automated workflow that monitors new orders, searches
-            inventory records, updates quantities, and triggers follow-up
-            actions based on business rules.
+            Build a Make.com workflow that monitors new submissions,
+            applies routing logic, and sends targeted notifications.
           </p>
         </div>
 
         <div class="summary-card">
           <h3>Outcome</h3>
           <p>
-            Created a repeatable process that improves inventory visibility,
-            reduces manual review, and supports faster response to low-stock
-            conditions.
+            Created a repeatable onboarding process that improves
+            consistency, reduces manual coordination, and supports
+            faster internal handoffs.
           </p>
         </div>
 
@@ -332,15 +330,15 @@
       <h2>Project Visual</h2>
 
       <p>
-        The workflow below shows how new order data is monitored, inventory
-        quantities are located and updated, and low-inventory conditions
-        trigger a secondary notification workflow.
+        The workflow below shows how a new client onboarding submission is
+        monitored, evaluated through routing logic, and directed to the
+        appropriate operational team.
       </p>
 
       <div class="project-visual">
         <img
-          src="inventory-reorder-automation.png"
-          alt="Inventory monitoring and reorder automation workflow"
+          src="client-onboarding-automation.png"
+          alt="Make.com client onboarding and conditional routing automation workflow"
           class="project-visual-image"
         >
       </div>
@@ -350,83 +348,71 @@
       <h2>How the Automation Works</h2>
 
       <ol class="workflow-list">
+
         <li>
-          The workflow monitors the new-order data source for incoming
-          records.
+          Google Sheets monitors the client onboarding submission source
+          for new records.
         </li>
 
         <li>
-          When a new order is detected, the workflow searches the inventory
-          data to locate the corresponding item and current quantity.
+          When a new submission is detected, Make.com retrieves the
+          onboarding information.
         </li>
 
         <li>
-          A variable is calculated or prepared so the inventory quantity can
-          be adjusted based on the new order.
+          A router evaluates the submission against defined business rules.
         </li>
 
         <li>
-          The appropriate Google Sheets inventory record is updated with the
-          revised quantity.
+          The submission is directed into the appropriate workflow path
+          based on the type of service or operational support required.
         </li>
 
         <li>
-          The updated inventory level is evaluated against a defined
-          low-inventory condition.
+          The appropriate internal team receives an automated Gmail
+          notification containing the onboarding information.
         </li>
 
         <li>
-          When the condition is met, an HTTP request triggers a secondary
-          workflow through a webhook.
+          The routing structure creates a more consistent handoff process
+          without requiring someone to manually review and forward every
+          submission.
         </li>
 
-        <li>
-          The secondary workflow sends an automated Gmail notification so
-          the appropriate person can review the inventory condition and take
-          the next action.
-        </li>
       </ol>
     </section>
 
     <section>
-      <h2>Business Rules &amp; Exception Handling</h2>
+      <h2>Routing Logic</h2>
 
       <p>
-        The value of this workflow comes from applying operational rules
-        consistently rather than simply moving data between systems.
+        The core of this automation is the routing layer. Instead of treating
+        every onboarding submission the same way, the workflow evaluates the
+        information and sends it to the team responsible for the next step.
       </p>
 
-      <ul class="business-rules">
+      <ul class="routing-list">
+
         <li>
-          New orders trigger inventory evaluation automatically.
+          AI consulting submissions are routed to the consulting team.
         </li>
 
         <li>
-          The correct inventory record must be identified before the
-          quantity is changed.
+          Digital advertising submissions are routed to advertising
+          operations.
         </li>
 
         <li>
-          Inventory quantities are updated using the order information
-          captured by the workflow.
+          AI automation or implementation submissions are routed to the
+          implementation team.
         </li>
 
-        <li>
-          Follow-up actions occur only when the inventory level meets the
-          defined low-stock condition.
-        </li>
-
-        <li>
-          The secondary notification workflow is separated from the main
-          inventory process to keep the automation easier to manage and
-          expand.
-        </li>
       </ul>
 
       <p>
-        Structuring the automation around business rules helps reduce
-        unnecessary notifications while making low-stock conditions more
-        visible when action is required.
+        This approach allows one centralized onboarding process to support
+        multiple operational paths while keeping the logic consistent and
+        manageable.
       </p>
     </section>
 
@@ -436,14 +422,14 @@
       <div class="tools">
         <span class="tool">Make.com</span>
         <span class="tool">Google Sheets</span>
-        <span class="tool">Webhooks</span>
-        <span class="tool">HTTP</span>
         <span class="tool">Gmail</span>
-        <span class="tool">Variables</span>
-        <span class="tool">Filters</span>
-        <span class="tool">Business Rules</span>
+        <span class="tool">Routers</span>
+        <span class="tool">Conditional Filters</span>
         <span class="tool">Workflow Design</span>
+        <span class="tool">Business Rules</span>
+        <span class="tool">Process Mapping</span>
         <span class="tool">Automation Testing</span>
+        <span class="tool">Quality Assurance</span>
       </div>
     </section>
 
@@ -451,23 +437,22 @@
       <h2>Challenges &amp; Problem Solving</h2>
 
       <p>
-        One of the key challenges was ensuring that the workflow updated the
-        correct inventory record and evaluated the resulting quantity before
-        triggering any follow-up action.
+        One of the key considerations was making sure each submission
+        followed the correct routing path. A workflow can run successfully
+        from a technical perspective and still create operational problems
+        if the routing logic is incorrect.
       </p>
 
       <p>
-        Testing needed to cover multiple scenarios, including normal inventory
-        levels, low-inventory conditions, different order quantities, and the
-        connection between the primary inventory workflow and the secondary
-        notification workflow.
+        Testing therefore focused on validating each route independently,
+        confirming that the correct conditions triggered the correct path,
+        and verifying that the appropriate team received the expected
+        notification.
       </p>
 
       <p>
-        Separating the notification process into a secondary webhook-based
-        workflow also created a more modular design. This makes it easier to
-        adjust notification logic later without redesigning the entire
-        inventory process.
+        The workflow was structured so additional onboarding paths could be
+        added later without redesigning the entire process.
       </p>
     </section>
 
@@ -475,36 +460,35 @@
       <h2>Business Value</h2>
 
       <ul class="business-value">
+
         <li>
-          Reduces repetitive manual inventory monitoring.
+          Reduces repetitive manual review and forwarding of onboarding
+          submissions.
         </li>
 
         <li>
-          Improves the consistency of inventory quantity updates.
+          Creates a more consistent internal handoff process.
         </li>
 
         <li>
-          Identifies low-stock conditions more quickly.
+          Helps ensure onboarding information reaches the correct
+          operational team.
         </li>
 
         <li>
-          Applies reorder-related business rules consistently.
+          Supports faster response times for new client submissions.
         </li>
 
         <li>
-          Creates greater visibility into inventory conditions that require
-          attention.
+          Reduces dependence on individual staff members to remember
+          routing requirements.
         </li>
 
         <li>
-          Separates monitoring and notification logic into reusable workflow
-          components.
+          Creates a scalable framework that can support additional teams
+          or service categories.
         </li>
 
-        <li>
-          Creates a scalable foundation for additional inventory rules,
-          alerts, or integrations.
-        </li>
       </ul>
     </section>
 
@@ -513,15 +497,15 @@
 
       <div class="skills">
         <span class="skill">Operations Management</span>
-        <span class="skill">Inventory Operations</span>
         <span class="skill">Process Improvement</span>
         <span class="skill">Workflow Design</span>
-        <span class="skill">Business Rules</span>
         <span class="skill">Conditional Logic</span>
-        <span class="skill">Exception Management</span>
+        <span class="skill">Business Rules</span>
+        <span class="skill">Cross-Functional Coordination</span>
         <span class="skill">Automation</span>
         <span class="skill">Testing</span>
         <span class="skill">Quality Assurance</span>
+        <span class="skill">Digital Transformation</span>
       </div>
     </section>
 
@@ -533,13 +517,15 @@
       <h2>Explore More Case Studies</h2>
 
       <div class="case-links">
-        <a href="case-study-1.html">
-          ← Case Study 1
-        </a>
 
         <a href="case-study-2.html">
           Case Study 2 →
         </a>
+
+        <a href="case-study-3.html">
+          Case Study 3 →
+        </a>
+
       </div>
     </section>
 
