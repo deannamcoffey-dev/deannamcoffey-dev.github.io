@@ -1,1202 +1,655 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Deanna Coffey - Operations, Automation, AI Workflows and Digital Transformation Portfolio"
-  >
-
-  <title>
-    Deanna Coffey | Operations + Automation
-  </title>
-
-  <style>
-    @import url(
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap'
-    );
-
-    /* =========================
-       RESET / BASE
-    ========================= */
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      color: #1e293b;
-      background: #ffffff;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1,
-    h2,
-    h3,
-    .logo {
-      font-family: 'Manrope', Arial, sans-serif;
-    }
-
-    p {
-      color: #475569;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-      background: rgba(11, 31, 51, 0.97);
-      color: #ffffff;
-      padding: 17px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-    }
-
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #93c5fd;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background:
-        radial-gradient(
-          circle at top right,
-          rgba(37, 99, 235, 0.13),
-          transparent 32%
-        ),
-        linear-gradient(
-          180deg,
-          #f8fafc 0%,
-          #ffffff 100%
-        );
-
-      padding: 120px 8% 110px;
-      text-align: center;
-      border-bottom: 1px solid #e2e8f0;
-
-      animation: heroFadeUp 0.7s ease-out both;
-    }
-
-    @keyframes heroFadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-label {
-      display: inline-block;
-      color: #2563eb;
-      background: #eff6ff;
-      border: 1px solid #dbeafe;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2.2px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      margin-bottom: 24px;
-    }
-.hero-role {
-  color: #2563eb;
-  font-size: clamp(18px, 2.5vw, 23px);
-  font-weight: 700;
-  margin-bottom: 18px;
-  letter-spacing: -0.2px;
-}
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.08;
-      letter-spacing: -2px;
-      color: #0b1f33;
-      max-width: 950px;
-      margin: 0 auto 24px;
-    }
-
-    .hero h2 {
-      font-family: 'Inter', Arial, sans-serif;
-      color: #334155;
-      max-width: 800px;
-      margin: 0 auto 22px;
-      font-size: clamp(20px, 3vw, 27px);
-      line-height: 1.45;
-      font-weight: 500;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 34px;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .button {
-      display: inline-block;
-      background: #2563eb;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 13px 22px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 700;
-      margin: 6px;
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .button:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
-    }
-
-  .button.secondary {
-  background: #2563eb;
-  color: #ffffff;
-  border: 1px solid #2563eb;
-}
-
-.button.secondary:hover {
-  background: #1d4ed8;
-}
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      padding: 90px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      color: #0b1f33;
-      font-size: 36px;
-      margin-bottom: 18px;
-      letter-spacing: -0.8px;
-    }
-
-    .section-intro {
-      max-width: 730px;
-      margin: 0 auto 50px;
-      text-align: center;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       WHAT I DO
-    ========================= */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .service {
-      padding: 30px 26px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
-      border-color: #cbd5e1;
-    }
-
-    .service h3 {
-      color: #0f2744;
-      margin-bottom: 12px;
-      font-size: 19px;
-    }
-
-    .service p {
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    /* =========================
-       PROJECTS
-    ========================= */
-
-    .projects-section {
-      background: #f8fafc;
-      border-top: 1px solid #e2e8f0;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .project {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 32px;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.09);
-      border-color: #cbd5e1;
-    }
-
-    .project-number {
-      color: #2563eb;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      margin-bottom: 12px;
-    }
-
-    .project h3 {
-      color: #0f2744;
-      font-size: 22px;
-      line-height: 1.35;
-      margin-bottom: 15px;
-    }
-
-    .project p {
-      font-size: 15px;
-      line-height: 1.75;
-      margin-bottom: 18px;
-    }
-
-    .tools {
-      color: #64748b;
-      font-size: 13px;
-      font-weight: 600;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .project-link {
-      color: #2563eb;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 55px;
-      align-items: center;
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .about-photo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .about-photo img {
-      width: 100%;
-      max-width: 260px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.13);
-    }
-
-    .about {
-      max-width: 760px;
-    }
-
-    .about p {
-      margin-bottom: 20px;
-      font-size: 17px;
-      line-height: 1.8;
-      color: #475569;
-    }
-
-    /* =========================
-       SKILLS
-    ========================= */
-
-    .skills-section {
-      background: #f8fafc;
-      border-top: 1px solid #e2e8f0;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      max-width: 1250px;
-      margin: 45px auto 0;
-    }
-
-    .skills > div {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 25px 22px;
-    }
-
-    .skills h3 {
-      color: #0f2744;
-      font-size: 17px;
-      margin-bottom: 14px;
-      line-height: 1.35;
-    }
-
-    .skills p {
-      font-size: 14px;
-      line-height: 1.9;
-      color: #475569;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      text-align: center;
-      background: #ffffff;
-    }
-
-    .contact p {
-      max-width: 650px;
-      margin: 16px auto 26px;
-      font-size: 17px;
-      color: #64748b;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px 28px;
-      max-width: 800px;
-      margin: 0 auto 28px;
-    }
-
-    .contact-links a {
-      color: #2563eb;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .contact-links a:hover {
-      color: #1d4ed8;
-      text-decoration: underline;
-      transform: translateY(-1px);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #0b1f33;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 28px 20px;
-      font-size: 14px;
-    }
-
-    /* =========================
-       SCROLL ANIMATION
-    ========================= */
-
-    .reveal {
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+  /* =========================================
+     DOE FARM SOLUTIONS — BRAND SYSTEM
+     ========================================= */
+
+  :root {
+    --forest: #123524;
+    --forest-dark: #0B281A;
+    --sage: #7A9E7E;
+    --sage-light: #DDE7DE;
+    --cloud: #F0EEE9;
+    --cream: #FAFAF7;
+    --white: #FFFFFF;
+    --ink: #17211D;
+    --body-text: #4F5D54;
+    --gold: #D6A84B;
+    --gold-dark: #B98B32;
+    --border: #D9DDD8;
+  }
+
+  /* =========================================
+     RESET / BASE
+     ========================================= */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  h3,
+  .logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+
+  p {
+    color: var(--body-text);
+  }
+
+  /* =========================================
+     NAVIGATION
+     ========================================= */
+
+  nav {
+    background: rgba(18, 53, 36, 0.98);
+    color: var(--white);
+    padding: 17px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 18px rgba(11, 40, 26, 0.10);
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+
+  nav a {
+    color: #F3F5F2;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: var(--gold);
+  }
+
+  /* =========================================
+     HERO
+     ========================================= */
+
+  .hero {
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(122, 158, 126, 0.22),
+        transparent 36%
+      ),
+      radial-gradient(
+        circle at bottom left,
+        rgba(214, 168, 75, 0.08),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        #FAFAF7 0%,
+        #F0EEE9 100%
+      );
+
+    padding: 120px 8% 110px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    animation: heroFadeUp 0.7s ease-out both;
+  }
+
+  @keyframes heroFadeUp {
+    from {
       opacity: 0;
       transform: translateY(18px);
-      transition:
-        opacity 0.65s ease,
-        transform 0.65s ease;
     }
 
-    .reveal.visible {
+    to {
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1050px) {
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .skills {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .about-photo img {
-        width: 210px;
-        height: 210px;
-      }
-
-      .skills {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 650px) {
-      nav {
-        padding: 15px 6%;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      .hero {
-        padding: 85px 6% 80px;
-      }
-
-      .hero h1 {
-        letter-spacing: -1px;
-      }
-
-      section {
-        padding: 70px 6%;
-      }
-
-      .section-title {
-        font-size: 30px;
-      }
-
-      .services,
-      .skills {
-        grid-template-columns: 1fr;
-      }
-
-      .project {
-        padding: 26px 22px;
-      }
-
-      .contact-links {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
-
-  <nav>
-
-    <div class="logo">
-      Deanna Coffey
-    </div>
-
-    <div>
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#projects">
-        Projects
-      </a>
-
-      <a href="#skills">
-        Skills
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-    </div>
-
-  </nav>
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
-<header class="hero">
-
-  <div class="hero-label">
-    OPERATIONS + AUTOMATION
-  </div>
-
-  <div class="hero-role">
-    Operations Leader | Process Improvement |
-    Automation &amp; AI
-  </div>
-
-  <h1>
-    Building Smarter, More Scalable Operations
-  </h1>
-
-  <h2>
-    Improving business processes through practical
-    process improvement, systems, automation and AI.
-  </h2>
-
-  <p>
-    Operations leader with 20+ years of hands-on
-    experience across financial processes, vendor
-    management, inventory, compliance, systems and
-    organizational growth.
-  </p>
-
-  <a
-    class="button"
-    href="#projects"
-  >
-    View My Projects
-  </a>
-
-  <a
-    class="button secondary"
-    href="deanna-coffey-resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Download Résumé
-  </a>
-
-</header>
-  <!-- =========================
-       WHAT I DO
-  ========================= -->
-
-  <section class="reveal">
-
-    <h2 class="section-title">
-      What I Do
-    </h2>
-
-    <p class="section-intro">
-      I approach automation from an operations
-      perspective: understand the business problem
-      first, then determine how technology can
-      improve the process.
-    </p>
-
-    <div class="services">
-
-      <div class="service">
-
-        <h3>
-          Operations
-        </h3>
-
-        <p>
-          Business operations, process design,
-          vendor management, workflow development
-          and operational scaling.
-        </p>
-
-      </div>
-
-      <div class="service">
-
-        <h3>
-          Workflow Automation
-        </h3>
-
-        <p>
-          Designing automated workflows that reduce
-          repetitive work and improve consistency.
-        </p>
-
-      </div>
-
-      <div class="service">
-
-        <h3>
-          AI &amp; Digital Transformation
-        </h3>
-
-        <p>
-          Applying AI and modern digital tools to
-          improve existing business processes.
-        </p>
-
-      </div>
-
-      <div class="service">
-
-        <h3>
-          Systems &amp; Data
-        </h3>
-
-        <p>
-          Connecting business systems, organizing
-          data and creating more efficient
-          information flows.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       PROJECTS
-  ========================= -->
-
-  <section
-    class="projects-section reveal"
-    id="projects"
-  >
-
-    <h2 class="section-title">
-      Featured Projects
-    </h2>
-
-    <p class="section-intro">
-      Selected projects demonstrating how I combine
-      operations, automation and technology to solve
-      business problems.
-    </p>
-
-    <div class="projects">
-
-      <!-- PROJECT 1 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 01
-        </div>
-
-        <h3>
-          Client Onboarding &amp;
-          Conditional Routing Automation
-        </h3>
-
-        <p>
-          Designed an automated onboarding workflow
-          that monitors new submissions, applies
-          routing logic, and directs each client to
-          the appropriate operational team.
-        </p>
-
-        <div class="tools">
-          Make • Google Sheets • Gmail •
-          Routing Logic • Process Improvement
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-1.html"
-        >
-          View Case Study →
-        </a>
-
-      </div>
-
-      <!-- PROJECT 2 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 02
-        </div>
-
-        <h3>
-          Accounts Payable Vendor Validation
-        </h3>
-
-        <p>
-          Designed an automated workflow for
-          extracting invoice information, validating
-          vendors, applying financial controls, and
-          routing exceptions through business rules.
-        </p>
-
-        <div class="tools">
-          QuickBooks • Make • JSON • Gmail •
-          Google Sheets • Webhooks
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-4.html"
-        >
-          View Case Study →
-        </a>
-
-      </div>
-
-      <!-- PROJECT 3 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 03
-        </div>
-
-        <h3>
-          Inventory Monitoring &amp;
-          Reorder Workflow
-        </h3>
-
-        <p>
-          Built an automated inventory workflow
-          that monitors new orders, updates stock
-          levels, identifies low-inventory conditions,
-          and triggers automated notifications
-          through connected workflows.
-        </p>
-
-        <div class="tools">
-          Make • Webhooks • HTTP •
-          Google Sheets • Gmail
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-3.html"
-        >
-          View Case Study →
-        </a>
-
-      </div>
-
-      <!-- PROJECT 4 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 04
-        </div>
-
-        <h3>
-          College Baseball Recruiting Automation
-        </h3>
-
-        <p>
-          Designed a workflow that transforms incoming
-          recruiting emails into organized player
-          records for easier review and recruiting
-          management.
-        </p>
-
-        <div class="tools">
-          Make • Gmail • Regex •
-          Google Sheets • Apps Script
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-2.html"
-        >
-          View Case Study →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       ABOUT
-  ========================= -->
-
-  <section
-    class="reveal"
-    id="about"
-  >
-
-    <h2 class="section-title">
-      About Me
-    </h2>
-
-    <div class="about-layout">
-
-      <div class="about-photo">
-
-        <img
-          src="deanna-coffey-headshot.png"
-          alt="Deanna Coffey"
-        >
-
-      </div>
-
-      <div class="about">
-
-        <p>
-          I’m an operations leader with 20+ years
-          of hands-on experience managing the
-          day-to-day functions that keep businesses
-          running effectively. My background includes
-          payroll, vendor payments, financial
-          processes, inventory control, budgeting,
-          compliance, systems, process improvement,
-          and leadership support.
-        </p>
-
-        <p>
-          My career spans both large organizations
-          and startup environments. Earlier in my
-          career, I managed pharmaceutical
-          distribution operations at H.D. Smith,
-          with responsibilities across payroll,
-          inventory, budgets, compliance, vendor
-          management, and process improvement.
-          More recently, as Director of Operations
-          at Best Agent Today, I’ve taken on a broad
-          operational role that includes payroll,
-          vendor payments, systems and technology,
-          cross-functional coordination, and
-          leadership support.
-        </p>
-
-        <p>
-          What I enjoy most is finding better ways
-          to work. I combine practical operations
-          experience with process improvement,
-          automation, and AI tools to reduce
-          repetitive work, improve workflows, and
-          help organizations operate more efficiently.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       SKILLS
-  ========================= -->
-
-  <section
-    class="skills-section reveal"
-    id="skills"
-  >
-
-    <h2 class="section-title">
-      Skills &amp; Tools
-    </h2>
-
-    <div class="skills">
-
-      <div>
-
-        <h3>
-          Operations &amp; Management
-        </h3>
-
-        <p>
-          Operations Management<br>
-          Process Improvement<br>
-          Workflow Design<br>
-          Vendor Management<br>
-          Operational Scaling<br>
-          Project Management
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Automation &amp; Integration
-        </h3>
-
-        <p>
-          Make<br>
-          Zapier<br>
-          Webhooks<br>
-          HTTP / APIs<br>
-          JSON<br>
-          Regex
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          AI &amp; Productivity
-        </h3>
-
-        <p>
-          ChatGPT<br>
-          Gemini<br>
-          Prompt Engineering<br>
-          AI-Assisted Workflows<br>
-          Gamma
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Business &amp; Operations Systems
-        </h3>
-
-        <p>
-          QuickBooks<br>
-          ADP<br>
-          Basecamp<br>
-          Mailchimp<br>
-          Google Sheets<br>
-          Apps Script<br>
-          GA4<br>
-          Monday.com<br>
-          Supabase
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Technical &amp; Development
-        </h3>
-
-        <p>
-          GitHub<br>
-          HTML
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       CONTACT
-  ========================= -->
-
-  <section
-    class="contact reveal"
-    id="contact"
-  >
-
-    <h2 class="section-title">
-      Let's Connect
-    </h2>
-
-    <p>
-      Interested in discussing operations,
-      automation, process improvement or
-      digital transformation opportunities?
-      I'd be happy to connect.
-    </p>
-
-    <div class="contact-links">
-
-      <a
-        href="mailto:deannamcoffey@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        deannamcoffey@gmail.com
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/deannamcoffey"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
-
-      <a href="tel:+16175846587">
-        617-584-6587
-      </a>
-
-    </div>
-
-    <a
-      class="button"
-      href="https://calendly.com/deannamcoffey/15min"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Schedule a Conversation
-    </a>
-
-  </section>
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-    © 2026 Deanna Coffey |
-    Operations + Automation Portfolio
-  </footer>
-
-  <!-- =========================
-       ANIMATIONS
-  ========================= -->
-
-  <script>
-    document.addEventListener(
-      "DOMContentLoaded",
-      () => {
-        const revealElements =
-          document.querySelectorAll(".reveal");
-
-        if (!("IntersectionObserver" in window)) {
-          revealElements.forEach(
-            (element) => {
-              element.classList.add("visible");
-            }
-          );
-
-          return;
-        }
-
-        const observer =
-          new IntersectionObserver(
-            (entries) => {
-              entries.forEach(
-                (entry) => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add(
-                      "visible"
-                    );
-
-                    observer.unobserve(
-                      entry.target
-                    );
-                  }
-                }
-              );
-            },
-            {
-              threshold: 0.12
-            }
-          );
-
-        revealElements.forEach(
-          (element) => {
-            observer.observe(element);
-          }
-        );
-      }
+  }
+
+  .hero-label {
+    display: inline-block;
+    color: var(--forest);
+    background: var(--sage-light);
+    border: 1px solid rgba(122, 158, 126, 0.45);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+
+  .hero-role {
+    color: var(--sage);
+    font-size: clamp(18px, 2.5vw, 23px);
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -0.2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    color: var(--forest);
+    max-width: 950px;
+    margin: 0 auto 24px;
+  }
+
+  .hero h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--ink);
+    max-width: 800px;
+    margin: 0 auto 22px;
+    font-size: clamp(20px, 3vw, 27px);
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  .hero p {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--body-text);
+  }
+
+  /* =========================================
+     BUTTONS
+     ========================================= */
+
+  .button {
+    display: inline-block;
+    background: var(--forest);
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 6px;
+    border: 1px solid var(--forest);
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .button:hover {
+    background: var(--forest-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(18, 53, 36, 0.18);
+  }
+
+  .button.secondary {
+    background: transparent;
+    color: var(--forest);
+    border: 1.5px solid var(--forest);
+  }
+
+  .button.secondary:hover {
+    background: var(--forest);
+    color: var(--white);
+  }
+
+  /* =========================================
+     SECTIONS
+     ========================================= */
+
+  section {
+    padding: 90px 8%;
+  }
+
+  .section-title {
+    text-align: center;
+    color: var(--forest);
+    font-size: 38px;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: var(--gold);
+    margin: 15px auto 0;
+    border-radius: 10px;
+  }
+
+  .section-intro {
+    max-width: 730px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--body-text);
+  }
+
+  /* =========================================
+     WHAT I DO
+     ========================================= */
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service {
+    padding: 30px 26px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--sage);
+    border-radius: 12px;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(18, 53, 36, 0.10);
+    border-color: var(--sage);
+  }
+
+  .service h3 {
+    color: var(--forest);
+    margin-bottom: 12px;
+    font-size: 19px;
+  }
+
+  .service p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--body-text);
+  }
+
+  /* =========================================
+     PROJECTS
+     ========================================= */
+
+  .projects-section {
+    background: var(--cloud);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .project {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--forest),
+      var(--sage),
+      var(--gold)
     );
-  </script>
+  }
 
-</body>
-</html>
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(18, 53, 36, 0.11);
+    border-color: var(--sage);
+  }
+
+  .project-number {
+    color: var(--sage);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+  }
+
+  .project h3 {
+    color: var(--forest);
+    font-size: 22px;
+    line-height: 1.35;
+    margin-bottom: 15px;
+  }
+
+  .project p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+    color: var(--body-text);
+  }
+
+  .tools {
+    color: #667269;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .project-link {
+    color: var(--forest);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 3px;
+  }
+
+  .project-link:hover {
+    color: var(--sage);
+  }
+
+  /* =========================================
+     ABOUT
+     ========================================= */
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 55px;
+    align-items: center;
+    max-width: 1050px;
+    margin: auto;
+  }
+
+  .about-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-photo img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid var(--white);
+    outline: 1px solid var(--sage-light);
+    box-shadow: 0 16px 38px rgba(18, 53, 36, 0.16);
+  }
+
+  .about {
+    max-width: 760px;
+  }
+
+  .about p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--body-text);
+  }
+
+  /* =========================================
+     SKILLS
+     ========================================= */
+
+  .skills-section {
+    background: var(--cloud);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1250px;
+    margin: 45px auto 0;
+  }
+
+  .skills > div {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px 22px;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .skills > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(18, 53, 36, 0.08);
+  }
+
+  .skills h3 {
+    color: var(--forest);
+    font-size: 17px;
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+
+  .skills p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--body-text);
+  }
+
+  /* =========================================
+     CONTACT
+     ========================================= */
+
+  .contact {
+    text-align: center;
+    background:
+      linear-gradient(
+        180deg,
+        var(--cream) 0%,
+        #F4F2EC 100%
+      );
+  }
+
+  .contact p {
+    max-width: 650px;
+    margin: 16px auto 26px;
+    font-size: 17px;
+    color: var(--body-text);
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    max-width: 800px;
+    margin: 0 auto 28px;
+  }
+
+  .contact-links a {
+    color: var(--forest);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .contact-links a:hover {
+    color: var(--sage);
+    text-decoration: underline;
+    transform: translateY(-1px);
+  }
+
+  /* =========================================
+     FOOTER
+     ========================================= */
+
+  footer {
+    background: var(--forest-dark);
+    color: #E4EAE5;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-top: 3px solid var(--gold);
+  }
+
+  /* =========================================
+     SCROLL ANIMATION
+     ========================================= */
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* =========================================
+     RESPONSIVE
+     ========================================= */
+
+  @media (max-width: 1050px) {
+    .services {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+
+    .about-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .about-photo img {
+      width: 210px;
+      height: 210px;
+    }
+
+    .skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 650px) {
+    nav {
+      padding: 15px 6%;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    nav a {
+      margin: 0 8px;
+    }
+
+    .hero {
+      padding: 85px 6% 80px;
+    }
+
+    .hero h1 {
+      letter-spacing: -1px;
+    }
+
+    section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      font-size: 32px;
+    }
+
+    .services,
+    .skills {
+      grid-template-columns: 1fr;
+    }
+
+    .project {
+      padding: 28px 23px;
+    }
+
+    .contact-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
