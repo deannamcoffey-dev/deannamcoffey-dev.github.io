@@ -68,8 +68,7 @@
       font-family: 'Playfair Display', Georgia, serif;
     }
 
-    h3,
-    .logo {
+    h3 {
       font-family: 'Montserrat', Arial, sans-serif;
     }
 
@@ -84,7 +83,7 @@
     nav {
       background: rgba(18, 53, 36, 0.98);
       color: var(--white);
-      padding: 17px 8%;
+      padding: 12px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -96,10 +95,26 @@
       box-shadow: 0 4px 18px rgba(11, 40, 26, 0.10);
     }
 
+    /* NEW LOGO */
+
     .logo {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      display: block;
+      width: 190px;
+      max-height: 75px;
+      height: auto;
+      object-fit: contain;
     }
 
     nav a {
@@ -614,10 +629,16 @@
     }
 
     @media (max-width: 650px) {
+
       nav {
-        padding: 15px 6%;
+        padding: 12px 6%;
         flex-direction: column;
         gap: 12px;
+      }
+
+      .nav-logo {
+        width: 165px;
+        max-height: 68px;
       }
 
       nav a {
@@ -673,6 +694,7 @@
         transform: none;
       }
     }
+
   </style>
 </head>
 
@@ -685,10 +707,17 @@
   <nav>
 
     <div class="logo">
-      DOE FARM SOLUTIONS
+      <a href="#">
+        <img
+          src="DoeFarmSolutions Logo.png"
+          alt="Doe Farm Solutions"
+          class="nav-logo"
+        >
+      </a>
     </div>
 
     <div>
+
       <a href="#about">
         About
       </a>
@@ -704,6 +733,7 @@
       <a href="#contact">
         Contact
       </a>
+
     </div>
 
   </nav>
@@ -1206,9 +1236,9 @@
     <div class="contact-links">
 
       <a
-       href="mailto:deanna@doefarmsolutions.com"
+        href="mailto:deanna@doefarmsolutions.com"
       >
-deanna@doefarmsolutions.com
+        deanna@doefarmsolutions.com
       </a>
 
       <a
