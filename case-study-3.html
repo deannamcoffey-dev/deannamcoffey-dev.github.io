@@ -3,15 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Doe Farm Solutions case study: Inventory Monitoring and Reorder Workflow"
+    content="Inventory automation case study from Doe Farm Solutions using Make.com, Google Sheets, webhooks and low-stock alerts to automate inventory monitoring and reorder workflows."
   >
 
   <title>
-    Inventory Monitoring & Reorder Workflow | Doe Farm Solutions
+    Inventory Automation & Low-Stock Monitoring | Doe Farm Solutions
   </title>
 
   <style>
@@ -63,7 +67,9 @@
       color: var(--body-text);
     }
 
-    /* NAVIGATION */
+    /* ================================
+       NAVIGATION
+    ================================ */
 
     nav {
       background: rgba(18, 53, 36, 0.98);
@@ -112,7 +118,9 @@
       color: var(--gold);
     }
 
-    /* HERO */
+    /* ================================
+       HERO
+    ================================ */
 
     .hero {
       background:
@@ -184,7 +192,9 @@
       line-height: 1.8;
     }
 
-    /* MAIN */
+    /* ================================
+       MAIN
+    ================================ */
 
     main {
       max-width: 1050px;
@@ -224,7 +234,9 @@
       line-height: 1.8;
     }
 
-    /* SUMMARY CARDS */
+    /* ================================
+       SUMMARY CARDS
+    ================================ */
 
     .summary-grid {
       display: grid;
@@ -260,7 +272,9 @@
       font-size: 15px;
     }
 
-    /* PROJECT VISUAL */
+    /* ================================
+       PROJECT VISUAL
+    ================================ */
 
     .project-visual {
       background: var(--white);
@@ -278,7 +292,9 @@
       border-radius: 9px;
     }
 
-    /* LISTS */
+    /* ================================
+       LISTS
+    ================================ */
 
     .workflow-list,
     .detail-list,
@@ -301,7 +317,9 @@
       font-weight: 700;
     }
 
-    /* TOOLS & SKILLS */
+    /* ================================
+       TOOLS & SKILLS
+    ================================ */
 
     .tools,
     .skills {
@@ -331,7 +349,9 @@
       font-weight: 600;
     }
 
-    /* BUTTON */
+    /* ================================
+       BUTTON
+    ================================ */
 
     .button {
       display: inline-block;
@@ -355,7 +375,9 @@
       box-shadow: 0 10px 24px rgba(18, 53, 36, 0.18);
     }
 
-    /* CASE NAVIGATION */
+    /* ================================
+       CASE NAVIGATION
+    ================================ */
 
     .case-navigation {
       border-top: 1px solid var(--border);
@@ -397,7 +419,9 @@
       box-shadow: 0 8px 20px rgba(18, 53, 36, 0.08);
     }
 
-    /* CONTACT */
+    /* ================================
+       CONTACT
+    ================================ */
 
     .case-contact {
       margin-top: 75px;
@@ -422,7 +446,7 @@
     }
 
     .case-contact p {
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto 24px;
     }
 
@@ -447,7 +471,9 @@
       text-decoration: underline;
     }
 
-    /* FOOTER */
+    /* ================================
+       FOOTER
+    ================================ */
 
     footer {
       background: var(--forest-dark);
@@ -459,7 +485,9 @@
       border-top: 3px solid var(--gold);
     }
 
-    /* MOBILE */
+    /* ================================
+       MOBILE
+    ================================ */
 
     @media (max-width: 750px) {
 
@@ -510,10 +538,12 @@
         flex-direction: column;
         gap: 10px;
       }
+
     }
 
   </style>
 </head>
+
 
 <body>
 
@@ -541,8 +571,12 @@
         Home
       </a>
 
+      <a href="index.html#services">
+        Services
+      </a>
+
       <a href="index.html#projects">
-        Projects
+        Case Studies
       </a>
 
       <a href="index.html#about">
@@ -565,18 +599,20 @@
     <div class="hero-content">
 
       <div class="eyebrow">
-        Case Study 03
+        Inventory Automation | Case Study 03
       </div>
 
       <h1>
-        Inventory Monitoring &amp; Reorder Workflow
+        Inventory Automation &amp;
+        Low-Stock Monitoring Workflow
       </h1>
 
       <p class="hero-description">
-        Built an automated inventory workflow that monitors
-        new orders, updates stock levels, identifies
-        low-inventory conditions, and triggers automated
-        notifications through connected workflows.
+        An automated inventory management workflow that
+        monitors new orders, updates stock levels,
+        identifies low-inventory conditions, and triggers
+        automated low-stock notifications through
+        connected Make.com workflows.
       </p>
 
     </div>
@@ -591,25 +627,28 @@
     <section>
 
       <h2>
-        Project Overview
+        Inventory Automation Overview
       </h2>
 
       <p>
         Inventory processes can become difficult to manage
         when order activity and stock levels are tracked
-        manually. Each order may require someone to locate
-        the item, calculate the remaining quantity, update
-        the inventory record, and determine whether the new
-        balance requires attention.
+        manually. Each new order may require someone to
+        locate the correct item, calculate the remaining
+        quantity, update the inventory record, and
+        determine whether the new stock level requires
+        attention.
       </p>
 
       <p>
-        This project demonstrates an automated workflow
-        that monitors new orders, updates inventory
-        quantities, evaluates low-stock conditions, and
-        sends a notification when inventory requires
-        follow-up.
+        This project demonstrates how inventory automation
+        can streamline that process. The workflow monitors
+        new orders, calculates updated inventory
+        quantities, updates the inventory record, evaluates
+        low-stock conditions, and automatically sends a
+        notification when inventory requires follow-up.
       </p>
+
 
       <div class="summary-grid">
 
@@ -620,37 +659,40 @@
           </h3>
 
           <p>
-            Reduce manual inventory updates and make
-            low-stock conditions easier to identify.
+            Reduce repetitive manual inventory updates
+            while making low-stock conditions easier to
+            identify and manage.
           </p>
 
         </div>
 
+
         <div class="summary-card">
 
           <h3>
-            Solution
+            Automation Solution
           </h3>
 
           <p>
             Connect Google Sheets, Make.com, HTTP,
-            webhooks, and Gmail in a parent/child
-            automation design.
+            webhooks, filters, and Gmail through a
+            parent-and-child inventory automation design.
           </p>
 
         </div>
 
+
         <div class="summary-card">
 
           <h3>
-            Outcome
+            Operational Impact
           </h3>
 
           <p>
-            Created a repeatable process that updates
-            inventory automatically and notifies the
-            appropriate person when stock falls below a
-            defined level.
+            Create a repeatable inventory monitoring
+            process that updates stock levels and alerts
+            the appropriate person when inventory falls
+            below a defined level.
           </p>
 
         </div>
@@ -665,22 +707,22 @@
     <section>
 
       <h2>
-        Project Visual
+        Inventory Monitoring Workflow
       </h2>
 
       <p>
-        The workflow below shows the main inventory
-        scenario that monitors new orders, calculates
-        inventory changes, updates the inventory record,
-        and triggers a secondary notification workflow
-        when stock is low.
+        The workflow below shows how the main inventory
+        automation monitors new orders, calculates stock
+        changes, updates the inventory record, evaluates
+        low-stock conditions, and triggers a secondary
+        notification workflow when attention is required.
       </p>
 
       <div class="project-visual">
 
         <img
           src="inventory-reorder-automation.png"
-          alt="Inventory monitoring and reorder automation workflow"
+          alt="Inventory automation workflow using Make.com and Google Sheets for low-stock monitoring"
           class="project-visual-image"
         >
 
@@ -694,45 +736,45 @@
     <section>
 
       <h2>
-        How the Automation Works
+        How the Inventory Automation Works
       </h2>
 
       <ol class="workflow-list">
 
         <li>
-          Google Sheets watches the New Orders sheet for
+          Google Sheets monitors the New Orders sheet for
           newly added order records.
         </li>
 
         <li>
-          The workflow searches order and inventory
-          information to identify the item and ordered
-          quantity.
+          The workflow searches the order and inventory
+          information to identify the correct item and
+          ordered quantity.
         </li>
 
         <li>
-          A Tools step calculates and stores the updated
-          inventory value.
+          A Make.com Tools step calculates and stores the
+          updated inventory value.
         </li>
 
         <li>
           Google Sheets updates the corresponding
-          inventory row with the new stock level.
+          inventory record with the new stock level.
         </li>
 
         <li>
-          A low-inventory filter determines whether the
+          A low-inventory filter evaluates whether the
           updated quantity requires attention.
         </li>
 
         <li>
-          If the condition is met, an HTTP POST sends
-          the low-stock information to a connected
+          If the low-stock condition is met, an HTTP POST
+          sends the inventory information to a connected
           webhook.
         </li>
 
         <li>
-          The secondary Make.com scenario receives the
+          A secondary Make.com workflow receives the
           webhook data.
         </li>
 
@@ -751,8 +793,14 @@
     <section>
 
       <h2>
-        Business Rules
+        Inventory Monitoring Business Rules
       </h2>
+
+      <p>
+        The automation uses defined business rules to
+        control when inventory is updated and when the
+        low-stock notification workflow should run.
+      </p>
 
       <ul class="detail-list">
 
@@ -762,8 +810,8 @@
         </li>
 
         <li>
-          The ordered item must be matched to the
-          correct inventory record.
+          The ordered item must be matched to the correct
+          inventory record.
         </li>
 
         <li>
@@ -778,7 +826,7 @@
 
         <li>
           The secondary notification workflow runs only
-          when the low-inventory condition is met.
+          when the defined low-inventory condition is met.
         </li>
 
       </ul>
@@ -791,21 +839,23 @@
     <section>
 
       <h2>
-        Parent / Child Workflow Design
+        Parent &amp; Child Inventory Workflow Design
       </h2>
 
       <p>
-        The solution separates inventory processing from
-        notification delivery. The main scenario handles
-        the order and inventory logic, while a second
-        scenario receives low-stock information through a
-        webhook and sends the Gmail alert.
+        The automation separates inventory processing from
+        notification delivery. The main Make.com scenario
+        handles the order and inventory logic, while a
+        secondary scenario receives low-stock information
+        through a webhook and sends the Gmail alert.
       </p>
 
       <p>
-        This design keeps each workflow focused and makes
-        it easier to expand the notification process later
-        without redesigning the inventory logic.
+        Separating these functions keeps each workflow
+        focused and creates a more flexible automation
+        structure. The notification process can be
+        expanded or modified later without requiring the
+        primary inventory workflow to be redesigned.
       </p>
 
     </section>
@@ -816,7 +866,7 @@
     <section>
 
       <h2>
-        Tools &amp; Methods
+        Inventory Automation Tools &amp; Methods
       </h2>
 
       <div class="tools">
@@ -837,6 +887,8 @@
 
         <span class="tool">Workflow Design</span>
 
+        <span class="tool">Business Rules</span>
+
         <span class="tool">Automation Testing</span>
 
       </div>
@@ -849,35 +901,50 @@
     <section>
 
       <h2>
-        Challenges &amp; Problem Solving
+        Automation Challenges &amp; Problem Solving
       </h2>
 
       <p>
-        One challenge was ensuring that each order
-        updated the correct inventory record and that
-        the remaining quantity was calculated before
+        One of the key challenges was ensuring that each
+        order updated the correct inventory record and
+        that the remaining quantity was calculated before
         the low-stock condition was evaluated.
       </p>
 
       <p>
-        Separating the low-inventory notification into
-        a webhook-driven secondary scenario also
-        required testing the data passed between the
-        two workflows and confirming that notifications
-        were triggered only when the defined condition
-        was met.
+        The workflow therefore needed to maintain the
+        correct sequence: identify the inventory item,
+        calculate the updated quantity, update the
+        inventory record, and then evaluate whether the
+        new stock level met the low-inventory condition.
+      </p>
+
+      <p>
+        Separating the low-stock notification into a
+        webhook-driven secondary workflow also required
+        testing the information passed between the two
+        scenarios and confirming that notifications were
+        triggered only when the defined condition was met.
       </p>
 
     </section>
 
 
-    <!-- BUSINESS VALUE -->
+    <!-- OPERATIONAL IMPACT -->
 
     <section>
 
       <h2>
-        Business Value
+        Operational Impact
       </h2>
+
+      <p>
+        This inventory automation creates a more
+        structured process for updating stock information
+        and identifying inventory that requires attention.
+        It reduces repetitive administrative steps while
+        maintaining defined inventory rules.
+      </p>
 
       <ul class="business-value">
 
@@ -896,8 +963,7 @@
         </li>
 
         <li>
-          Creates a reusable notification workflow
-          through webhook integration.
+          Creates an automated low-stock alert process.
         </li>
 
         <li>
@@ -906,8 +972,14 @@
         </li>
 
         <li>
-          Demonstrates integration between spreadsheet
-          data, HTTP requests, webhooks, and email.
+          Creates a reusable notification workflow
+          through webhook integration.
+        </li>
+
+        <li>
+          Connects spreadsheet data, HTTP requests,
+          webhooks, and email into one inventory
+          automation process.
         </li>
 
       </ul>
@@ -920,28 +992,54 @@
     <section>
 
       <h2>
-        Skills Demonstrated
+        Inventory &amp; Automation Skills Demonstrated
       </h2>
 
       <div class="skills">
 
-        <span class="skill">Inventory Operations</span>
+        <span class="skill">
+          Inventory Operations
+        </span>
 
-        <span class="skill">Process Improvement</span>
+        <span class="skill">
+          Inventory Automation
+        </span>
 
-        <span class="skill">Workflow Design</span>
+        <span class="skill">
+          Process Improvement
+        </span>
 
-        <span class="skill">Google Sheets</span>
+        <span class="skill">
+          Workflow Automation
+        </span>
 
-        <span class="skill">Webhooks</span>
+        <span class="skill">
+          Google Sheets
+        </span>
 
-        <span class="skill">HTTP Integration</span>
+        <span class="skill">
+          Make.com
+        </span>
 
-        <span class="skill">Business Rules</span>
+        <span class="skill">
+          Webhooks
+        </span>
 
-        <span class="skill">Automation Testing</span>
+        <span class="skill">
+          HTTP Integration
+        </span>
 
-        <span class="skill">Exception Monitoring</span>
+        <span class="skill">
+          Business Rules
+        </span>
+
+        <span class="skill">
+          Automation Testing
+        </span>
+
+        <span class="skill">
+          Low-Stock Monitoring
+        </span>
 
       </div>
 
@@ -954,7 +1052,7 @@
       class="button"
       href="index.html#projects"
     >
-      ← Back to Projects
+      ← View All Automation Case Studies
     </a>
 
 
@@ -963,21 +1061,21 @@
     <section class="case-navigation">
 
       <h2>
-        Explore More Case Studies
+        Explore More Business Automation Case Studies
       </h2>
 
       <div class="case-links">
 
         <a href="case-study-1.html">
-          Client Onboarding →
+          Client Onboarding Automation →
         </a>
 
         <a href="case-study-2.html">
-          College Baseball Recruiting →
+          Accounts Payable Automation →
         </a>
 
         <a href="case-study-4.html">
-          Accounts Payable Vendor Validation →
+          Recruiting Automation →
         </a>
 
       </div>
@@ -990,14 +1088,17 @@
     <section class="case-contact">
 
       <h2>
-        Let's Connect
+        Have an Inventory Process That Needs Improvement?
       </h2>
 
       <p>
-        Interested in discussing operations,
-        automation, process improvement, or
-        professional opportunities? I'd be happy
-        to connect.
+        Doe Farm Solutions helps businesses identify
+        repetitive inventory and operational tasks,
+        inefficient workflows, and opportunities for
+        business process automation. Let's discuss whether
+        a practical automation solution could improve
+        inventory monitoring or another part of your
+        business operations.
       </p>
 
       <div class="case-contact-links">
@@ -1026,7 +1127,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Schedule a Conversation
+        Schedule a Free 15-Minute Consultation
       </a>
 
     </section>
@@ -1038,7 +1139,8 @@
 
   <footer>
     © 2026 Doe Farm Solutions |
-    Operations • Process Improvement • Automation
+    Business Operations • Process Improvement •
+    Workflow Automation • AI Solutions
   </footer>
 
 </body>
