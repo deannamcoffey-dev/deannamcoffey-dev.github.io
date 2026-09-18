@@ -7,11 +7,11 @@
 
   <meta
     name="description"
-    content="Doe Farm Solutions case study: College Baseball Recruiting Automation"
+    content="Doe Farm Solutions case study: Accounts Payable Vendor Validation"
   >
 
   <title>
-    College Baseball Recruiting Automation | Doe Farm Solutions
+    Accounts Payable Vendor Validation | Doe Farm Solutions
   </title>
 
   <style>
@@ -224,7 +224,7 @@
       line-height: 1.8;
     }
 
-    /* SUMMARY */
+    /* SUMMARY CARDS */
 
     .summary-grid {
       display: grid;
@@ -301,7 +301,7 @@
       font-weight: 700;
     }
 
-    /* TOOLS AND SKILLS */
+    /* TOOLS & SKILLS */
 
     .tools,
     .skills {
@@ -522,6 +522,7 @@
   <nav>
 
     <div class="logo">
+
       <a href="index.html">
 
         <img
@@ -531,6 +532,7 @@
         >
 
       </a>
+
     </div>
 
     <div>
@@ -567,14 +569,17 @@
       </div>
 
       <h1>
-        College Baseball Recruiting Automation
+        Accounts Payable Vendor Validation
       </h1>
 
       <p class="hero-description">
-        Designed a workflow that transforms incoming
-        college baseball recruiting emails into organized
-        player records for easier review, tracking, and
-        recruiting management.
+        Designed an automated accounts payable workflow
+        that receives invoice information, validates
+        vendors against an approved vendor master,
+        applies invoice business rules, detects
+        exceptions, and routes approved financial
+        information into QuickBooks Online for AP
+        processing.
       </p>
 
     </div>
@@ -593,22 +598,23 @@
       </h2>
 
       <p>
-        College baseball recruiting can generate a large
-        volume of emails containing player names,
-        graduation years, positions, school information,
-        statistics, video links, profile links, and
-        additional recruiting details.
+        Accounts payable teams often spend significant
+        time reviewing invoice information, confirming
+        vendor status, checking purchase order
+        requirements, identifying duplicate invoices,
+        and determining whether an invoice is ready
+        for processing.
       </p>
 
       <p>
-        Reviewing each message manually and transferring
-        the information into a structured recruiting
-        system can be time-consuming and inconsistent.
         This project demonstrates how automation can
-        capture incoming recruiting emails, extract
-        relevant information, organize player data in
-        Google Sheets, and support a more efficient
-        recruiting workflow.
+        apply those controls consistently. Invoice
+        data enters the workflow, vendor information
+        is validated against an approved vendor
+        master, invoice requirements are checked, and
+        the transaction is routed either to an
+        exception path or into QuickBooks Online for
+        accounts payable processing.
       </p>
 
       <div class="summary-grid">
@@ -618,9 +624,9 @@
           <h3>Challenge</h3>
 
           <p>
-            Reduce the manual effort required to review
-            recruiting emails and organize player
-            information.
+            Reduce repetitive AP validation work while
+            maintaining consistent vendor and invoice
+            controls.
           </p>
 
         </div>
@@ -630,9 +636,10 @@
           <h3>Solution</h3>
 
           <p>
-            Use Make.com, Gmail, Regex, Google Sheets,
-            and Apps Script to extract and organize
-            recruiting information automatically.
+            Build a Make.com workflow using webhooks,
+            JSON, Google Sheets, business rules,
+            routers, filters, Gmail, and QuickBooks
+            Online.
           </p>
 
         </div>
@@ -642,9 +649,11 @@
           <h3>Outcome</h3>
 
           <p>
-            Created a more consistent process for
-            turning unstructured recruiting emails into
-            organized player records for review.
+            Created a repeatable validation process
+            that separates exceptions from approved
+            invoices and prepares validated
+            transactions for processing in QuickBooks
+            Online.
           </p>
 
         </div>
@@ -663,16 +672,18 @@
       </h2>
 
       <p>
-        The workflow below demonstrates how recruiting
-        emails are captured, processed, and transformed
-        into structured player information.
+        The workflow below illustrates how invoice
+        information enters the automation, moves
+        through vendor and invoice validation, and is
+        routed to either an exception-review path or a
+        QuickBooks Online processing path.
       </p>
 
       <div class="project-visual">
 
         <img
-          src="make-recruiter-automation.png"
-          alt="College baseball recruiting automation workflow"
+          src="accounts-payable-vendor-validation.png"
+          alt="Accounts payable vendor and invoice validation automation workflow"
           class="project-visual-image"
         >
 
@@ -692,44 +703,57 @@
       <ol class="workflow-list">
 
         <li>
-          Gmail monitors incoming recruiting emails.
+          A custom webhook receives structured invoice
+          information.
         </li>
 
         <li>
-          Make.com retrieves the email content for processing.
+          JSON parsing identifies fields including
+          Vendor ID, Vendor Name, Invoice Number,
+          Invoice Date, Amount, Purchase Order,
+          Payment Terms, and Vendor Email.
         </li>
 
         <li>
-          Pattern matching and Regex are used to locate
-          recruiting information contained within the
-          email body.
+          Google Sheets searches the Vendor Master
+          using the Vendor ID.
         </li>
 
         <li>
-          Player details are organized into structured
-          fields for easier review.
+          The workflow confirms that the vendor exists
+          and is active.
         </li>
 
         <li>
-          Video and recruiting profile URLs are captured
-          when present in the message.
+          Required invoice fields and purchase order
+          requirements are checked.
         </li>
 
         <li>
-          The structured player information is added to
-          Google Sheets.
+          The Invoice Log is searched by Vendor ID and
+          Invoice Number to identify possible duplicate
+          invoices.
         </li>
 
         <li>
-          Google Apps Script supports additional
-          processing and organization within the
-          recruiting workflow.
+          A router directs the invoice to either the
+          approved path or the exception path.
         </li>
 
         <li>
-          Gmail sends an automated response when the
-          workflow requires a confirmation or follow-up
-          message.
+          Approved invoice data is passed to the
+          QuickBooks Online module for accounts
+          payable processing.
+        </li>
+
+        <li>
+          The approved transaction is recorded in the
+          Invoice Log.
+        </li>
+
+        <li>
+          Exceptions are logged and an automated
+          Gmail notification is sent for human review.
         </li>
 
       </ol>
@@ -737,68 +761,108 @@
     </section>
 
 
-    <!-- DATA EXTRACTION -->
+    <!-- BUSINESS RULES -->
 
     <section>
 
       <h2>
-        Data Extraction &amp; Organization
+        Business Rules
       </h2>
-
-      <p>
-        Recruiting emails are not always formatted the
-        same way. Important information may appear in
-        different locations or may be included as plain
-        text, links, or labels.
-      </p>
-
-      <p>
-        The workflow uses pattern matching and Regex to
-        identify information that can be consistently
-        extracted and placed into structured fields.
-      </p>
 
       <ul class="detail-list">
 
-        <li>Player name</li>
+        <li>
+          The vendor must exist in the approved Vendor
+          Master.
+        </li>
 
-        <li>Graduation year</li>
+        <li>
+          The vendor must be active.
+        </li>
 
-        <li>Position information</li>
+        <li>
+          Required invoice information must be present.
+        </li>
 
-        <li>School or team information</li>
+        <li>
+          Purchase order requirements must be
+          satisfied when applicable.
+        </li>
 
-        <li>Contact or recruiting details</li>
+        <li>
+          The Vendor ID and Invoice Number combination
+          must not already exist in the Invoice Log.
+        </li>
 
-        <li>Video URLs</li>
+        <li>
+          Only invoices that pass validation are
+          routed to the QuickBooks Online processing
+          step.
+        </li>
 
-        <li>Recruiting profile URLs</li>
+        <li>
+          Invoices that fail a control are routed for
+          exception review rather than continuing
+          automatically.
+        </li>
 
       </ul>
 
     </section>
 
 
-    <!-- WORKFLOW DESIGN -->
+    <!-- QUICKBOOKS -->
 
     <section>
 
       <h2>
-        Workflow Design
+        QuickBooks Online Integration
       </h2>
 
       <p>
-        The automation converts unstructured email
-        information into a format that is easier to
-        review and manage.
+        QuickBooks Online serves as the financial
+        system step after the validation controls have
+        been completed.
       </p>
 
       <p>
-        Instead of requiring someone to repeatedly
-        copy and paste recruiting information into a
-        spreadsheet, the workflow creates a consistent
-        intake process that organizes the available
-        player data automatically.
+        The workflow is intentionally designed so
+        invoice data does not move into QuickBooks
+        until vendor, invoice, purchase order, and
+        duplicate checks have passed.
+      </p>
+
+      <p>
+        This creates a clear control point between
+        automated validation and downstream accounts
+        payable processing.
+      </p>
+
+    </section>
+
+
+    <!-- EXCEPTION MANAGEMENT -->
+
+    <section>
+
+      <h2>
+        Exception Management
+      </h2>
+
+      <p>
+        Not every invoice should move into QuickBooks
+        without review. Unknown vendors, inactive
+        vendors, incomplete invoice information,
+        missing required purchase orders, or duplicate
+        invoice records are routed to an exception
+        path.
+      </p>
+
+      <p>
+        The exception path creates visibility into the
+        issue and sends a Gmail notification so the
+        transaction can be reviewed before further
+        processing.
       </p>
 
     </section>
@@ -814,23 +878,17 @@
 
       <div class="tools">
 
+        <span class="tool">QuickBooks Online</span>
         <span class="tool">Make.com</span>
-
-        <span class="tool">Gmail</span>
-
-        <span class="tool">Regex</span>
-
+        <span class="tool">Webhooks</span>
+        <span class="tool">JSON</span>
         <span class="tool">Google Sheets</span>
-
-        <span class="tool">Google Apps Script</span>
-
-        <span class="tool">Pattern Matching</span>
-
-        <span class="tool">Data Extraction</span>
-
-        <span class="tool">Workflow Design</span>
-
-        <span class="tool">Automation Testing</span>
+        <span class="tool">Gmail</span>
+        <span class="tool">Routers</span>
+        <span class="tool">Filters</span>
+        <span class="tool">Vendor Master</span>
+        <span class="tool">Invoice Log</span>
+        <span class="tool">Business Rules</span>
 
       </div>
 
@@ -846,24 +904,27 @@
       </h2>
 
       <p>
-        A key challenge was working with email content
-        that could vary from one recruiting message to
-        another. Unlike data submitted through a
-        standardized form, email text may not always
-        follow the same structure.
+        One of the most important design
+        considerations was determining which
+        decisions could be automated safely and which
+        conditions should be routed for human review.
       </p>
 
       <p>
-        Pattern matching and Regex were used to locate
-        recognizable pieces of information and extract
-        them into structured fields where possible.
+        Vendor validation required the workflow to
+        compare incoming invoice information against a
+        controlled vendor master rather than relying
+        only on the information contained in the
+        invoice.
       </p>
 
       <p>
-        The workflow also required testing with
-        different email formats to confirm that player
-        records remained organized and that links were
-        captured correctly.
+        Duplicate detection required a search of
+        historical invoice records before approving a
+        new transaction. The QuickBooks integration
+        was positioned after these controls so it
+        serves as a downstream processing step rather
+        than bypassing validation.
       </p>
 
     </section>
@@ -880,34 +941,38 @@
       <ul class="business-value">
 
         <li>
-          Reduces repetitive copying and pasting from
-          recruiting emails.
+          Reduces repetitive manual vendor and invoice
+          validation.
         </li>
 
         <li>
-          Creates a more consistent recruiting intake
+          Applies accounts payable business rules more
+          consistently.
+        </li>
+
+        <li>
+          Helps identify duplicate invoices before
+          further processing.
+        </li>
+
+        <li>
+          Improves visibility into invoices requiring
+          additional review.
+        </li>
+
+        <li>
+          Creates a structured exception-handling
           process.
         </li>
 
         <li>
-          Makes player information easier to review and
-          compare.
+          Provides a centralized invoice validation
+          log for tracking and review.
         </li>
 
         <li>
-          Centralizes recruiting information in Google
-          Sheets.
-        </li>
-
-        <li>
-          Improves visibility into video and recruiting
-          profile links.
-        </li>
-
-        <li>
-          Demonstrates how automation can convert
-          unstructured communication into structured
-          operational data.
+          Connects validated AP information with
+          QuickBooks Online for downstream processing.
         </li>
 
       </ul>
@@ -925,23 +990,16 @@
 
       <div class="skills">
 
-        <span class="skill">Workflow Automation</span>
-
-        <span class="skill">Gmail Automation</span>
-
-        <span class="skill">Regex</span>
-
-        <span class="skill">Data Extraction</span>
-
-        <span class="skill">Google Sheets</span>
-
-        <span class="skill">Apps Script</span>
-
+        <span class="skill">QuickBooks Online</span>
+        <span class="skill">Accounts Payable Operations</span>
+        <span class="skill">Vendor Management</span>
+        <span class="skill">Financial Processes</span>
         <span class="skill">Process Improvement</span>
-
-        <span class="skill">Data Organization</span>
-
-        <span class="skill">Automation Testing</span>
+        <span class="skill">Workflow Design</span>
+        <span class="skill">Business Rules</span>
+        <span class="skill">Data Validation</span>
+        <span class="skill">Exception Management</span>
+        <span class="skill">Operational Controls</span>
 
       </div>
 
@@ -969,15 +1027,15 @@
       <div class="case-links">
 
         <a href="case-study-1.html">
-          Client Onboarding →
+          Case Study 01 — Client Onboarding →
         </a>
 
         <a href="case-study-3.html">
-          Inventory Monitoring →
+          Case Study 03 — Inventory Monitoring →
         </a>
 
-        <a href="case-study-4.html">
-          Accounts Payable Vendor Validation →
+        <a href="case-study-2.html">
+          Case Study 04 — College Baseball Recruiting →
         </a>
 
       </div>
