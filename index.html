@@ -41,7 +41,217 @@
   <title>
     Business Process Improvement &amp; Workflow Automation | Doe Farm Solutions
   </title>
+/* ========================================
+   DOE FARM COOKIE CONSENT BANNER
+======================================== */
 
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1100px;
+
+  background: #123524;
+  color: #ffffff;
+
+  padding: 22px 26px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(214, 168, 75, 0.35);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22);
+
+  z-index: 99999;
+}
+
+
+/* INNER LAYOUT */
+
+.cookie-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+
+/* TEXT AREA */
+
+.cookie-text {
+  flex: 1;
+}
+
+.cookie-text strong {
+  display: block;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  margin-bottom: 6px;
+}
+
+
+.cookie-text p {
+  margin: 0;
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+
+  color: #F0EEE9;
+}
+
+
+/* PRIVACY POLICY LINK */
+
+.cookie-text a {
+  color: #D6A84B;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-text a:hover {
+  color: #ffffff;
+}
+
+
+/* BUTTON CONTAINER */
+
+.cookie-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* BOTH BUTTONS */
+
+.cookie-buttons button {
+  min-height: 44px;
+  padding: 10px 18px;
+
+  border-radius: 7px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* REJECT BUTTON */
+
+.cookie-reject {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.cookie-reject:hover {
+  background: #ffffff;
+  color: #123524;
+  border-color: #ffffff;
+}
+
+
+/* ACCEPT BUTTON */
+
+.cookie-accept {
+  background: #D6A84B;
+
+  color: #17211D;
+
+  border: 1px solid #D6A84B;
+}
+
+.cookie-accept:hover {
+  background: #ffffff;
+  color: #123524;
+  border-color: #ffffff;
+}
+
+
+/* SMALL HOVER EFFECT */
+
+.cookie-buttons button:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   MOBILE COOKIE BANNER
+======================================== */
+
+@media (max-width: 750px) {
+
+  .cookie-banner {
+    bottom: 10px;
+
+    width: calc(100% - 20px);
+
+    padding: 20px;
+
+    border-radius: 10px;
+  }
+
+  .cookie-content {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 18px;
+  }
+
+  .cookie-text strong {
+    font-size: 19px;
+  }
+
+  .cookie-text p {
+    font-size: 12px;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+  }
+
+  .cookie-buttons button {
+    flex: 1;
+  }
+
+}
+
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 450px) {
+
+  .cookie-buttons {
+    flex-direction: column;
+  }
+
+  .cookie-buttons button {
+    width: 100%;
+  }
+
+}
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
