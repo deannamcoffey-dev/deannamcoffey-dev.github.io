@@ -24,7 +24,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-   gtag('config', ''G-NS7G8WPXF4');
+ gtag('config', 'G-NS7G8WPXF4');
   </script>
   <meta charset="UTF-8">
 
@@ -253,7 +253,7 @@
   }
    </style>
 
-}
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
@@ -1711,12 +1711,22 @@
 
   <p style="margin-top: 10px;">
     <a
-      href="privacy-policy.html"
+       href="privacy-policy.html"
       target="_blank"
       rel="noopener noreferrer"
       style="color: #D6A84B; text-decoration: none; font-weight: 600;"
     >
       Privacy Policy
+    </a>
+
+    <span style="color: #E4EAE5; margin: 0 8px;">|</span>
+
+    <a
+      href="#"
+      id="cookie-preferences"
+      style="color: #D6A84B; text-decoration: none; font-weight: 600;"
+    >
+      Cookie Preferences
     </a>
   </p>
 </footer>
@@ -1914,21 +1924,7 @@ if (preferencesButton) {
   });
 
 }
-  preferencesButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    localStorage.removeItem("doeFarmCookieConsent");
-
-    gtag('consent', 'update', {
-      'analytics_storage': 'denied'
-    });
-
-    banner.style.display = "block";
-
-  });
-
-}
+ 
 })();
 
 </script>
