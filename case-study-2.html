@@ -2,15 +2,21 @@
 <html lang="en">
 
 <head>
- <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-MEASUREMENT-ID"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS7G8WPXF4"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'YOUR-MEASUREMENT-ID');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-NS7G8WPXF4');
   </script>
+
   <meta charset="UTF-8">
 
   <meta
@@ -28,6 +34,7 @@
   </title>
 
   <style>
+
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
     :root {
@@ -76,9 +83,10 @@
       color: var(--body-text);
     }
 
-    /* ================================
+
+    /* ========================================
        NAVIGATION
-    ================================ */
+    ======================================== */
 
     nav {
       background: rgba(18, 53, 36, 0.98);
@@ -127,9 +135,37 @@
       color: var(--gold);
     }
 
-    /* ================================
+
+    /* ========================================
+       BACK TO PROJECTS
+    ======================================== */
+
+    .back-projects-wrap {
+      max-width: 1000px;
+      margin: 0 auto 28px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--forest);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--sage);
+      transform: translateX(-3px);
+    }
+
+
+    /* ========================================
        HERO
-    ================================ */
+    ======================================== */
 
     .hero {
       background:
@@ -149,12 +185,13 @@
           #F0EEE9 100%
         );
 
-      padding: 90px 8% 80px;
+      padding: 55px 8% 80px;
       border-bottom: 1px solid var(--border);
       animation: heroFadeUp 0.7s ease-out both;
     }
 
     @keyframes heroFadeUp {
+
       from {
         opacity: 0;
         transform: translateY(18px);
@@ -164,6 +201,7 @@
         opacity: 1;
         transform: translateY(0);
       }
+
     }
 
     .hero-content {
@@ -201,9 +239,10 @@
       line-height: 1.8;
     }
 
-    /* ================================
-       MAIN
-    ================================ */
+
+    /* ========================================
+       MAIN CONTENT
+    ======================================== */
 
     main {
       max-width: 1050px;
@@ -243,9 +282,10 @@
       line-height: 1.8;
     }
 
-    /* ================================
+
+    /* ========================================
        SUMMARY CARDS
-    ================================ */
+    ======================================== */
 
     .summary-grid {
       display: grid;
@@ -281,9 +321,10 @@
       font-size: 15px;
     }
 
-    /* ================================
+
+    /* ========================================
        PROJECT VISUAL
-    ================================ */
+    ======================================== */
 
     .project-visual {
       background: var(--white);
@@ -301,9 +342,10 @@
       border-radius: 9px;
     }
 
-    /* ================================
+
+    /* ========================================
        LISTS
-    ================================ */
+    ======================================== */
 
     .workflow-list,
     .detail-list,
@@ -326,9 +368,10 @@
       font-weight: 700;
     }
 
-    /* ================================
+
+    /* ========================================
        TOOLS & SKILLS
-    ================================ */
+    ======================================== */
 
     .tools,
     .skills {
@@ -358,9 +401,10 @@
       font-weight: 600;
     }
 
-    /* ================================
-       BUTTON
-    ================================ */
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
 
     .button {
       display: inline-block;
@@ -384,9 +428,10 @@
       box-shadow: 0 10px 24px rgba(18, 53, 36, 0.18);
     }
 
-    /* ================================
-       CASE NAVIGATION
-    ================================ */
+
+    /* ========================================
+       CASE STUDY NAVIGATION
+    ======================================== */
 
     .case-navigation {
       border-top: 1px solid var(--border);
@@ -428,9 +473,10 @@
       box-shadow: 0 8px 20px rgba(18, 53, 36, 0.08);
     }
 
-    /* ================================
+
+    /* ========================================
        CONTACT
-    ================================ */
+    ======================================== */
 
     .case-contact {
       margin-top: 75px;
@@ -480,9 +526,10 @@
       text-decoration: underline;
     }
 
-    /* ================================
+
+    /* ========================================
        FOOTER
-    ================================ */
+    ======================================== */
 
     footer {
       background: var(--forest-dark);
@@ -494,9 +541,29 @@
       border-top: 3px solid var(--gold);
     }
 
-    /* ================================
+    footer p {
+      color: #E4EAE5;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+
+    /* ========================================
        MOBILE
-    ================================ */
+    ======================================== */
 
     @media (max-width: 750px) {
 
@@ -516,7 +583,7 @@
       }
 
       .hero {
-        padding: 70px 6%;
+        padding: 45px 6% 70px;
       }
 
       h1 {
@@ -551,12 +618,16 @@
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- ========================================
+       NAVIGATION
+  ========================================= -->
 
   <nav>
 
@@ -573,6 +644,7 @@
       </a>
 
     </div>
+
 
     <div>
 
@@ -601,9 +673,23 @@
   </nav>
 
 
-  <!-- HERO -->
+  <!-- ========================================
+       HERO
+  ========================================= -->
 
   <header class="hero">
+
+    <div class="back-projects-wrap">
+
+      <a
+        href="index.html#projects"
+        class="back-link"
+      >
+        ← Back to Projects
+      </a>
+
+    </div>
+
 
     <div class="hero-content">
 
@@ -629,7 +715,12 @@
   </header>
 
 
+  <!-- ========================================
+       MAIN CONTENT
+  ========================================= -->
+
   <main>
+
 
     <!-- PROJECT OVERVIEW -->
 
@@ -661,6 +752,7 @@
 
 
       <div class="summary-grid">
+
 
         <div class="summary-card">
 
@@ -708,6 +800,7 @@
 
         </div>
 
+
       </div>
 
     </section>
@@ -742,7 +835,7 @@
     </section>
 
 
-    <!-- AUTOMATION -->
+    <!-- HOW AUTOMATION WORKS -->
 
     <section>
 
@@ -1194,16 +1287,36 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
 
   <footer>
-    © 2026 Doe Farm Solutions |
-    Business Operations • Process Improvement •
-    Workflow Automation • AI Solutions
+
+    <p>
+      © 2026 Doe Farm Solutions |
+      Business Operations • Process Improvement •
+      Workflow Automation • AI Solutions
+    </p>
+
+    <p class="footer-links">
+
+      <a
+        href="privacy-policy.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Privacy Policy
+      </a>
+
+    </p>
+
   </footer>
+
 
 </body>
 
