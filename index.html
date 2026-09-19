@@ -1895,7 +1895,25 @@
     banner.style.display = "none";
 
   });
+/* COOKIE PREFERENCES */
 
+if (preferencesButton) {
+
+  preferencesButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    localStorage.removeItem("doeFarmCookieConsent");
+
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+    });
+
+    banner.style.display = "block";
+
+  });
+
+}
 })();
 
 </script>
