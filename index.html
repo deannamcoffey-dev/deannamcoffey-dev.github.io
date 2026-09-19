@@ -2,14 +2,29 @@
 <html lang="en">
 
 <head>
+   <!-- Google Consent Mode - Default -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+</script>
    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-MEASUREMENT-ID"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS7G8WPXF4></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'YOUR-MEASUREMENT-ID');
+    gtag('config', ''G-NS7G8WPXF4');
   </script>
   <meta charset="UTF-8">
 
@@ -1545,6 +1560,121 @@
     );
 
   </script>
+   <!-- COOKIE CONSENT BANNER -->
+
+<div id="cookie-banner" class="cookie-banner">
+
+  <div class="cookie-content">
+
+    <div class="cookie-text">
+
+      <strong>We value your privacy</strong>
+
+      <p>
+        Doe Farm Solutions uses cookies and Google Analytics to understand
+        how visitors use our website and help us improve it.
+        You can accept or reject analytics cookies.
+        Learn more in our
+        <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
+
+    </div>
+
+    <div class="cookie-buttons">
+
+      <button id="reject-cookies" class="cookie-reject">
+        Reject Analytics
+      </button>
+
+      <button id="accept-cookies" class="cookie-accept">
+        Accept Analytics
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+(function () {
+
+  const banner = document.getElementById("cookie-banner");
+  const acceptButton = document.getElementById("accept-cookies");
+  const rejectButton = document.getElementById("reject-cookies");
+
+  const consent = localStorage.getItem("doeFarmCookieConsent");
+
+
+  /* EXISTING VISITOR */
+
+  if (consent === "accepted") {
+
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+
+    banner.style.display = "none";
+
+  }
+
+  else if (consent === "rejected") {
+
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+    });
+
+    banner.style.display = "none";
+
+  }
+
+  else {
+
+    banner.style.display = "block";
+
+  }
+
+
+  /* ACCEPT */
+
+  acceptButton.addEventListener("click", function () {
+
+    localStorage.setItem(
+      "doeFarmCookieConsent",
+      "accepted"
+    );
+
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+
+    banner.style.display = "none";
+
+  });
+
+
+  /* REJECT */
+
+  rejectButton.addEventListener("click", function () {
+
+    localStorage.setItem(
+      "doeFarmCookieConsent",
+      "rejected"
+    );
+
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+    });
+
+    banner.style.display = "none";
+
+  });
+
+})();
+
+</script>
 
 </body>
 
