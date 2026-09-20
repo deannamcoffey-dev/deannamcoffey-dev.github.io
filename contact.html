@@ -2,21 +2,39 @@
 <html lang="en">
 
 <head>
-   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-MEASUREMENT-ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'YOUR-MEASUREMENT-ID');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | Deanna Coffey</title>
+  <title>Contact Doe Farm Solutions | Workflow Automation</title>
+
+  <meta
+    name="description"
+    content="Contact Doe Farm Solutions to discuss workflow automation, process improvement, business systems integration, and practical AI solutions for your business."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://doefarmsolutions.com/contact.html"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,192 +42,517 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #1f2937;
-      background: #f8fafc;
-      line-height: 1.6;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #17211D;
+      background: #FAFAF7;
+      line-height: 1.7;
     }
 
+    h1,
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #123524;
+    }
+
+    p {
+      color: #4F5D54;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
-      background: #0f2744;
-      color: #ffffff;
-      padding: 18px 7%;
+      background: #123524;
+      padding: 12px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .logo {
-      font-size: 20px;
-      font-weight: 700;
+    .nav-logo {
+      display: block;
+      width: 180px;
+      height: auto;
     }
 
-    nav a {
-      color: #ffffff;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #FFFFFF;
       text-decoration: none;
-      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .nav-links a:hover {
+      color: #D6A84B;
     }
 
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 70px 25px;
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: #F0EEE9;
+      padding: 65px 8%;
+      text-align: center;
+      border-bottom: 1px solid #D9DDD8;
     }
 
-    .contact-card {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(15, 39, 68, 0.08);
+    .hero-inner {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #DDE7DE;
+      color: #123524;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      color: #0f2744;
-      font-size: 40px;
-      margin-bottom: 12px;
+      font-size: clamp(40px, 5vw, 58px);
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
 
-    .intro {
-      color: #64748b;
-      margin-bottom: 30px;
-      font-size: 17px;
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 65px 25px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contact-info,
+    .form-card {
+      background: #FFFFFF;
+      border: 1px solid #D9DDD8;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 10px 25px rgba(18, 53, 36, 0.06);
+    }
+
+    h2 {
+      font-size: 29px;
+      margin-bottom: 18px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 3px;
+      background: #D6A84B;
+      margin-top: 10px;
+    }
+
+    .contact-info p {
+      margin-bottom: 22px;
+    }
+
+    .contact-label {
+      color: #123524;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-link {
+      color: #123524;
+      text-decoration: none;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link:hover {
+      color: #B98B32;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .button {
+      display: inline-block;
+      background: #123524;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .button:hover {
+      background: #0B281A;
+    }
+
+    /* =========================
+       GOOGLE FORM
+    ========================= */
+
+    .form-card {
+      padding: 20px;
     }
 
     .google-form-container {
       width: 100%;
       overflow: hidden;
       border-radius: 8px;
-      background: #ffffff;
+      background: #FFFFFF;
     }
 
     .google-form-container iframe {
       display: block;
       width: 100%;
-      min-height: 966px;
+      min-height: 1050px;
       border: 0;
     }
 
+    /* =========================
+       BACK LINK
+    ========================= */
+
+    .back-wrap {
+      text-align: center;
+      margin-top: 45px;
+    }
+
     .back-link {
-      display: inline-block;
-      margin-top: 24px;
-      color: #2563eb;
+      color: #123524;
       text-decoration: none;
       font-weight: 700;
+      border-bottom: 2px solid #D6A84B;
+      padding-bottom: 3px;
     }
 
-    .back-link:hover {
-      text-decoration: underline;
-    }
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
+      background: #0B281A;
       text-align: center;
-      padding: 24px;
-      color: #64748b;
+      padding: 32px 20px;
     }
 
-    @media (max-width: 650px) {
+    footer p {
+      color: #E4EAE5;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #D6A84B;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 750px) {
+
       nav {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        gap: 14px;
       }
 
-      nav a {
-        margin-left: 0;
-        margin-right: 15px;
+      .nav-logo {
+        width: 165px;
       }
 
-      .page {
-        padding: 40px 15px;
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
       }
 
-      .contact-card {
-        padding: 25px 10px;
+      .hero {
+        padding: 45px 7%;
       }
 
-      h1 {
-        font-size: 32px;
-        padding-left: 10px;
-        padding-right: 10px;
+      main {
+        padding: 45px 15px;
       }
 
-      .intro {
-        padding-left: 10px;
-        padding-right: 10px;
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        padding: 25px;
+      }
+
+      .form-card {
+        padding: 8px;
       }
 
       .google-form-container iframe {
-        min-height: 1050px;
+        min-height: 1100px;
       }
 
-      .back-link {
-        margin-left: 10px;
-      }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <nav>
-    <div class="logo">Deanna Coffey</div>
 
-    <div>
-      <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#about">About</a>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <a href="index.html">
+
+      <img
+        src="DoeFarmSolutions Logo.png"
+        alt="Doe Farm Solutions"
+        class="nav-logo"
+      >
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#services">
+        Services
+      </a>
+
+      <a href="index.html#who-we-help">
+        Who We Help
+      </a>
+
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
     </div>
+
   </nav>
 
-  <main class="page">
 
-    <div class="contact-card">
+  <!-- =========================
+       HERO
+  ========================= -->
 
-      <h1>Let's Connect</h1>
+  <header class="hero">
 
-      <p class="intro">
-        Interested in discussing operations, automation,
-        process improvement, or digital transformation opportunities?
-        Send me a message below.
-      </p>
-      
+    <div class="hero-inner">
 
-      <p style="margin-bottom: 25px; font-size: 17px;">
-        <strong>Email:</strong>
-        <a href="mailto:deanna@doefarmsolutions.com"
-           style="color: #2563eb; text-decoration: none; font-weight: 600;">
-          deanna@doefarmsolutions.com
-        </a>
-      </p>
-
-      <div class="google-form-container">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSehjwP9TcpHO8MHSNCBUMsy1ERcYclxHH1Nh7-sJ33sCYhWgg/viewform?embedded=true"
-          width="100%"
-          height="966"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="Contact Deanna Coffey">
-          Loading…
-        </iframe>
+      <div class="eyebrow">
+        LET'S CONNECT
       </div>
 
-      <a class="back-link" href="index.html">
-        ← Back to Portfolio
+      <h1>
+        Let's Talk About Your Business
+      </h1>
+
+      <p>
+        Have a repetitive process, disconnected system,
+        or operational task that's taking too much time?
+        Let's talk about where practical automation or
+        process improvement could help.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       CONTACT CONTENT
+  ========================= -->
+
+  <main>
+
+    <div class="contact-grid">
+
+
+      <!-- CONTACT INFORMATION -->
+
+      <section class="contact-info">
+
+        <h2>
+          Contact Doe Farm Solutions
+        </h2>
+
+        <p>
+          Whether you're exploring workflow automation,
+          process improvement, systems integration, or
+          practical AI solutions, you don't have to
+          automate everything at once.
+        </p>
+
+        <p>
+          Start with one process that's slowing your
+          business down.
+        </p>
+
+
+        <div>
+
+          <div class="contact-label">
+            Email
+          </div>
+
+          <a
+            href="mailto:deanna@doefarmsolutions.com"
+            class="contact-link"
+          >
+            deanna@doefarmsolutions.com
+          </a>
+
+        </div>
+
+
+        <div style="margin-top:28px;">
+
+          <div class="contact-label">
+            Prefer to schedule a conversation?
+          </div>
+
+          <a
+            href="https://calendly.com/deannamcoffey/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            Schedule a Free 15-Minute Consultation
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- GOOGLE FORM -->
+
+      <section class="form-card">
+
+        <div class="google-form-container">
+
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSehjwP9TcpHO8MHSNCBUMsy1ERcYclxHH1Nh7-sJ33sCYhWgg/viewform?embedded=true"
+            width="100%"
+            height="1050"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Contact Doe Farm Solutions"
+          >
+            Loading…
+          </iframe>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <div class="back-wrap">
+
+      <a
+        href="index.html"
+        class="back-link"
+      >
+        ← Back to Doe Farm Solutions
       </a>
 
     </div>
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    © 2026 Deanna Coffey | Operations + Automation Portfolio
+
+    <p>
+      © 2026 Doe Farm Solutions |
+      Business Operations • Process Improvement •
+      Workflow Automation • AI Solutions
+    </p>
+
+    <p>
+      <a href="privacy-policy.html">
+        Privacy Policy
+      </a>
+    </p>
+
   </footer>
+
+
+  <!-- =========================
+       GOOGLE ANALYTICS
+  ========================= -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-NS7G8WPXF4"
+  ></script>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-NS7G8WPXF4');
+
+  </script>
+
 
 </body>
 
