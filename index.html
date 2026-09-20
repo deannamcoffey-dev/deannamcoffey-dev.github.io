@@ -2,30 +2,37 @@
 <html lang="en">
 
 <head>
-   <!-- Google Consent Mode - Default -->
-<script>
-  window.dataLayer = window.dataLayer || [];
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied'
-  });
-</script>
-   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS7G8WPXF4"></script>
+  <!-- GOOGLE CONSENT MODE -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
- gtag('config', 'G-NS7G8WPXF4');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
   </script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS7G8WPXF4"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-NS7G8WPXF4');
+  </script>
+
   <meta charset="UTF-8">
 
   <meta
@@ -33,251 +40,45 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-<meta
-  name="description"
-  content="Doe Farm Solutions helps small businesses simplify operations, improve processes, and automate repetitive work with practical workflow automation and AI solutions."
->
+  <meta
+    name="description"
+    content="Doe Farm Solutions helps small businesses simplify operations, improve processes, and automate repetitive work with practical workflow automation and AI solutions."
+  >
 
-<title>Workflow Automation for Small Business | Doe Farm Solutions</title>
+  <title>
+    Workflow Automation for Small Business | Doe Farm Solutions
+  </title>
 
-<meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://doefarmsolutions.com/">
-   <!-- Doe Farm Solutions Organization Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Doe Farm Solutions",
-  "url": "https://doefarmsolutions.com/",
-  "logo": "https://doefarmsolutions.com/DoeFarmSolutions%20Logo.png",
-  "description": "Doe Farm Solutions helps small businesses simplify operations, improve processes, and automate repetitive work with practical workflow automation and AI solutions.",
-  "founder": {
-    "@type": "Person",
-    "name": "Deanna Coffey"
-  },
-  "email": "mailto:deanna@doefarmsolutions.com",
-  "telephone": "+1-617-584-6587"
-}
-</script>
-   <style>
-/* ========================================
-   DOE FARM COOKIE CONSENT BANNER
-======================================== */
+  <link
+    rel="canonical"
+    href="https://doefarmsolutions.com/"
+  >
 
-.cookie-banner {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 40px);
-  max-width: 1100px;
-
-  background: #123524;
-  color: #ffffff;
-
-  padding: 22px 26px;
-
-  border-radius: 12px;
-  border: 1px solid rgba(214, 168, 75, 0.35);
-
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.22);
-
-  z-index: 99999;
-}
-
-
-/* INNER LAYOUT */
-
-.cookie-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-
-/* TEXT AREA */
-
-.cookie-text {
-  flex: 1;
-}
-
-.cookie-text strong {
-  display: block;
-
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 20px;
-  font-weight: 700;
-
-  color: #ffffff;
-
-  margin-bottom: 6px;
-}
-
-
-.cookie-text p {
-  margin: 0;
-
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
-
-  color: #F0EEE9;
-}
-
-
-/* PRIVACY POLICY LINK */
-
-.cookie-text a {
-  color: #D6A84B;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.cookie-text a:hover {
-  color: #ffffff;
-}
-
-
-/* BUTTON CONTAINER */
-
-.cookie-buttons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  flex-shrink: 0;
-}
-
-
-/* BOTH BUTTONS */
-
-.cookie-buttons button {
-  min-height: 44px;
-  padding: 10px 18px;
-
-  border-radius: 7px;
-
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-
-/* REJECT BUTTON */
-
-.cookie-reject {
-  background: transparent;
-
-  color: #ffffff;
-
-  border: 1px solid rgba(255, 255, 255, 0.65);
-}
-
-.cookie-reject:hover {
-  background: #ffffff;
-  color: #123524;
-  border-color: #ffffff;
-}
-
-
-/* ACCEPT BUTTON */
-
-.cookie-accept {
-  background: #D6A84B;
-
-  color: #17211D;
-
-  border: 1px solid #D6A84B;
-}
-
-.cookie-accept:hover {
-  background: #ffffff;
-  color: #123524;
-  border-color: #ffffff;
-}
-
-
-/* SMALL HOVER EFFECT */
-
-.cookie-buttons button:hover {
-  transform: translateY(-1px);
-}
-
-
-/* ========================================
-   MOBILE COOKIE BANNER
-======================================== */
-
-@media (max-width: 750px) {
-
-  .cookie-banner {
-    bottom: 10px;
-
-    width: calc(100% - 20px);
-
-    padding: 20px;
-
-    border-radius: 10px;
+  <!-- ORGANIZATION SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Doe Farm Solutions",
+    "url": "https://doefarmsolutions.com/",
+    "logo": "https://doefarmsolutions.com/DoeFarmSolutions%20Logo.png",
+    "email": "deanna@doefarmsolutions.com",
+    "telephone": "+1-617-584-6587",
+    "founder": {
+      "@type": "Person",
+      "name": "Deanna Coffey"
+    }
   }
-
-  .cookie-content {
-    flex-direction: column;
-    align-items: stretch;
-
-    gap: 18px;
-  }
-
-  .cookie-text strong {
-    font-size: 19px;
-  }
-
-  .cookie-text p {
-    font-size: 12px;
-  }
-
-  .cookie-buttons {
-    width: 100%;
-  }
-
-  .cookie-buttons button {
-    flex: 1;
-  }
-
-}
-
-
-/* EXTRA SMALL PHONES */
-
-@media (max-width: 450px) {
-
-  .cookie-buttons {
-    flex-direction: column;
-  }
-
-  .cookie-buttons button {
-    width: 100%;
-  }
-   </style>
-
+  </script>
 
   <style>
+
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
     /* =========================================
-       DOE FARM SOLUTIONS BRAND COLORS
+       BRAND COLORS
     ========================================= */
 
     :root {
@@ -296,7 +97,7 @@
     }
 
     /* =========================================
-       RESET / BASE
+       RESET
     ========================================= */
 
     * {
@@ -322,15 +123,7 @@
     .section-title {
       font-family: 'Playfair Display', Georgia, serif;
     }
-.section-tagline {
-    text-align: center;
-    width: 100%;
-    margin: 0 auto 18px;
-    color: #17211D;
-    font-size: 18px;
-    font-weight: 700;
-}
-    
+
     h3 {
       font-family: 'Montserrat', Arial, sans-serif;
     }
@@ -390,25 +183,27 @@
     nav a:hover {
       color: var(--gold);
     }
-/* =========================================
-   MOBILE MENU BUTTON
-========================================= */
 
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  color: var(--white);
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  padding: 8px;
-}
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
 
-.nav-menu {
-  display: flex;
-  align-items: center;
-}
+    /* =========================================
+       MOBILE MENU BUTTON
+    ========================================= */
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: var(--white);
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 8px;
+    }
+
     /* =========================================
        HERO
     ========================================= */
@@ -434,19 +229,6 @@
       padding: 120px 8% 110px;
       text-align: center;
       border-bottom: 1px solid var(--border);
-      animation: heroFadeUp 0.7s ease-out both;
-    }
-
-    @keyframes heroFadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .hero-label {
@@ -467,7 +249,6 @@
       font-size: clamp(18px, 2.5vw, 23px);
       font-weight: 700;
       margin-bottom: 18px;
-      letter-spacing: -0.2px;
     }
 
     .hero h1 {
@@ -494,7 +275,6 @@
       margin: 0 auto 34px;
       font-size: 18px;
       line-height: 1.8;
-      color: var(--body-text);
     }
 
     /* =========================================
@@ -512,23 +292,17 @@
       font-weight: 700;
       margin: 6px;
       border: 1px solid var(--forest);
-      transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .button:hover {
       background: var(--forest-dark);
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(18, 53, 36, 0.18);
     }
 
     .button.secondary {
       background: transparent;
       color: var(--forest);
-      border: 1.5px solid var(--forest);
     }
 
     .button.secondary:hover {
@@ -537,7 +311,7 @@
     }
 
     /* =========================================
-       SECTIONS
+       GENERAL SECTIONS
     ========================================= */
 
     section {
@@ -545,213 +319,67 @@
     }
 
     .section-title {
-      text-align: center;
       color: var(--forest);
-      font-size: 38px;
-      margin-bottom: 18px;
-      letter-spacing: -0.5px;
+      text-align: center;
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 22px;
     }
 
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 45px;
-      height: 3px;
-      background: var(--gold);
-      margin: 15px auto 0;
-      border-radius: 10px;
+    .section-tagline {
+      text-align: center;
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto 18px;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 700;
     }
 
     .section-intro {
-      max-width: 760px;
-      margin: 0 auto 50px;
+      max-width: 850px;
+      margin: 0 auto 45px;
       text-align: center;
       font-size: 17px;
-      line-height: 1.8;
-      color: var(--body-text);
     }
 
     /* =========================================
        SERVICES
     ========================================= */
 
+    .services-section {
+      background: var(--white);
+    }
+
     .services {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      max-width: 1200px;
-      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1150px;
+      margin: 45px auto 0;
     }
 
     .service {
-      padding: 30px 26px;
-      background: var(--white);
+      background: var(--cream);
+      padding: 34px;
+      border-radius: 14px;
       border: 1px solid var(--border);
-      border-top: 3px solid var(--sage);
-      border-radius: 12px;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 34px rgba(18, 53, 36, 0.10);
-      border-color: var(--sage);
+      border-top: 4px solid var(--sage);
+      box-shadow: 0 8px 24px rgba(18, 53, 36, 0.06);
     }
 
     .service h3 {
       color: var(--forest);
-      margin-bottom: 12px;
-      font-size: 19px;
+      font-size: 21px;
+      margin-bottom: 14px;
     }
 
     .service p {
-      font-size: 15px;
-      line-height: 1.75;
-      color: var(--body-text);
-    }
-
-    /* =========================================
-       WHO I HELP
-    ========================================= */
-
-    .who-section {
-      background: var(--forest);
-      border-top: 1px solid var(--forest-dark);
-      border-bottom: 1px solid var(--forest-dark);
-    }
-
-    .who-section .section-title {
-      color: var(--white);
-    }
-
-    .who-section .section-intro {
-      color: #DCE5DE;
-    }
-
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .who-card {
-      background: rgba(255, 255, 255, 0.97);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-top: 3px solid var(--gold);
-      border-radius: 12px;
-      padding: 30px 28px;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .who-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.16);
-    }
-
-    .who-card h3 {
-      color: var(--forest);
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    .who-card p {
-      color: var(--body-text);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    /* =========================================
-       PROJECTS
-    ========================================= */
-
-    .projects-section {
-      background: var(--cloud);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .project {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .project::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(
-        90deg,
-        var(--forest),
-        var(--sage),
-        var(--gold)
-      );
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 38px rgba(18, 53, 36, 0.11);
-      border-color: var(--sage);
-    }
-
-    .project-number {
-      color: var(--sage);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      margin-bottom: 12px;
-    }
-
-    .project h3 {
-      color: var(--forest);
-      font-size: 22px;
-      line-height: 1.35;
-      margin-bottom: 15px;
-    }
-
-    .project p {
-      font-size: 15px;
-      line-height: 1.75;
       margin-bottom: 18px;
-      color: var(--body-text);
-    }
-
-    .tools {
-      color: #667269;
-      font-size: 13px;
-      font-weight: 600;
-      line-height: 1.7;
-      margin-bottom: 20px;
     }
 
     .project-link {
       color: var(--forest);
-      font-size: 14px;
       font-weight: 700;
       text-decoration: none;
       border-bottom: 2px solid var(--gold);
@@ -759,7 +387,86 @@
     }
 
     .project-link:hover {
+      color: var(--gold-dark);
+    }
+
+    /* =========================================
+       WHO WE HELP
+    ========================================= */
+
+    .who-section {
+      background: var(--cloud);
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 40px auto 0;
+    }
+
+    .who-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .who-card h3 {
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    /* =========================================
+       PROJECTS
+    ========================================= */
+
+    .projects-section {
+      background: var(--cream);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1150px;
+      margin: 45px auto 0;
+    }
+
+    .project {
+      position: relative;
+      background: var(--white);
+      padding: 34px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 8px 24px rgba(18, 53, 36, 0.06);
+    }
+
+    .project-number {
       color: var(--sage);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    .project h3 {
+      color: var(--forest);
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .project p {
+      margin-bottom: 18px;
+    }
+
+    .tools {
+      font-size: 13px;
+      font-weight: 600;
+      color: #617067;
+      margin-bottom: 20px;
     }
 
     /* =========================================
@@ -767,40 +474,24 @@
     ========================================= */
 
     .about-layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 55px;
-      align-items: center;
       max-width: 1050px;
-      margin: auto;
-    }
-
-    .about-photo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 45px auto 0;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 55px;
+      align-items: start;
     }
 
     .about-photo img {
       width: 100%;
-      max-width: 260px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 4px solid var(--white);
-      outline: 1px solid var(--sage-light);
-      box-shadow: 0 16px 38px rgba(18, 53, 36, 0.16);
-    }
-
-    .about {
-      max-width: 760px;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--border);
     }
 
     .about p {
       margin-bottom: 20px;
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--body-text);
+      font-size: 16px;
     }
 
     /* =========================================
@@ -809,97 +500,55 @@
 
     .skills-section {
       background: var(--cloud);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
     }
 
     .skills {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      max-width: 1250px;
+      max-width: 1100px;
       margin: 45px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .skills > div {
       background: var(--white);
-      border: 1px solid var(--border);
+      padding: 28px;
       border-radius: 12px;
-      padding: 25px 22px;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .skills > div:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(18, 53, 36, 0.08);
+      border: 1px solid var(--border);
     }
 
     .skills h3 {
       color: var(--forest);
-      font-size: 17px;
-      margin-bottom: 14px;
-      line-height: 1.35;
-    }
-
-    .skills p {
-      font-size: 14px;
-      line-height: 1.9;
-      color: var(--body-text);
+      margin-bottom: 12px;
     }
 
     /* =========================================
-       CONTACT / CTA
+       CONTACT
     ========================================= */
 
     .contact {
       text-align: center;
-      background:
-        radial-gradient(
-          circle at top right,
-          rgba(122, 158, 126, 0.18),
-          transparent 32%
-        ),
-        linear-gradient(
-          180deg,
-          var(--cream) 0%,
-          #F4F2EC 100%
-        );
+      background: var(--cream);
     }
 
-    .contact p {
-      max-width: 760px;
-      margin: 16px auto 26px;
+    .contact > p {
+      max-width: 780px;
+      margin: 0 auto 28px;
       font-size: 17px;
-      line-height: 1.8;
-      color: var(--body-text);
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 12px 28px;
-      max-width: 800px;
-      margin: 0 auto 28px;
+      gap: 24px;
+      margin-bottom: 25px;
     }
 
     .contact-links a {
       color: var(--forest);
       text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .contact-links a:hover {
-      color: var(--sage);
-      text-decoration: underline;
-      transform: translateY(-1px);
+      font-weight: 700;
     }
 
     /* =========================================
@@ -908,278 +557,322 @@
 
     footer {
       background: var(--forest-dark);
-      color: #E4EAE5;
+      color: var(--white);
+      padding: 35px 8%;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-      border-top: 3px solid var(--gold);
+      font-size: 13px;
+    }
+
+    footer p {
+      color: #E4EAE5;
     }
 
     /* =========================================
-       SCROLL ANIMATION
+       COOKIE BANNER
     ========================================= */
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition:
-        opacity 0.65s ease,
-        transform 0.65s ease;
+    .cookie-banner {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 1100px;
+      background: #123524;
+      color: #ffffff;
+      padding: 22px 26px;
+      border-radius: 12px;
+      border: 1px solid rgba(214, 168, 75, 0.35);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+      z-index: 99999;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .cookie-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cookie-text {
+      flex: 1;
+    }
+
+    .cookie-text strong {
+      display: block;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .cookie-text p {
+      margin: 0;
+      font-size: 13px;
+      color: #F0EEE9;
+    }
+
+    .cookie-text a {
+      color: #D6A84B;
+      font-weight: 600;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cookie-buttons button {
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 7px;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .cookie-reject {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+    }
+
+    .cookie-accept {
+      background: #D6A84B;
+      color: #17211D;
+      border: 1px solid #D6A84B;
     }
 
     /* =========================================
-       RESPONSIVE
+       MOBILE
     ========================================= */
 
-    @media (max-width: 1050px) {
+    @media (max-width: 750px) {
 
-      .services {
-        grid-template-columns: repeat(2, 1fr);
+      nav {
+        padding: 12px 6%;
+        flex-wrap: wrap;
       }
 
-      .skills {
-        grid-template-columns: repeat(3, 1fr);
+      .nav-logo {
+        width: 150px;
+        max-height: 65px;
       }
 
-    }
-
-    @media (max-width: 900px) {
-
-      .projects {
-        grid-template-columns: 1fr;
+      .menu-toggle {
+        display: block;
       }
 
-      .who-grid {
-        grid-template-columns: 1fr;
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 12px 0 6px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
       }
 
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 32px;
+      .nav-menu.active {
+        display: flex;
       }
 
-      .about-photo img {
-        width: 210px;
-        height: 210px;
+      .nav-menu a {
+        margin: 0;
+        padding: 12px 4px;
+        width: 100%;
       }
-
-      .skills {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-    @media (max-width: 650px) {
-
-     nav {
-  padding: 10px 6%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.nav-logo {
-  width: 150px;
-  max-height: 62px;
-}
-
-.menu-toggle {
-  display: block;
-}
-
-.nav-menu {
-  display: none;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
-  padding: 12px 0 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.nav-menu.active {
-  display: flex;
-}
-
-.nav-menu a {
-  margin: 0;
-  padding: 11px 4px;
-  width: 100%;
-}
 
       .hero {
-        padding: 85px 6% 80px;
+        padding: 80px 6% 75px;
       }
 
       .hero h1 {
-        letter-spacing: -1px;
+        font-size: 42px;
       }
 
       section {
         padding: 70px 6%;
       }
 
-      .section-title {
-        font-size: 32px;
-      }
-
       .services,
+      .projects,
+      .who-grid,
       .skills {
         grid-template-columns: 1fr;
       }
 
-      .project {
-        padding: 28px 23px;
+      .about-layout {
+        grid-template-columns: 1fr;
       }
 
-      .contact-links {
+      .about-photo {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .cookie-banner {
+        bottom: 10px;
+        width: calc(100% - 20px);
+        padding: 20px;
+      }
+
+      .cookie-content {
         flex-direction: column;
-        gap: 10px;
+        align-items: stretch;
+      }
+
+      .cookie-buttons {
+        width: 100%;
+      }
+
+      .cookie-buttons button {
+        flex: 1;
       }
 
     }
 
-    @media (prefers-reduced-motion: reduce) {
+    @media (max-width: 450px) {
 
-      html {
-        scroll-behavior: auto;
+      .hero h1 {
+        font-size: 38px;
       }
 
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+      .cookie-buttons {
+        flex-direction: column;
       }
 
-      .reveal {
-        opacity: 1;
-        transform: none;
+      .cookie-buttons button {
+        width: 100%;
       }
 
     }
 
   </style>
-</head>
 
+</head>
 
 <body>
 
-  <!-- =========================================
-       NAVIGATION
-  ========================================== -->
-
-  <nav>
-
-    <div class="logo">
-      <a href="#">
-        <img
-          src="DoeFarmSolutions Logo.png"
-          alt="Doe Farm Solutions"
-          class="nav-logo"
-        >
-      </a>
-    </div>
-
-    <div>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#who-we-help">
-        Who We Help
-      </a>
-
-      <a href="#projects">
-        Projects
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#skills">
-        Skills
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </div>
-
-  </nav>
-
-
-  <!-- =========================================
-       HERO
-  ========================================== -->
-
-  <header class="hero">
-
-    <div class="hero-label">
-      OPERATIONS + WORKFLOW AUTOMATION
-    </div>
-
-    <div class="hero-role">
-      Business Process Improvement | Workflow Automation |
-      AI Solutions
-    </div>
-
-    <h1>
-      Simplify Your Business. Automate What Slows You Down.
-    </h1>
-
-    <h2>
-  Automation doesn't have to be complicated or expensive.
-</h2>
-
-<p>
-  Doe Farm Solutions helps small businesses simplify everyday operations through practical process improvement, workflow automation, and AI.
-</p>
-
-<p class="hero-tagline">
-  <strong>Start Small. Automate Smart. Grow.</strong>
-</p>
-
-    <a
-      class="button"
-      href="#services"
-    >
-      Explore Business Solutions
-    </a>
-
-    <a
-      class="button secondary"
-      href="https://calendly.com/deannamcoffey/15min"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Schedule a Free Consultation
-    </a>
-<a
-  class="button secondary"
-  href="contact.html"
->
-  Contact Doe Farm Solutions
-</a>
-  </header>
-
-
- 
 <!-- =========================================
-     BUSINESS OPERATIONS & AUTOMATION SERVICES
-========================================== -->
+     NAVIGATION
+========================================= -->
+
+<nav>
+
+  <div class="logo">
+
+    <a href="#">
+
+      <img
+        src="DoeFarmSolutions Logo.png"
+        alt="Doe Farm Solutions"
+        class="nav-logo"
+      >
+
+    </a>
+
+  </div>
+
+  <button
+    class="menu-toggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="nav-menu"
+  >
+    ☰
+  </button>
+
+  <div
+    class="nav-menu"
+    id="nav-menu"
+  >
+
+    <a href="#services">
+      Services
+    </a>
+
+    <a href="#who-we-help">
+      Who We Help
+    </a>
+
+    <a href="#projects">
+      Projects
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#skills">
+      Skills
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<header class="hero">
+
+  <div class="hero-label">
+    OPERATIONS + WORKFLOW AUTOMATION
+  </div>
+
+  <div class="hero-role">
+    Business Process Improvement |
+    Workflow Automation | AI Solutions
+  </div>
+
+  <h1>
+    Simplify Your Business.<br>
+    Automate What Slows You Down.
+  </h1>
+
+  <h2>
+    Automation doesn't have to be complicated
+    or expensive.
+  </h2>
+
+  <p>
+    Doe Farm Solutions makes business operations
+    simpler through practical process improvement,
+    automation, and AI.
+  </p>
+
+  <a
+    class="button"
+    href="#services"
+  >
+    Explore Services
+  </a>
+
+  <a
+    class="button secondary"
+    href="#projects"
+  >
+    View Case Studies
+  </a>
+
+</header>
+
+
+<!-- =========================================
+     SERVICES
+========================================= -->
 
 <section
-  class="reveal"
+  class="services-section"
   id="services"
 >
 
@@ -1187,89 +880,90 @@
     Business Operations &amp; Automation Services
   </h2>
 
-  <h3 class="section-tagline">
-    Start Small. Automate Smart.
-  </h3>
+  <p class="section-tagline">
+    Start Small. Automate Smart. Grow.
+  </p>
 
   <p class="section-intro">
-    Business automation doesn't have to mean replacing the systems
-    that already work. Doe Farm Solutions helps small businesses
-    find the processes that are taking too much time, simplify
-    the way work gets done, and use workflow automation where
-    it makes sense.
+    Practical solutions designed to reduce repetitive
+    work, improve business processes, connect systems,
+    and make everyday operations easier to manage.
   </p>
 
   <div class="services">
 
-    <!-- SERVICE 1 -->
+    <div class="service">
 
-   <div class="service">
+      <h3>
+        Operations &amp; Process Improvement
+      </h3>
 
-  <h3>
-    Operations &amp; Process Improvement
-  </h3>
+      <p>
+        Find the steps, handoffs, and repetitive tasks
+        that are slowing your business down. Through
+        process mapping, workflow design, and practical
+        SOPs, we create simpler processes that are easier
+        to manage and grow with.
+      </p>
 
-  <p>
-    Find the steps, handoffs, and repetitive tasks that
-    are slowing your business down. Through process
-    mapping, workflow design, and practical SOPs, we
-    create simpler processes that are easier to manage
-    and grow with.
-  </p>
+      <a
+        class="project-link"
+        href="case-study-3.html"
+      >
+        See an Inventory Process Improvement Example →
+      </a>
 
-  <a class="project-link" href="case-study-3.html">
-    See an Inventory Process Improvement Example →
-  </a>
+    </div>
 
-</div>
-
-    <!-- SERVICE 2 -->
 
     <div class="service">
 
-  <h3>
-    Workflow &amp; Business Process Automation
-  </h3>
+      <h3>
+        Workflow &amp; Business Process Automation
+      </h3>
 
-  <p>
-    Turn repetitive tasks into reliable workflows that
-    run with less manual effort. Workflow automation can
-    connect tools such as Make.com, Zapier, Google
-    Workspace, email, webhooks, and APIs to save time
-    and keep work moving consistently.
-  </p>
+      <p>
+        Turn repetitive tasks into reliable workflows
+        that run with less manual effort. Workflow
+        automation can connect tools such as Make.com,
+        Zapier, Google Workspace, email, webhooks, and
+        APIs to save time and keep work moving
+        consistently.
+      </p>
 
-  <a class="project-link" href="case-study-1.html">
-    See a Client Onboarding Automation Example →
-  </a>
+      <a
+        class="project-link"
+        href="case-study-1.html"
+      >
+        See a Client Onboarding Automation Example →
+      </a>
 
-</div>
+    </div>
 
-
-    <!-- SERVICE 3 -->
 
     <div class="service">
 
-  <h3>
-    Business Systems &amp; Data Integration
-  </h3>
+      <h3>
+        Business Systems &amp; Data Integration
+      </h3>
 
-  <p>
-    When information is scattered across spreadsheets,
-    email, and different platforms, everyday work gets
-    harder. We connect business systems, organize data,
-    and build practical data workflows so information
-    gets where it needs to go.
-  </p>
+      <p>
+        When information is scattered across spreadsheets,
+        email, and different platforms, everyday work gets
+        harder. We connect business systems, organize data,
+        and build practical data workflows so information
+        gets where it needs to go.
+      </p>
 
-  <a class="project-link" href="case-study-4.html">
-    See a Business Data Integration Example →
-  </a>
+      <a
+        class="project-link"
+        href="case-study-4.html"
+      >
+        See a Business Data Integration Example →
+      </a>
 
-</div>
+    </div>
 
-
-    <!-- SERVICE 4 -->
 
     <div class="service">
 
@@ -1278,11 +972,12 @@
       </h3>
 
       <p>
-        You don't need AI everywhere. You need it where it
-        can actually make work easier. We identify practical
-        ways to use AI automation for administrative work,
-        reporting, marketing, customer communication, and
-        other everyday business tasks.
+        AI doesn't have to be intimidating. It just has
+        to be useful. We identify practical opportunities
+        to use AI for research, content, data organization,
+        workflow support, and repetitive business tasks.
+        You don't need AI everywhere. You need the right
+        solution in the right place.
       </p>
 
     </div>
@@ -1292,620 +987,555 @@
 </section>
 
 
+<!-- =========================================
+     WHO WE HELP
+========================================= -->
 
-  <!-- =========================================
-       WHO DOE FARM SOLUTIONS HELPS
-  ========================================== -->
+<section
+  class="who-section"
+  id="who-we-help"
+>
 
-  <section
-    class="who-section reveal"
-    id="who-we-help"
-  >
+  <h2 class="section-title">
+    Who We Help
+  </h2>
 
-    <h2 class="section-title">
-      Who Doe Farm Solutions Helps
-    </h2>
+  <p class="section-intro">
+    Doe Farm Solutions works with businesses that
+    have outgrown manual processes, disconnected
+    tools, or repetitive administrative work.
+  </p>
 
-    <p class="section-intro">
-      Practical operations consulting and business automation
-      for organizations that need better processes, connected
-      systems, and more efficient workflows without adding
-      unnecessary complexity.
-    </p>
+  <div class="who-grid">
 
-    <div class="who-grid">
+    <div class="who-card">
 
+      <h3>
+        Small Businesses
+      </h3>
 
-      <div class="who-card">
-
-        <h3>
-          Small Businesses
-        </h3>
-
-        <p>
-          Improve everyday business operations, reduce
-          repetitive administrative work, organize
-          processes, and create more efficient workflows
-          that save time and support business growth.
-        </p>
-
-      </div>
-
-
-      <div class="who-card">
-
-        <h3>
-          Startups &amp; Growing Teams
-        </h3>
-
-        <p>
-          Build scalable operational workflows, organize
-          business systems, and automate repetitive
-          processes before manual work becomes a
-          bottleneck as the organization grows.
-        </p>
-
-      </div>
-
-
-      <div class="who-card">
-
-        <h3>
-          Operations Teams
-        </h3>
-
-        <p>
-          Improve existing workflows, connect business
-          systems, automate repetitive tasks, and create
-          more consistent operational processes across
-          teams and departments.
-        </p>
-
-      </div>
-
+      <p>
+        Improve everyday operations without adding
+        unnecessary complexity or expensive enterprise
+        systems.
+      </p>
 
     </div>
 
-  </section>
+    <div class="who-card">
 
+      <h3>
+        Growing Teams
+      </h3>
 
-  <!-- =========================================
-       BUSINESS PROCESS AUTOMATION CASE STUDIES
-  ========================================== -->
-
-  <section
-    class="projects-section reveal"
-    id="projects"
-  >
-
-    <h2 class="section-title">
-      Business Process Automation Case Studies
-    </h2>
-
-    <p class="section-intro">
-      Explore real-world workflow automation and business
-      process improvement projects using Make.com, Google
-      Sheets, QuickBooks, Gmail, webhooks, APIs, and other
-      business automation tools. These case studies demonstrate
-      practical ways to reduce manual work, improve process
-      consistency, organize data, and increase operational
-      efficiency.
-    </p>
-
-    <div class="projects">
-
-
-      <!-- PROJECT 1 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 01
-        </div>
-
-        <h3>
-          Client Onboarding &amp;
-          Conditional Routing Automation
-        </h3>
-
-        <p>
-          Designed a client onboarding automation workflow
-          that monitors new submissions, applies conditional
-          routing logic, and automatically directs client
-          information to the appropriate operational team.
-          The workflow reduces manual review and creates a
-          more consistent onboarding process.
-        </p>
-
-        <div class="tools">
-          Make • Google Sheets • Gmail •
-          Routing Logic • Process Improvement
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-1.html"
-        >
-          View Client Onboarding Case Study →
-        </a>
-
-      </div>
-
-
-      <!-- PROJECT 2 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 02
-        </div>
-
-        <h3>
-          Accounts Payable Vendor Validation
-        </h3>
-
-        <p>
-          Built an accounts payable automation workflow
-          that extracts invoice information, validates
-          vendors, applies financial business rules, checks
-          for exceptions, and prepares approved information
-          for QuickBooks Online processing.
-        </p>
-
-        <div class="tools">
-          QuickBooks • Make • JSON • Gmail •
-          Google Sheets • Webhooks
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-2.html"
-        >
-          View Accounts Payable Case Study →
-        </a>
-
-      </div>
-
-
-      <!-- PROJECT 3 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 03
-        </div>
-
-        <h3>
-          Inventory Monitoring &amp;
-          Reorder Workflow
-        </h3>
-
-        <p>
-          Created an inventory management automation
-          workflow that monitors new orders, updates
-          inventory levels, identifies low-stock conditions,
-          and triggers automated notifications through
-          connected workflows.
-        </p>
-
-        <div class="tools">
-          Make • Webhooks • HTTP •
-          Google Sheets • Gmail
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-3.html"
-        >
-          View Inventory Automation Case Study →
-        </a>
-
-      </div>
-
-
-      <!-- PROJECT 4 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          CASE STUDY 04
-        </div>
-
-        <h3>
-          College Baseball Recruiting Automation
-        </h3>
-
-        <p>
-          Developed an email and data automation workflow
-          that extracts college baseball recruiting
-          information from incoming emails and converts
-          unstructured player information into organized
-          Google Sheets records for easier recruiting
-          review and management.
-        </p>
-
-        <div class="tools">
-          Make • Gmail • Regex •
-          Google Sheets • Apps Script
-        </div>
-
-        <a
-          class="project-link"
-          href="case-study-4.html"
-        >
-          View Recruiting Automation Case Study →
-        </a>
-
-      </div>
-
+      <p>
+        Build more consistent processes and workflows
+        as responsibilities, customers, and data increase.
+      </p>
 
     </div>
 
-  </section>
+    <div class="who-card">
 
+      <h3>
+        Operations Teams
+      </h3>
 
-  <!-- =========================================
-       OPERATIONS & AUTOMATION EXPERIENCE
-  ========================================== -->
-
-  <section
-    class="reveal"
-    id="about"
-  >
-
-    <h2 class="section-title">
-      Operations &amp; Automation Consulting Experience
-    </h2>
-
-    <div class="about-layout">
-
-      <div class="about-photo">
-
-        <img
-          src="deanna-coffey-headshot.png"
-          alt="Deanna Coffey, founder of Doe Farm Solutions"
-        >
-
-      </div>
-
-
-      <div class="about">
-
-        <p>
-          Doe Farm Solutions combines more than 20 years
-          of operations management experience with modern
-          workflow automation, business process improvement,
-          systems integration, and practical AI tools. I help
-          businesses identify inefficient processes, reduce
-          repetitive work, and build practical systems that
-          support more efficient and scalable operations.
-        </p>
-
-        <p>
-          My operations experience includes payroll,
-          accounts payable and vendor payments, financial
-          processes, inventory management, budgeting,
-          compliance, vendor management, workflow design,
-          process improvement, systems implementation, and
-          cross-functional business operations.
-        </p>
-
-        <p>
-          My career spans both large organizations and
-          startup environments. Earlier in my career, I
-          managed pharmaceutical distribution operations
-          at H.D. Smith, with responsibilities across
-          payroll, inventory, budgets, compliance, vendor
-          management, and process improvement. More
-          recently, as Director of Operations at Best Agent
-          Today, I have managed payroll, vendor payments,
-          business systems and technology, cross-functional
-          coordination, and leadership support.
-        </p>
-
-        <p>
-          Today, I combine that hands-on operations
-          experience with business process automation,
-          Make.com, Zapier, Google Workspace, APIs,
-          workflow design, and AI tools to help businesses
-          reduce manual tasks, improve information flow,
-          and create more efficient business processes.
-        </p>
-
-      </div>
+      <p>
+        Reduce repetitive administrative work and
+        connect the tools your team already uses.
+      </p>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- =========================================
-       SKILLS
-  ========================================== -->
+<!-- =========================================
+     PROJECTS
+========================================= -->
 
-  <section
-    class="skills-section reveal"
-    id="skills"
-  >
+<section
+  class="projects-section"
+  id="projects"
+>
 
-    <h2 class="section-title">
-      Skills &amp; Tools
-    </h2>
+  <h2 class="section-title">
+    Workflow Automation Case Studies
+  </h2>
 
-    <div class="skills">
+  <p class="section-intro">
+    Examples of practical automation and process
+    improvement projects designed around real
+    operational challenges.
+  </p>
+
+  <div class="projects">
 
 
-      <div>
+    <!-- CASE STUDY 1 -->
 
-        <h3>
-          Operations &amp; Management
-        </h3>
+    <div class="project">
 
-        <p>
-          Operations Management<br>
-          Process Improvement<br>
-          Workflow Design<br>
-          Vendor Management<br>
-          Operational Scaling<br>
-          Project Management
-        </p>
-
+      <div class="project-number">
+        CASE STUDY 01
       </div>
 
+      <h3>
+        Client Onboarding Automation
+      </h3>
 
-      <div>
+      <p>
+        Built a client onboarding workflow that captures
+        new submissions, applies business rules, routes
+        information to the correct team, and reduces
+        repetitive administrative work.
+      </p>
 
-        <h3>
-          Automation &amp; Integration
-        </h3>
-
-        <p>
-          Make<br>
-          Zapier<br>
-          Webhooks<br>
-          HTTP / APIs<br>
-          JSON<br>
-          Regex
-        </p>
-
+      <div class="tools">
+        Make • Google Sheets • Gmail •
+        Routing Logic • Process Improvement
       </div>
-
-
-      <div>
-
-        <h3>
-          AI &amp; Productivity
-        </h3>
-
-        <p>
-          ChatGPT<br>
-          Gemini<br>
-          Prompt Engineering<br>
-          AI-Assisted Workflows<br>
-          Gamma
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Business &amp; Operations Systems
-        </h3>
-
-        <p>
-          QuickBooks<br>
-          ADP<br>
-          Basecamp<br>
-          Mailchimp<br>
-          Google Sheets<br>
-          Apps Script<br>
-          GA4<br>
-          Monday.com<br>
-          Supabase
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Technical &amp; Development
-        </h3>
-
-        <p>
-          GitHub<br>
-          HTML
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================
-       CONTACT / CALL TO ACTION
-  ========================================== -->
-
-  <section
-    class="contact reveal"
-    id="contact"
-  >
-
-    <h2 class="section-title">
-      Ready to Improve Your Business Processes?
-    </h2>
-
-    <p>
-      Spending too much time on repetitive tasks,
-      disconnected systems, or inefficient workflows?
-      Doe Farm Solutions can help identify opportunities
-      for business process improvement and workflow
-      automation and develop practical solutions that
-      fit the way your business operates.
-    </p>
-
-    <div class="contact-links">
 
       <a
-        href="mailto:deanna@doefarmsolutions.com"
+        class="project-link"
+        href="case-study-1.html"
       >
-        deanna@doefarmsolutions.com
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/deannamcoffey"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
-
-      <a href="tel:+16175846587">
-        617-584-6587
+        View Client Onboarding Case Study →
       </a>
 
     </div>
+
+
+    <!-- CASE STUDY 2 -->
+
+    <div class="project">
+
+      <div class="project-number">
+        CASE STUDY 02
+      </div>
+
+      <h3>
+        Accounts Payable Vendor Validation
+      </h3>
+
+      <p>
+        Built an accounts payable automation workflow
+        that extracts invoice information, validates
+        vendors, applies financial business rules, checks
+        for exceptions, and prepares approved information
+        for QuickBooks Online processing.
+      </p>
+
+      <div class="tools">
+        QuickBooks • Make • JSON • Gmail •
+        Google Sheets • Webhooks
+      </div>
+
+      <a
+        class="project-link"
+        href="case-study-2.html"
+      >
+        View Accounts Payable Case Study →
+      </a>
+
+    </div>
+
+
+    <!-- CASE STUDY 3 -->
+
+    <div class="project">
+
+      <div class="project-number">
+        CASE STUDY 03
+      </div>
+
+      <h3>
+        Inventory Monitoring &amp; Reorder Workflow
+      </h3>
+
+      <p>
+        Created an inventory management automation
+        workflow that monitors new orders, updates
+        inventory levels, identifies low-stock conditions,
+        and triggers automated notifications through
+        connected workflows.
+      </p>
+
+      <div class="tools">
+        Make • Webhooks • HTTP •
+        Google Sheets • Gmail
+      </div>
+
+      <a
+        class="project-link"
+        href="case-study-3.html"
+      >
+        View Inventory Automation Case Study →
+      </a>
+
+    </div>
+
+
+    <!-- CASE STUDY 4 -->
+
+    <div class="project">
+
+      <div class="project-number">
+        CASE STUDY 04
+      </div>
+
+      <h3>
+        College Baseball Recruiting Automation
+      </h3>
+
+      <p>
+        Developed an email and data automation workflow
+        that extracts college baseball recruiting
+        information from incoming emails and converts
+        unstructured player information into organized
+        Google Sheets records for easier recruiting
+        review and management.
+      </p>
+
+      <div class="tools">
+        Make • Gmail • Regex •
+        Google Sheets • Apps Script
+      </div>
+
+      <a
+        class="project-link"
+        href="case-study-4.html"
+      >
+        View Recruiting Automation Case Study →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section
+  class="about"
+  id="about"
+>
+
+  <h2 class="section-title">
+    About Doe Farm Solutions
+  </h2>
+
+  <p class="section-intro">
+    Practical operations experience combined with
+    modern automation tools to help businesses work
+    more efficiently.
+  </p>
+
+  <div class="about-layout">
+
+    <div class="about-photo">
+
+      <img
+        src="deanna-coffey-headshot.png"
+        alt="Deanna Coffey, founder of Doe Farm Solutions"
+      >
+
+    </div>
+
+    <div>
+
+      <p>
+        Doe Farm Solutions was founded by Deanna Coffey
+        with a simple goal: help businesses make their
+        operations easier to manage without making
+        technology more complicated than it needs to be.
+      </p>
+
+      <p>
+        With experience across operations management,
+        workflow design, business systems, analytics,
+        payroll, onboarding, and automation, the focus
+        is always on solving the operational problem
+        first and choosing the right technology second.
+      </p>
+
+      <p>
+        That might mean improving an existing process,
+        connecting systems that do not communicate,
+        automating repetitive work, organizing business
+        data, or introducing practical AI tools where
+        they can provide real value.
+      </p>
+
+      <p>
+        The goal is not automation for the sake of
+        automation. It is creating simpler, more
+        reliable operations that give business owners
+        and teams more time to focus on the work that
+        matters.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     SKILLS
+========================================= -->
+
+<section
+  class="skills-section"
+  id="skills"
+>
+
+  <h2 class="section-title">
+    Tools &amp; Capabilities
+  </h2>
+
+  <p class="section-intro">
+    A practical combination of operations, automation,
+    analytics, and business technology.
+  </p>
+
+  <div class="skills">
+
+    <div>
+
+      <h3>
+        Workflow Automation
+      </h3>
+
+      <p>
+        Make.com, Zapier, webhooks, routers, filters,
+        conditional logic, APIs, and multi-step
+        business workflows.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Business Systems
+      </h3>
+
+      <p>
+        Google Workspace, Google Sheets, Gmail,
+        QuickBooks, CRM workflows, forms, and
+        connected business applications.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Data &amp; Analytics
+      </h3>
+
+      <p>
+        GA4, Looker Studio, data organization,
+        reporting workflows, spreadsheet automation,
+        and operational metrics.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Process Improvement
+      </h3>
+
+      <p>
+        Process mapping, SOP development, workflow
+        documentation, operational controls, and
+        identifying opportunities to reduce manual work.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        AI Solutions
+      </h3>
+
+      <p>
+        Practical AI integration for research,
+        content support, data organization, workflow
+        assistance, and repetitive business tasks.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Operations Management
+      </h3>
+
+      <p>
+        Cross-functional coordination, onboarding,
+        payroll processes, vendor workflows, project
+        implementation, and day-to-day operational
+        support.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section
+  class="contact"
+  id="contact"
+>
+
+  <h2 class="section-title">
+    Ready to Simplify Your Operations?
+  </h2>
+
+  <p>
+    Spending too much time on repetitive tasks,
+    disconnected systems, or inefficient workflows?
+    Doe Farm Solutions can help identify opportunities
+    for business process improvement and workflow
+    automation and develop practical solutions that fit
+    the way your business operates.
+  </p>
+
+  <div class="contact-links">
+
+    <a href="mailto:deanna@doefarmsolutions.com">
+      deanna@doefarmsolutions.com
+    </a>
 
     <a
-      class="button"
-      href="https://calendly.com/deannamcoffey/15min"
+      href="https://www.linkedin.com/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Schedule a Free 15-Minute Consultation
+      LinkedIn
     </a>
 
-  </section>
+    <a href="tel:+16175846587">
+      617-584-6587
+    </a>
+
+  </div>
+
+  <a
+    class="button"
+    href="https://calendly.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Schedule a Conversation
+  </a>
+
+  <a
+    class="button secondary"
+    href="contact.html"
+  >
+    Contact Doe Farm Solutions
+  </a>
+
+</section>
 
 
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
+<!-- =========================================
+     FOOTER
+========================================= -->
 
-  <footer>
+<footer>
+
   <p>
-    © 2026 Doe Farm Solutions |
-    Business Operations • Process Improvement •
-    Workflow Automation • AI Solutions
+    © 2026 Doe Farm Solutions LLC
   </p>
 
-  <p style="margin-top: 10px;">
+  <p>
+    Start Small. Automate Smart. Grow.
+  </p>
+
+  <p>
     <a
-       href="privacy-policy.html"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="color: #D6A84B; text-decoration: none; font-weight: 600;"
+      href="privacy-policy.html"
+      style="color:#D6A84B; text-decoration:none;"
     >
       Privacy Policy
     </a>
-
-    <span style="color: #E4EAE5; margin: 0 8px;">|</span>
-
-    <a
-      href="#"
-      id="cookie-preferences"
-      style="color: #D6A84B; text-decoration: none; font-weight: 600;"
-    >
-      Cookie Preferences
-    </a>
   </p>
+
 </footer>
 
-  <!-- =========================================
-       ANIMATIONS
-  ========================================== -->
 
-  <script>
+<!-- =========================================
+     COOKIE BANNER
+========================================= -->
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      () => {
-
-        const revealElements =
-          document.querySelectorAll(".reveal");
-
-        if (!("IntersectionObserver" in window)) {
-
-          revealElements.forEach(
-            (element) => {
-              element.classList.add("visible");
-            }
-          );
-
-          return;
-        }
-
-        const observer =
-          new IntersectionObserver(
-            (entries) => {
-
-              entries.forEach(
-                (entry) => {
-
-                  if (entry.isIntersecting) {
-
-                    entry.target.classList.add(
-                      "visible"
-                    );
-
-                    observer.unobserve(
-                      entry.target
-                    );
-                  }
-
-                }
-              );
-
-            },
-            {
-              threshold: 0.12
-            }
-          );
-
-        revealElements.forEach(
-          (element) => {
-            observer.observe(element);
-          }
-        );
-
-      }
-    );
-
-  </script>
-   <!-- COOKIE CONSENT BANNER -->
-
-<div id="cookie-banner" class="cookie-banner">
+<div
+  class="cookie-banner"
+  id="cookieBanner"
+  role="dialog"
+  aria-label="Cookie preferences"
+>
 
   <div class="cookie-content">
 
     <div class="cookie-text">
 
-      <strong>We value your privacy</strong>
+      <strong>
+        Your Privacy Matters
+      </strong>
 
       <p>
-        Doe Farm Solutions uses cookies and Google Analytics to understand
-        how visitors use our website and help us improve it.
-        You can accept or reject analytics cookies.
-        Learn more in our
-        <a href="privacy-policy.html">Privacy Policy</a>.
+        Doe Farm Solutions uses analytics cookies to
+        understand how visitors use this website and
+        improve the experience. You can accept or
+        decline analytics cookies.
+        <a href="privacy-policy.html">
+          Privacy Policy
+        </a>
       </p>
 
     </div>
 
     <div class="cookie-buttons">
 
-      <button id="reject-cookies" class="cookie-reject">
-        Reject Analytics
+      <button
+        class="cookie-reject"
+        id="rejectCookies"
+        type="button"
+      >
+        Decline
       </button>
 
-      <button id="accept-cookies" class="cookie-accept">
-        Accept Analytics
+      <button
+        class="cookie-accept"
+        id="acceptCookies"
+        type="button"
+      >
+        Accept
       </button>
 
     </div>
@@ -1915,136 +1545,176 @@
 </div>
 
 
+<!-- =========================================
+     MOBILE NAVIGATION
+========================================= -->
+
 <script>
 
-(function () {
+  const menuToggle =
+    document.querySelector('.menu-toggle');
 
-  const banner = document.getElementById("cookie-banner");
-  const acceptButton = document.getElementById("accept-cookies");
-  const rejectButton = document.getElementById("reject-cookies");
-   const preferencesButton =
-  document.getElementById("cookie-preferences");
-
-  const consent = localStorage.getItem("doeFarmCookieConsent");
-
-
-  /* EXISTING VISITOR */
-
-  if (consent === "accepted") {
-
-    gtag('consent', 'update', {
-      'analytics_storage': 'granted'
-    });
-
-    banner.style.display = "none";
-
-  }
-
-  else if (consent === "rejected") {
-
-    gtag('consent', 'update', {
-      'analytics_storage': 'denied'
-    });
-
-    banner.style.display = "none";
-
-  }
-
-  else {
-
-    banner.style.display = "block";
-
-  }
-
-
-  /* ACCEPT */
-
-  acceptButton.addEventListener("click", function () {
-
-    localStorage.setItem(
-      "doeFarmCookieConsent",
-      "accepted"
-    );
-
-    gtag('consent', 'update', {
-      'analytics_storage': 'granted'
-    });
-
-    banner.style.display = "none";
-
-  });
-
-
-  /* REJECT */
-
-  rejectButton.addEventListener("click", function () {
-
-    localStorage.setItem(
-      "doeFarmCookieConsent",
-      "rejected"
-    );
-
-    gtag('consent', 'update', {
-      'analytics_storage': 'denied'
-    });
-
-    banner.style.display = "none";
-
-  });
-/* COOKIE PREFERENCES */
-
-if (preferencesButton) {
-
-  preferencesButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    localStorage.removeItem("doeFarmCookieConsent");
-
-    gtag('consent', 'update', {
-      'analytics_storage': 'denied'
-    });
-
-    banner.style.display = "block";
-
-  });
-
-}
- 
-})();
-
-</script>
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const navMenu =
+    document.querySelector('.nav-menu');
 
   if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function () {
-      const isOpen = navMenu.classList.toggle('active');
 
-      menuToggle.setAttribute(
-        'aria-expanded',
-        isOpen ? 'true' : 'false'
-      );
+    menuToggle.addEventListener(
+      'click',
+      function () {
 
-      menuToggle.setAttribute(
-        'aria-label',
-        isOpen ? 'Close navigation menu' : 'Open navigation menu'
-      );
+        const isOpen =
+          navMenu.classList.toggle('active');
 
-      menuToggle.textContent = isOpen ? '✕' : '☰';
-    });
+        menuToggle.setAttribute(
+          'aria-expanded',
+          isOpen ? 'true' : 'false'
+        );
 
-    navMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navMenu.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Open navigation menu');
-        menuToggle.textContent = '☰';
+        menuToggle.setAttribute(
+          'aria-label',
+          isOpen
+            ? 'Close navigation menu'
+            : 'Open navigation menu'
+        );
+
+        menuToggle.textContent =
+          isOpen ? '✕' : '☰';
+
+      }
+    );
+
+
+    navMenu
+      .querySelectorAll('a')
+      .forEach(function (link) {
+
+        link.addEventListener(
+          'click',
+          function () {
+
+            navMenu.classList.remove('active');
+
+            menuToggle.setAttribute(
+              'aria-expanded',
+              'false'
+            );
+
+            menuToggle.setAttribute(
+              'aria-label',
+              'Open navigation menu'
+            );
+
+            menuToggle.textContent = '☰';
+
+          }
+        );
+
       });
-    });
+
   }
+
 </script>
+
+
+<!-- =========================================
+     COOKIE CONSENT
+========================================= -->
+
+<script>
+
+  const cookieBanner =
+    document.getElementById('cookieBanner');
+
+  const acceptCookies =
+    document.getElementById('acceptCookies');
+
+  const rejectCookies =
+    document.getElementById('rejectCookies');
+
+
+  function grantAnalyticsConsent() {
+
+    if (typeof gtag === 'function') {
+
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+
+    }
+
+  }
+
+
+  function denyAnalyticsConsent() {
+
+    if (typeof gtag === 'function') {
+
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+
+    }
+
+  }
+
+
+  const cookieChoice =
+    localStorage.getItem(
+      'doeFarmCookieConsent'
+    );
+
+
+  if (cookieChoice === 'accepted') {
+
+    grantAnalyticsConsent();
+
+  } else if (cookieChoice === 'declined') {
+
+    denyAnalyticsConsent();
+
+  } else {
+
+    cookieBanner.style.display = 'block';
+
+  }
+
+
+  acceptCookies.addEventListener(
+    'click',
+    function () {
+
+      localStorage.setItem(
+        'doeFarmCookieConsent',
+        'accepted'
+      );
+
+      grantAnalyticsConsent();
+
+      cookieBanner.style.display = 'none';
+
+    }
+  );
+
+
+  rejectCookies.addEventListener(
+    'click',
+    function () {
+
+      localStorage.setItem(
+        'doeFarmCookieConsent',
+        'declined'
+      );
+
+      denyAnalyticsConsent();
+
+      cookieBanner.style.display = 'none';
+
+    }
+  );
+
+</script>
+
 </body>
 
 </html>
