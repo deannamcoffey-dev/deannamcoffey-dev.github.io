@@ -233,28 +233,25 @@
        HERO
     ========================================= */
 
-    .hero {
-      background:
-        radial-gradient(
-          circle at top right,
-          rgba(122, 158, 126, 0.22),
-          transparent 36%
-        ),
-        radial-gradient(
-          circle at bottom left,
-          rgba(214, 168, 75, 0.08),
-          transparent 32%
-        ),
-        linear-gradient(
-          180deg,
-          #FAFAF7 0%,
-          #F0EEE9 100%
-        );
+   .hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 53, 36, 0.96) 0%,
+      rgba(18, 53, 36, 0.88) 40%,
+      rgba(18, 53, 36, 0.68) 70%,
+      rgba(18, 53, 36, 0.52) 100%
+    ),
+    url("small-business-workflow-automation.png");
 
-      padding: 120px 8% 110px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 120px 8% 110px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
 
     .hero-label {
       display: inline-block;
