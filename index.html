@@ -158,7 +158,88 @@
     p {
       color: var(--body-text);
     }
+/* =========================================
+   NAVIGATION
+========================================= */
 
+nav {
+  width: 100%;
+  height: 92px;
+  background: var(--forest);
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo {
+  display: block;
+  width: 135px;
+  max-width: 135px;
+  height: auto;
+}
+
+/* NAVIGATION LINKS */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.nav-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--gold);
+}
+
+/* CONSULTATION BUTTON */
+
+.nav-menu .nav-cta {
+  background: var(--gold);<nav
+  color: var(--forest);
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  border: 1px solid var(--gold);
+  transition: all 0.2s ease;
+}
+
+.nav-menu .nav-cta:hover {
+  background: var(--white);
+  color: var(--forest);
+  border-color: var(--white);
+  transform: translateY(-1px);
+}
     /* =========================================
        MOBILE MENU BUTTON
     ========================================= */
@@ -649,10 +730,11 @@
         display: none;
       }
 
-      .nav-logo {
-        width: 150px;
-        max-height: 65px;
-      }
+     .nav-logo {
+    width: 115px;
+    max-width: 115px;
+    height: auto;
+}
 
       .menu-toggle {
         display: block;
@@ -676,7 +758,13 @@
         padding: 12px 4px;
         width: 100%;
       }
-
+.nav-menu .nav-cta {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    padding: 12px 18px;
+    border-bottom: none;
+}
       .hero {
         padding: 80px 6% 75px;
       }
@@ -801,15 +889,7 @@
     </a>
   </div>
 
-  <div class="nav-tagline" aria-label="Start Small. Automate Smart. Grow.">
-    START SMALL.
-    <span aria-hidden="true">•</span>
-    AUTOMATE SMART.
-    <span aria-hidden="true">•</span>
-    GROW.
-  </div>
-
-  <button
+   <button
     class="menu-toggle"
     aria-label="Open navigation menu"
     aria-expanded="false"
@@ -820,18 +900,24 @@
 
   <div class="nav-menu" id="nav-menu">
 
-    <a href="#services">Services</a>
+   <a href="#services">Services</a>
 
-    <a href="#who-we-help">Who We Help</a>
+<a href="#who-we-help">Who We Help</a>
 
-    <a href="#projects">Projects</a>
+<a href="#projects">Case Studies</a>
 
-    <a href="#about">About</a>
+<a href="#about">About</a>
 
-    <a href="#skills">Skills</a>
+<a href="contact.html">Contact</a>
 
-    <a href="contact.html">Contact</a>
-
+<a
+  href="https://calendly.com/deannamcoffey/15min"
+  class="nav-cta"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Free Consultation
+</a>
   </div>
 
 </nav>
