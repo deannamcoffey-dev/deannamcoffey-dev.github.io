@@ -107,7 +107,6 @@
     "name": "Doe Farm Solutions",
     "url": "https://doefarmsolutions.com/",
  "logo": "https://doefarmsolutions.com/DoeFarmSolutions-Logo.webp",
-    "email": "deanna@doefarmsolutions.com",
     "telephone": "+1-617-584-6587",
     "founder": {
       "@type": "Person",
@@ -1725,9 +1724,9 @@ url("small-business-workflow-automation-woman.webp");
 
   <div class="contact-links">
 
-    <a href="mailto:deanna@doefarmsolutions.com">
-      deanna@doefarmsolutions.com
-    </a>
+    <a href="#" id="email-link">
+  Email Doe Farm Solutions
+</a>
 
   <a
   href="https://www.linkedin.com/company/doe-farm-solutions/"
@@ -1801,7 +1800,24 @@ url("small-business-workflow-automation-woman.webp");
   </p>
 
 </footer>
+<!-- =========================================
+     EMAIL LINK
+========================================= -->
 
+<script>
+  const emailLink = document.getElementById('email-link');
+
+  if (emailLink) {
+    emailLink.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const user = 'deanna';
+      const domain = 'doefarmsolutions.com';
+
+      window.location.href = 'mailto:' + user + '@' + domain;
+    });
+  }
+</script>
 <!-- =========================================
      COOKIE BANNER
 ========================================= -->
