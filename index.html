@@ -878,23 +878,32 @@ url("small-business-workflow-automation-woman.webp");
         display: none;
       }
 
-     .nav-logo {
-    width: 115px;
-    max-width: 115px;
-    height: auto;
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin-left: 0;
+  padding: 12px 16px;
+  background-color: #123524;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 10px 10px;
 }
 
-      .menu-toggle {
-        display: block;
-      }
+.nav-menu a {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 14px 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        padding: 12px 0 6px;
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+  color: #D6A84B;
       }
 
       .nav-menu.active {
